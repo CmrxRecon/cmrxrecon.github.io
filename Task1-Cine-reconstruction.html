@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>CMRxRecon</title>
+	<link rel="stylesheet" href="nicepage.css" media="screen">
+	<link rel="stylesheet" href="Task1-Cine-reconstruction.css" media="screen">
+	<script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+	<script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+	<meta name="generator" content="Nicepage 5.8.2, nicepage.com">
+	<link id="u-theme-google-font" rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+
+
+
+
+
+
+
+
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Organization",
+			"name": ""
+		}
+	</script>
+	<meta name="theme-color" content="#478ac9">
+	<meta property="og:title" content="Task1-Cine-reconstruction">
+	<meta property="og:type" content="website">
+	<meta data-intl-tel-input-cdn-path="intlTelInput/">
+</head>
+
+<body class="u-body u-white u-xl-mode" data-lang="en">
+	<header class="u-clearfix u-header u-header" id="sec-2bff">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<nav class="u-align-center u-menu u-menu-dropdown u-offcanvas u-menu-1">
+				<div class="menu-collapse u-custom-font u-font-arial"
+					style="font-size: 1rem; letter-spacing: 0px; text-transform: uppercase; font-weight: 700;">
+					<a class="u-button-style u-custom-active-border-color u-custom-border u-custom-border-color u-custom-borders u-custom-color u-custom-hover-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-decoration u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+						href="#">
+						<svg class="u-svg-link" viewBox="0 0 24 24">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
+						</svg>
+						<svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px"
+							xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+							<g>
+								<rect y="1" width="16" height="2"></rect>
+								<rect y="7" width="16" height="2"></rect>
+								<rect y="13" width="16" height="2"></rect>
+							</g>
+						</svg>
+					</a>
+				</div>
+				<div class="u-custom-menu u-nav-container">
+					<ul class="u-custom-font u-font-arial u-nav u-spacing-2 u-unstyled u-nav-1">
+						<li class="u-nav-item"><a
+								class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
+								href="Home.html" style="padding: 10px 20px;">Home</a>
+						</li>
+						<li class="u-nav-item"><a
+								class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
+								href="#" style="padding: 10px 20px;">Task</a>
+							<div class="u-nav-popup">
+								<ul class="u-nav u-unstyled u-v-spacing-13">
+									<li class="u-nav-item"><a class="u-button-style u-nav-link"
+											href="Task1-Cine-reconstruction.html">Task1:Cine reconstruction</a>
+									</li>
+									<li class="u-nav-item"><a class="u-button-style u-nav-link"
+											href="Task2-T1-T2-mapping.html">Task2: T1/T2 mapping</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="u-nav-item"><a
+								class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
+								href="Data.html" style="padding: 10px 20px;">Data</a>
+						</li>
+						<li class="u-nav-item"><a
+							class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
+							href="#" style="padding: 10px 20px;">Submission</a>
+						<div class="u-nav-popup">
+							<ul class="u-nav u-unstyled u-v-spacing-13">
+								<li class="u-nav-item"><a class="u-button-style u-nav-link"
+										href="STACOM-workshop-paper.html">STACOM-workshop-paper</a>
+								</li>
+								<li class="u-nav-item"><a class="u-button-style u-nav-link"
+										href="Challenge-Submission.html">Challenge-Submission</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+						<li class="u-nav-item"><a
+								class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
+								href="Organizer.html" style="padding: 10px 20px;">Organizer</a>
+						</li>
+						<li class="u-nav-item"><a
+								class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
+								href="Sponsor.html" style="padding: 10px 20px;">Sponsor</a>
+						</li>
+					</ul>
+				</div>
+				<div class="u-custom-menu u-nav-container-collapse">
+					<div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+						<div class="u-inner-container-layout u-sidenav-overflow">
+							<div class="u-menu-close"></div>
+							<ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3">
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
+								</li>
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">Task</a>
+									<div class="u-nav-popup">
+										<ul class="u-nav u-unstyled u-v-spacing-13">
+											<li class="u-nav-item"><a class="u-button-style u-nav-link"
+													href="Task/Task1-Cine-reconstruction.html">Task1:Cine
+													reconstruction</a>
+											</li>
+											<li class="u-nav-item"><a class="u-button-style u-nav-link"
+													href="Task/Task2-T1-T2-mapping.html">Task2: T1/T2 mapping</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Data.html">Data</a>
+								</li>
+								<li class="u-nav-item"><a class="u-button-style u-nav-link"
+										href="Organizer.html">Organizer</a>
+								</li>
+								<li class="u-nav-item"><a class="u-button-style u-nav-link"
+										href="Sponsor.html">Sponsor</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+				</div>
+			</nav>
+		</div>
+	</header>
+  <section class="u-clearfix u-section-1" id="sec-199a">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <img class="u-image u-image-contain u-image-default u-image-1" src="../images/cmrlogo.jpeg" alt=""
+        data-image-width="614" data-image-height="550">
+    </div>
+  </section>
+  <section class="u-clearfix u-section-2" id="sec-757c">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <h3 class="u-custom-font u-font-arial u-text u-text-default u-text-1">Task1: Cine reconstruction</h3>
+      <h3 class="u-custom-font u-font-arial u-text u-text-default u-text-2">Background</h3>
+      <p class="u-align-justify u-custom-font u-font-arial u-text u-text-default u-text-grey-60 u-text-3">Cine
+        is the current gold standard for the noninvasive evaluation of cardiac
+        functional parameters. Typically,&nbsp; cine
+        MRI is obtained by retrospective electrocardiography (ECG)-gated segmented
+        sequence since the full k-space cannot be obtained within one acquisition
+        window, where the segments of the entire k-space are read out over multiple
+        cardiac cycles. For patients with voluntary breath-holds or cardiac arrhythmia,
+        image degradation will occur during the long acquisition window&nbsp; because of motions, thus affecting the
+        image
+        quality. Accelerated cine MRI has the capability to address these limitations,
+        in which the k-space of all temporal phases can be filled up in a less R-R
+        interval and the cine images covering the entire left ventricle can be acquired
+        in a single breath-hold. It is also possible to perform “real-time” imaging by
+        accelerated reconstructions, therefore artifacts associated with respiratory
+        motion and arrhythmia can be largely reduced. This challenge aims to provide a
+        benchmark platform for the existing cine CMR reconstruction approaches to
+        promote advances in this area of research.
+        <!--EndFragment-->
+        <style>
+          <!--
+          /* Font Definitions */
+          @font-face {
+            font-family: "Cambria Math";
+            panose-1: 2 4 5 3 5 4 6 3 2 4;
+            mso-font-charset: 0;
+            mso-generic-font-family: roman;
+            mso-font-pitch: variable;
+            mso-font-signature: -536870145 1107305727 0 0 415 0;
+          }
+
+          @font-face {
+            font-family: DengXian;
+            panose-1: 2 1 6 0 3 1 1 1 1 1;
+            mso-font-alt: 等线;
+            mso-font-charset: 134;
+            mso-generic-font-family: auto;
+            mso-font-pitch: variable;
+            mso-font-signature: -1610612033 953122042 22 0 262159 0;
+          }
+
+          @font-face {
+            font-family: "\@等线";
+            panose-1: 2 1 6 0 3 1 1 1 1 1;
+            mso-font-alt: "\@DengXian";
+            mso-font-charset: 134;
+            mso-generic-font-family: auto;
+            mso-font-pitch: variable;
+            mso-font-signature: -1610612033 953122042 22 0 262159 0;
+          }
+
+          /* Style Definitions */
+          p.MsoNormal,
+          li.MsoNormal,
+          div.MsoNormal {
+            mso-style-unhide: no;
+            mso-style-parent: "";
+            margin-top: 3.0pt;
+            margin-right: 0cm;
+            margin-bottom: 3.0pt;
+            margin-left: 0cm;
+            line-height: 130%;
+            mso-pagination: none;
+            layout-grid-mode: char;
+            font-size: 11.0pt;
+            font-family: DengXian;
+            mso-ascii-font-family: DengXian;
+            mso-ascii-theme-font: minor-latin;
+            mso-fareast-font-family: DengXian;
+            mso-fareast-theme-font: minor-fareast;
+            mso-hansi-font-family: DengXian;
+            mso-hansi-theme-font: minor-latin;
+            mso-bidi-font-family: "Times New Roman";
+            mso-bidi-theme-font: minor-bidi;
+            color: #333333;
+            mso-font-kerning: 1.0pt;
+          }
+
+          .MsoChpDefault {
+            mso-style-type: export-only;
+            mso-default-props: yes;
+            font-size: 11.0pt;
+            mso-ansi-font-size: 11.0pt;
+            mso-bidi-font-size: 11.0pt;
+            font-family: DengXian;
+            mso-bidi-font-family: "Times New Roman";
+            mso-bidi-theme-font: minor-bidi;
+            color: #333333;
+          }
+
+          .MsoPapDefault {
+            mso-style-type: export-only;
+            margin-top: 3.0pt;
+            margin-right: 0cm;
+            margin-bottom: 3.0pt;
+            margin-left: 0cm;
+            line-height: 130%;
+            layout-grid-mode: char;
+          }
+
+          /* Page Definitions */
+          @page {
+            mso-page-border-surround-header: no;
+            mso-page-border-surround-footer: no;
+          }
+
+          @page WordSection1 {
+            size: 612.0pt 792.0pt;
+            margin: 72.0pt 90.0pt 72.0pt 90.0pt;
+            mso-header-margin: 36.0pt;
+            mso-footer-margin: 36.0pt;
+            mso-paper-source: 0;
+          }
+
+          div.WordSection1 {
+            page: WordSection1;
+          }
+          -->
+        </style>
+      </p>
+    </div>
+  </section>
+  <section class="u-clearfix u-section-3" id="sec-b88f">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <h3 class="u-custom-font u-font-arial u-text u-text-default u-text-1">Data</h3>
+      <p class="u-align-justify u-custom-font u-font-arial u-text u-text-grey-60 u-text-2">
+        <span style="font-weight: 700;">Scanner:</span> Siemens 3T MRI scanner (MAGNETOM Vida).&nbsp;<br>
+        <br>
+        <!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves></w:TrackMoves>
+  <w:TrackFormatting></w:TrackFormatting>
+  <w:PunctuationKerning></w:PunctuationKerning>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas></w:ValidateAgainstSchemas>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF></w:DoNotPromoteQF>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>ZH-CN</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:SpaceForUL></w:SpaceForUL>
+   <w:BalanceSingleByteDoubleByteWidth></w:BalanceSingleByteDoubleByteWidth>
+   <w:DoNotLeaveBackslashAlone></w:DoNotLeaveBackslashAlone>
+   <w:ULTrailSpace></w:ULTrailSpace>
+   <w:DoNotExpandShiftReturn></w:DoNotExpandShiftReturn>
+   <w:AdjustLineHeightInTable></w:AdjustLineHeightInTable>
+   <w:BreakWrappedTables></w:BreakWrappedTables>
+   <w:SnapToGridInCell></w:SnapToGridInCell>
+   <w:WrapTextWithPunct></w:WrapTextWithPunct>
+   <w:UseAsianBreakRules></w:UseAsianBreakRules>
+   <w:DontGrowAutofit></w:DontGrowAutofit>
+   <w:SplitPgBreakAndParaMark></w:SplitPgBreakAndParaMark>
+   <w:EnableOpenTypeKerning></w:EnableOpenTypeKerning>
+   <w:DontFlipMirrorIndents></w:DontFlipMirrorIndents>
+   <w:OverrideTableStyleHps></w:OverrideTableStyleHps>
+   <w:UseFELayout></w:UseFELayout>
+  </w:Compatibility>
+  <w:DoNotOptimizeForBrowser></w:DoNotOptimizeForBrowser>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"></m:mathFont>
+   <m:brkBin m:val="before"></m:brkBin>
+   <m:brkBinSub m:val="&#45;-"></m:brkBinSub>
+   <m:smallFrac m:val="off"></m:smallFrac>
+   <m:dispDef></m:dispDef>
+   <m:lMargin m:val="0"></m:lMargin>
+   <m:rMargin m:val="0"></m:rMargin>
+   <m:defJc m:val="centerGroup"></m:defJc>
+   <m:wrapIndent m:val="1440"></m:wrapIndent>
+   <m:intLim m:val="subSup"></m:intLim>
+   <m:naryLim m:val="undOvr"></m:naryLim>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]-->
+        <!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="376">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"></w:LsdException>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"></w:LsdException>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"></w:LsdException>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"></w:LsdException>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"></w:LsdException>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"></w:LsdException>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"></w:LsdException>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"></w:LsdException>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"></w:LsdException>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"></w:LsdException>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"></w:LsdException>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"></w:LsdException>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"></w:LsdException>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"></w:LsdException>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"></w:LsdException>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"></w:LsdException>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"></w:LsdException>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"></w:LsdException>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"></w:LsdException>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"></w:LsdException>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"></w:LsdException>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"></w:LsdException>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"></w:LsdException>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"></w:LsdException>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"></w:LsdException>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"></w:LsdException>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"></w:LsdException>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"></w:LsdException>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"></w:LsdException>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"></w:LsdException>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"></w:LsdException>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"></w:LsdException>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"></w:LsdException>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"></w:LsdException>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"></w:LsdException>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"></w:LsdException>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"></w:LsdException>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"></w:LsdException>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"></w:LsdException>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"></w:LsdException>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"></w:LsdException>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"></w:LsdException>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Mention"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Hyperlink"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hashtag"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Unresolved Mention"></w:LsdException>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Link"></w:LsdException>
+ </w:LatentStyles>
+</xml><![endif]-->
+        <style>
+          <!--
+          /* Font Definitions */
+          @font-face {
+            font-family: "Cambria Math";
+            panose-1: 2 4 5 3 5 4 6 3 2 4;
+            mso-font-charset: 0;
+            mso-generic-font-family: roman;
+            mso-font-pitch: variable;
+            mso-font-signature: -536870145 1107305727 0 0 415 0;
+          }
+
+          @font-face {
+            font-family: DengXian;
+            panose-1: 2 1 6 0 3 1 1 1 1 1;
+            mso-font-alt: 等线;
+            mso-font-charset: 134;
+            mso-generic-font-family: auto;
+            mso-font-pitch: variable;
+            mso-font-signature: -1610612033 953122042 22 0 262159 0;
+          }
+
+          @font-face {
+            font-family: "\@等线";
+            panose-1: 2 1 6 0 3 1 1 1 1 1;
+            mso-font-alt: "\@DengXian";
+            mso-font-charset: 134;
+            mso-generic-font-family: auto;
+            mso-font-pitch: variable;
+            mso-font-signature: -1610612033 953122042 22 0 262159 0;
+          }
+
+          /* Style Definitions */
+          p.MsoNormal,
+          li.MsoNormal,
+          div.MsoNormal {
+            mso-style-unhide: no;
+            mso-style-parent: "";
+            margin-top: 3.0pt;
+            margin-right: 0cm;
+            margin-bottom: 3.0pt;
+            margin-left: 0cm;
+            line-height: 130%;
+            mso-pagination: none;
+            layout-grid-mode: char;
+            font-size: 11.0pt;
+            font-family: DengXian;
+            mso-ascii-font-family: DengXian;
+            mso-ascii-theme-font: minor-latin;
+            mso-fareast-font-family: DengXian;
+            mso-fareast-theme-font: minor-fareast;
+            mso-hansi-font-family: DengXian;
+            mso-hansi-theme-font: minor-latin;
+            mso-bidi-font-family: "Times New Roman";
+            mso-bidi-theme-font: minor-bidi;
+            color: #333333;
+            mso-font-kerning: 1.0pt;
+          }
+
+          .MsoChpDefault {
+            mso-style-type: export-only;
+            mso-default-props: yes;
+            font-size: 11.0pt;
+            mso-ansi-font-size: 11.0pt;
+            mso-bidi-font-size: 11.0pt;
+            font-family: DengXian;
+            mso-bidi-font-family: "Times New Roman";
+            mso-bidi-theme-font: minor-bidi;
+            color: #333333;
+          }
+
+          .MsoPapDefault {
+            mso-style-type: export-only;
+            margin-top: 3.0pt;
+            margin-right: 0cm;
+            margin-bottom: 3.0pt;
+            margin-left: 0cm;
+            line-height: 130%;
+            layout-grid-mode: char;
+          }
+
+          /* Page Definitions */
+          @page {
+            mso-page-border-surround-header: no;
+            mso-page-border-surround-footer: no;
+          }
+
+          @page WordSection1 {
+            size: 612.0pt 792.0pt;
+            margin: 72.0pt 90.0pt 72.0pt 90.0pt;
+            mso-header-margin: 36.0pt;
+            mso-footer-margin: 36.0pt;
+            mso-paper-source: 0;
+          }
+
+          div.WordSection1 {
+            page: WordSection1;
+          }
+          -->
+        </style>
+        <!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin-top:3.0pt;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:3.0pt;
+	mso-para-margin-left:0cm;
+	line-height:130%;
+	mso-pagination:widow-orphan;
+	layout-grid-mode:char;
+	font-size:11.0pt;
+	font-family:DengXian;
+	mso-ascii-font-family:DengXian;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:DengXian;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:DengXian;
+	mso-hansi-theme-font:minor-latin;
+	color:#333333;
+	mso-font-kerning:1.0pt;}
+</style>
+<![endif]-->
+        <!--StartFragment-->
+        <span style="font-weight: 700;"> CMR acquisition:</span>&nbsp;We
+        follow the recommendations of CMR exams reported in the previous publication
+        (doi: 10.1007/s43657-02100018x, 10.1007/s43657-021-00018-x). We use the clinical
+        sequence ‘TrueFISP’ for CINE imaging. The collected imaging planes include
+        short-axis (SA) and two-chamber (2CH), three-chamber (3CH) and
+        four-chamber(4CH) long-axis (LA) views. Typically 5~10 slices are acquired for&nbsp; SA cine, while one slice is
+        acquired for
+        other views. The cardiac cycle is segmented into 15–25 phases with a temporal
+        resolution 50 ms. For this challenge, we only provide raw k-space data of the
+        SA and LA with all frames. Typical scan parameters: spatial resolution 2.0×2.0
+        mm2, slice thickness 8.0 mm, and slice gap 4.0 mm.<br>
+        <br>
+        <span style="font-weight: 700;">Pre-processing: <span style="font-weight: 400;">T</span>
+        </span>he
+        raw k-space data exported from the scanner will be processed and transformed to
+        HDF5 format. A readme file will be provided to describe the content and usage of
+        the data.&nbsp;
+        <!--EndFragment-->
+        <!--EndFragment-->
+        <style>
+          <!--
+          /* Font Definitions */
+          @font-face {
+            font-family: "Cambria Math";
+            panose-1: 2 4 5 3 5 4 6 3 2 4;
+            mso-font-charset: 0;
+            mso-generic-font-family: roman;
+            mso-font-pitch: variable;
+            mso-font-signature: -536870145 1107305727 0 0 415 0;
+          }
+
+          @font-face {
+            font-family: DengXian;
+            panose-1: 2 1 6 0 3 1 1 1 1 1;
+            mso-font-alt: 等线;
+            mso-font-charset: 134;
+            mso-generic-font-family: auto;
+            mso-font-pitch: variable;
+            mso-font-signature: -1610612033 953122042 22 0 262159 0;
+          }
+
+          @font-face {
+            font-family: "\@等线";
+            panose-1: 2 1 6 0 3 1 1 1 1 1;
+            mso-font-alt: "\@DengXian";
+            mso-font-charset: 134;
+            mso-generic-font-family: auto;
+            mso-font-pitch: variable;
+            mso-font-signature: -1610612033 953122042 22 0 262159 0;
+          }
+
+          /* Style Definitions */
+          p.MsoNormal,
+          li.MsoNormal,
+          div.MsoNormal {
+            mso-style-unhide: no;
+            mso-style-parent: "";
+            margin-top: 3.0pt;
+            margin-right: 0cm;
+            margin-bottom: 3.0pt;
+            margin-left: 0cm;
+            line-height: 130%;
+            mso-pagination: none;
+            layout-grid-mode: char;
+            font-size: 11.0pt;
+            font-family: DengXian;
+            mso-ascii-font-family: DengXian;
+            mso-ascii-theme-font: minor-latin;
+            mso-fareast-font-family: DengXian;
+            mso-fareast-theme-font: minor-fareast;
+            mso-hansi-font-family: DengXian;
+            mso-hansi-theme-font: minor-latin;
+            mso-bidi-font-family: "Times New Roman";
+            mso-bidi-theme-font: minor-bidi;
+            color: #333333;
+            mso-font-kerning: 1.0pt;
+          }
+
+          .MsoChpDefault {
+            mso-style-type: export-only;
+            mso-default-props: yes;
+            font-size: 11.0pt;
+            mso-ansi-font-size: 11.0pt;
+            mso-bidi-font-size: 11.0pt;
+            font-family: DengXian;
+            mso-bidi-font-family: "Times New Roman";
+            mso-bidi-theme-font: minor-bidi;
+            color: #333333;
+          }
+
+          .MsoPapDefault {
+            mso-style-type: export-only;
+            margin-top: 3.0pt;
+            margin-right: 0cm;
+            margin-bottom: 3.0pt;
+            margin-left: 0cm;
+            line-height: 130%;
+            layout-grid-mode: char;
+          }
+
+          /* Page Definitions */
+          @page {
+            mso-page-border-surround-header: no;
+            mso-page-border-surround-footer: no;
+          }
+
+          @page WordSection1 {
+            size: 612.0pt 792.0pt;
+            margin: 72.0pt 90.0pt 72.0pt 90.0pt;
+            mso-header-margin: 36.0pt;
+            mso-footer-margin: 36.0pt;
+            mso-paper-source: 0;
+          }
+
+          div.WordSection1 {
+            page: WordSection1;
+          }
+          -->
+        </style>
+        <style>
+          <!--
+          /* Font Definitions */
+          @font-face {
+            font-family: "Cambria Math";
+            panose-1: 2 4 5 3 5 4 6 3 2 4;
+            mso-font-charset: 0;
+            mso-generic-font-family: roman;
+            mso-font-pitch: variable;
+            mso-font-signature: -536870145 1107305727 0 0 415 0;
+          }
+
+          @font-face {
+            font-family: DengXian;
+            panose-1: 2 1 6 0 3 1 1 1 1 1;
+            mso-font-alt: 等线;
+            mso-font-charset: 134;
+            mso-generic-font-family: auto;
+            mso-font-pitch: variable;
+            mso-font-signature: -1610612033 953122042 22 0 262159 0;
+          }
+
+          @font-face {
+            font-family: "\@等线";
+            panose-1: 2 1 6 0 3 1 1 1 1 1;
+            mso-font-alt: "\@DengXian";
+            mso-font-charset: 134;
+            mso-generic-font-family: auto;
+            mso-font-pitch: variable;
+            mso-font-signature: -1610612033 953122042 22 0 262159 0;
+          }
+
+          /* Style Definitions */
+          p.MsoNormal,
+          li.MsoNormal,
+          div.MsoNormal {
+            mso-style-unhide: no;
+            mso-style-parent: "";
+            margin-top: 3.0pt;
+            margin-right: 0cm;
+            margin-bottom: 3.0pt;
+            margin-left: 0cm;
+            line-height: 130%;
+            mso-pagination: none;
+            layout-grid-mode: char;
+            font-size: 11.0pt;
+            font-family: DengXian;
+            mso-ascii-font-family: DengXian;
+            mso-ascii-theme-font: minor-latin;
+            mso-fareast-font-family: DengXian;
+            mso-fareast-theme-font: minor-fareast;
+            mso-hansi-font-family: DengXian;
+            mso-hansi-theme-font: minor-latin;
+            mso-bidi-font-family: "Times New Roman";
+            mso-bidi-theme-font: minor-bidi;
+            color: #333333;
+            mso-font-kerning: 1.0pt;
+          }
+
+          .MsoChpDefault {
+            mso-style-type: export-only;
+            mso-default-props: yes;
+            font-size: 11.0pt;
+            mso-ansi-font-size: 11.0pt;
+            mso-bidi-font-size: 11.0pt;
+            font-family: DengXian;
+            mso-bidi-font-family: "Times New Roman";
+            mso-bidi-theme-font: minor-bidi;
+            color: #333333;
+          }
+
+          .MsoPapDefault {
+            mso-style-type: export-only;
+            margin-top: 3.0pt;
+            margin-right: 0cm;
+            margin-bottom: 3.0pt;
+            margin-left: 0cm;
+            line-height: 130%;
+            layout-grid-mode: char;
+          }
+
+          /* Page Definitions */
+          @page {
+            mso-page-border-surround-header: no;
+            mso-page-border-surround-footer: no;
+          }
+
+          @page WordSection1 {
+            size: 612.0pt 792.0pt;
+            margin: 72.0pt 90.0pt 72.0pt 90.0pt;
+            mso-header-margin: 36.0pt;
+            mso-footer-margin: 36.0pt;
+            mso-paper-source: 0;
+          }
+
+          div.WordSection1 {
+            page: WordSection1;
+          }
+          -->
+        </style>
+      </p>
+    </div>
+  </section>
+  <section class="u-clearfix u-section-4" id="sec-c5bf">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <h3 class="u-text u-text-default u-text-1">Metrics &amp; Ranking</h3>
+      <ul class="u-align-justify u-text u-text-grey-60 u-text-2">
+        <li><b>
+            <span style="font-weight: 400;">Metrics:&nbsp;</span></b>PSNR,
+          SSIM, RMSE and Radiologists' scoring
+        </li>
+        <li><b>
+            <span style="font-weight: 400;">Ranking method:&nbsp;</span></b>We
+          will use a two-stage evaluation, where quantitative metrics will be used to
+          select the top 5 submissions. These finalists will then be sent to radiologists
+          to determine the winners. We use the SSIM as our quantitative image quality index for ranking submissions
+          prior to
+          submission to clinical radiologists. The final ranking will be decided based on
+          the weighting of the quantitative metrics and the qualitative scoring. Participating
+          teams are required to submit docker containers and process all the cases in the
+          test set. For the cases without valid output, we will assign it to the lowest
+          value of metric.
+        </li>
+        <li>PSNR,
+          SSIM and RMSE are commonly used metric and proven valid in previous challenges.</li>
+      </ul>
+      <h3 class="u-text u-text-default u-text-3">Submission</h3>
+      <p class="u-align-justify u-text u-text-grey-60 u-text-4">The submission instructions will be released on the
+        Synapse platform.<br>
+      </p>
+    </div>
+  </section>
+
+
+  <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-e835">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <p class="u-align-left u-text u-text-default u-text-1">Contact us:<br>
+      </p>
+      <a href="mailto:CMRxRecon@outlook.com"
+        class="u-active-none u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-top-left-radius-0 u-top-right-radius-0 u-btn-1">CMRxRecon@outlook.com</a>
+      <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="../images/1.png" alt=""
+        data-image-width="200" data-image-height="200">
+      <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2" src="../images/twitter.png"
+        alt="" data-image-width="200" data-image-height="200">
+      <a href="https://twitter.com/CMRxRecon"
+        class="u-active-none u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-text-body-alt-color u-top-left-radius-0 u-top-right-radius-0 u-btn-2">CMRxRecon</a>
+    </div>
+  </footer>
+  <section class="u-backlink u-clearfix u-grey-80">
+    <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+      <span>Website Templates</span>
+    </a>
+    <p class="u-text">
+      <span>created with</span>
+    </p>
+    <a class="u-link" href="" target="_blank">
+      <span>Website Builder Software</span>
+    </a>.
+  </section>
+
+</body>
+
+</html>
