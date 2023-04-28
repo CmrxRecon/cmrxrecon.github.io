@@ -1,272 +1,382 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="en">
-
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8">
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-  <title>CMRxRecon</title>
-  <link rel="stylesheet" href="nicepage.css" media="screen">
-  <link rel="stylesheet" href="Task1-Cine-reconstruction.css" media="screen">
-  <link rel="icon" type="image/svg+xml" href="images/cmrlogo.jpeg" />
-  <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-  <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-  <meta name="generator" content="Nicepage 5.8.2, nicepage.com">
-  <link id="u-theme-google-font" rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-
-
-
-
-
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      "name": ""
-    }
-  </script>
-  <meta name="theme-color" content="#478ac9">
-  <meta property="og:title" content="Task1 Cine reconstruction">
-  <meta property="og:type" content="website">
-  <meta data-intl-tel-input-cdn-path="intlTelInput/">
-</head>
-
-<body class="u-body u-xl-mode" data-lang="en">
-  <header class="u-clearfix u-header u-header" id="sec-2bff">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
-        <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
-          <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-            href="#">
-            <svg class="u-svg-link" viewBox="0 0 24 24">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
-            </svg>
-            <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px"
-              xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-              <g>
-                <rect y="1" width="16" height="2"></rect>
-                <rect y="7" width="16" height="2"></rect>
-                <rect y="13" width="16" height="2"></rect>
-              </g>
-            </svg>
-          </a>
-        </div>
-        <div class="u-custom-menu u-nav-container">
-          <ul class="u-custom-font u-font-arial u-nav u-spacing-2 u-unstyled u-nav-1">
-            <li class="u-nav-item"><a
-                class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
-                href="Home.html" style="padding: 10px 20px;">Home</a>
-            </li>
-            <li class="u-nav-item"><a
-                class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
-                href="#" style="padding: 10px 20px;">Task</a>
-              <div class="u-nav-popup">
-                <ul class="u-nav u-unstyled u-v-spacing-13 u-nav-2">
-                  <li class="u-nav-item"><a class="u-button-style u-nav-link"
-                      href="Task1-Cine-reconstruction.html">Task1:Cine reconstruction</a>
-                  </li>
-                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Task2-T1-T2-mapping.html">Task2:T1/
-                      T2 mapping</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="u-nav-item"><a
-                class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
-                href="Challenge.html" style="padding: 10px 20px;">Data</a>
-            </li>
-            <li class="u-nav-item"><a
-                class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
-                href="Organizer.html" style="padding: 10px 20px;">Organizer</a>
-            </li>
-            <li class="u-nav-item"><a
-                class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
-                href="Sponsor.html" style="padding: 10px 20px;">Sponsor</a>
-            </li>
-          </ul>
-        </div>
-        <div class="u-custom-menu u-nav-container-collapse">
-          <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-            <div class="u-inner-container-layout u-sidenav-overflow">
-              <div class="u-menu-close"></div>
-              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3">
-                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
-                </li>
-                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">Task</a>
-                  <div class="u-nav-popup">
-                    <ul class="u-nav u-unstyled u-v-spacing-13 u-nav-4">
-                      <li class="u-nav-item"><a class="u-button-style u-nav-link"
-                          href="Task1-Cine-reconstruction.html">Task1 Cine reconstruction</a>
-                      </li>
-                      <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Task2-T1-T2-mapping.html">Task2
-                          T1 T2 mapping</a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Challenge.html">Data</a>
-                </li>
-                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Organizer.html">Organizer</a>
-                </li>
-                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Sponsor.html">Sponsor</a>
-                </li>
-              </ul>
-            </div>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Task1 Cine reconstruction</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Task1-Cine-reconstruction.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.8.2, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Task1 Cine reconstruction">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-2bff"><div class="u-clearfix u-sheet u-sheet-1">
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-active-color u-custom-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
           </div>
-          <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-custom-font u-font-arial u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-custom-color-5 u-border-2 u-border-active-custom-color-5 u-border-hover-white u-button-style u-nav-link u-text-active-white u-text-grey-90 u-text-hover-grey-90 u-white" href="Home.html" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-active-custom-color-5 u-border-2 u-border-active-custom-color-5 u-border-hover-white u-button-style u-nav-link u-text-active-white u-text-grey-90 u-text-hover-grey-90 u-white" href="#" style="padding: 10px 20px;">Task</a><div class="u-nav-popup"><ul class="u-nav u-unstyled u-v-spacing-13 u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Task1-Cine-reconstruction.html">Task1 Cine reconstruction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Task2-T1-T2-mapping.html">Task2 T1 T2 mapping</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-custom-color-5 u-border-2 u-border-active-custom-color-5 u-border-hover-white u-button-style u-nav-link u-text-active-white u-text-grey-90 u-text-hover-grey-90 u-white" href="Challenge.html" style="padding: 10px 20px;">Join the Challenge!</a>
+</li><li class="u-nav-item"><a class="u-active-custom-color-5 u-border-2 u-border-active-custom-color-5 u-border-hover-white u-button-style u-nav-link u-text-active-white u-text-grey-90 u-text-hover-grey-90 u-white" href="Organizer.html" style="padding: 10px 20px;">Organizer</a>
+</li><li class="u-nav-item"><a class="u-active-custom-color-5 u-border-2 u-border-active-custom-color-5 u-border-hover-white u-button-style u-nav-link u-text-active-white u-text-grey-90 u-text-hover-grey-90 u-white" href="Sponsor.html" style="padding: 10px 20px;">Sponsor</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">Task</a><div class="u-nav-popup"><ul class="u-nav u-unstyled u-v-spacing-13 u-nav-4"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Task1-Cine-reconstruction.html">Task1 Cine reconstruction</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Task2-T1-T2-mapping.html">Task2 T1 T2 mapping</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Challenge.html">Join the Challenge!</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Organizer.html">Organizer</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Sponsor.html">Sponsor</a>
+</li></ul>
+                <div class="u-menu-close u-menu-close-1"></div>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="images/cmrlogo.jpeg" alt="" data-image-width="614" data-image-height="550">
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2" src="images/miccailogo.png" alt="" data-image-width="768" data-image-height="333">
+      </div></header>
+    <section class="u-clearfix u-section-1" id="sec-9e79">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <img class="u-expanded-width u-image u-image-default u-preserve-proportions u-image-1" src="images/2023-04-273.48.38.png" alt="" data-image-width="2136" data-image-height="706">
+      </div>
+    </section>
+    <section class="u-clearfix u-section-2" id="sec-757c">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-custom-font u-font-arial u-text u-text-default u-text-1">Task1: Cine reconstruction</h3>
+        <h3 class="u-custom-font u-font-arial u-text u-text-default u-text-2">Background</h3>
+        <p class="u-align-justify u-custom-font u-font-arial u-text u-text-default u-text-grey-60 u-text-3">Cine
+is the current gold standard for the noninvasive evaluation of cardiac
+functional parameters. Typically, cine
+MRI is obtained by retrospective electrocardiography (ECG) -gated segmented
+sequence since the full k-space cannot be obtained within one acquisition
+window, where the segments of the entire k-space are read out over multiple
+cardiac cycles. For patients with voluntary breath-holds or cardiac arrhythmia,
+image degradation will occur during the long acquisition window&nbsp; because of motions, thus affecting the image
+quality. Accelerated cine MRI has the capability to address these limitations,
+in which the k-space of all temporal phases can be filled up in a less R-R
+interval and the cine images covering the entire left ventricle can be acquired
+in a single breath-hold. It is also possible to perform “real-time” imaging by
+accelerated reconstructions, therefore artifacts associated with respiratory
+motion and arrhythmia can be largely reduced.<span style="font-weight: 700;"> This challenge aims to provide a
+benchmark platform for the existing cine CMR reconstruction approaches to
+promote advances in this area of research. </span><!--EndFragment-->
+          <style> <!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:等线;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 953122042 22 0 262159 0;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:"\@DengXian";
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 953122042 22 0 262159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-parent:"";
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	line-height:130%;
+	mso-pagination:none;
+	layout-grid-mode:char;
+	font-size:11.0pt;
+	font-family:DengXian;
+	mso-ascii-font-family:DengXian;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:DengXian;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:DengXian;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:#333333;
+	mso-font-kerning:1.0pt;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:11.0pt;
+	mso-ansi-font-size:11.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:DengXian;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:#333333;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	line-height:130%;
+	layout-grid-mode:char;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+--> </style>
+        </p>
+      </div>
+    </section>
+    <section class="u-clearfix u-white u-section-3" id="sec-e375">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-custom-font u-font-arial u-text u-text-default u-text-1">Annotation</h3>
+        <p class="u-align-justify u-custom-font u-font-arial u-text u-text-default u-text-grey-60 u-text-2">Radiologists' scoring according to the Likert score system will be performed on the op 5 participant groups in regard to the image overall the quality, artifacts, sharpness and contrast-to-noise ratio using the ground truth as the reference.&nbsp;&nbsp;<!--EndFragment--><!--EndFragment-->
+          <style> <!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:等线;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 953122042 22 0 262159 0;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:"\@DengXian";
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 953122042 22 0 262159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-parent:"";
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	line-height:130%;
+	mso-pagination:none;
+	layout-grid-mode:char;
+	font-size:11.0pt;
+	font-family:DengXian;
+	mso-ascii-font-family:DengXian;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:DengXian;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:DengXian;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:#333333;
+	mso-font-kerning:1.0pt;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:11.0pt;
+	mso-ansi-font-size:11.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:DengXian;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:#333333;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	line-height:130%;
+	layout-grid-mode:char;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+--> </style>
+          <style> <!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:等线;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 953122042 22 0 262159 0;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:"\@DengXian";
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 953122042 22 0 262159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-parent:"";
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	line-height:130%;
+	mso-pagination:none;
+	layout-grid-mode:char;
+	font-size:11.0pt;
+	font-family:DengXian;
+	mso-ascii-font-family:DengXian;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:DengXian;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:DengXian;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:#333333;
+	mso-font-kerning:1.0pt;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:11.0pt;
+	mso-ansi-font-size:11.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:DengXian;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:#333333;
+	mso-ligatures:none;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	line-height:130%;
+	layout-grid-mode:char;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+--> </style>
+        </p>
+        <p class="u-align-justify u-text u-text-default u-text-grey-60 u-text-3">Likert Scor​e </p>
+        <div class="u-table u-table-responsive u-table-1">
+          <table class="u-table-entity">
+            <colgroup>
+              <col width="31.2%">
+              <col width="68.8%">
+            </colgroup>
+            <tbody class="u-table-body">
+              <tr style="height: 55px;">
+                <td class="u-custom-font u-font-arial u-grey-10 u-table-cell u-text-grey-60 u-table-cell-1">4-point score</td>
+                <td class="u-custom-font u-font-arial u-grey-10 u-table-cell u-text-grey-60 u-table-cell-2">Grade</td>
+              </tr>
+              <tr style="height: 44px;">
+                <td class="u-custom-font u-font-arial u-table-cell u-text-grey-60">1</td>
+                <td class="u-custom-font u-font-arial u-table-cell u-text-grey-60">Excellent</td>
+              </tr>
+              <tr style="height: 69px;">
+                <td class="u-custom-font u-font-arial u-grey-10 u-table-cell u-text-grey-60 u-table-cell-5">2</td>
+                <td class="u-custom-font u-font-arial u-grey-10 u-table-cell u-text-grey-60 u-table-cell-6">More than adequate for diagnosis</td>
+              </tr>
+              <tr style="height: 44px;">
+                <td class="u-custom-font u-font-arial u-table-cell u-text-grey-60">3</td>
+                <td class="u-custom-font u-font-arial u-table-cell u-text-grey-60">Adequate for diagnosis</td>
+              </tr>
+              <tr style="height: 44px;">
+                <td class="u-custom-font u-font-arial u-grey-10 u-table-cell u-text-grey-60 u-table-cell-9">4</td>
+                <td class="u-custom-font u-font-arial u-grey-10 u-table-cell u-text-grey-60 u-table-cell-10">Non diagnostic</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </nav>
-      <img class="u-image u-image-contain u-image-default u-image-1" src="images/cmrlogo.jpeg" alt=""
-        data-image-width="614" data-image-height="550">
-    </div>
-  </header>
-  <section class="u-clearfix u-section-1" id="sec-9e79">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <img class="u-image u-image-default u-image-1"
-        src="images/ChengyanWang_computer_screen_cardiac_imaging_speed_up_network_d_12b01039-8a90-4deb-a1ed-2e8266ffe5d7.png"
-        alt="" data-image-width="1024" data-image-height="1024">
-      <img class="u-image u-image-default u-image-2"
-        src="images/ChengyanWang_A_doctor_is_scanning_a_patients_heart_using_magnet_d618a9ba-a3ae-4c64-9be0-9b68a6423848.png"
-        alt="" data-image-width="1024" data-image-height="1024">
-      <img class="u-image u-image-default u-image-3"
-        src="images/ChengyanWang_cardiac_imaging_mri_kspace_signal_processing_highl_196133d3-137c-4704-b1b1-b0feffc2c7df.png"
-        alt="" data-image-width="1024" data-image-height="1024">
-    </div>
-  </section>
-  <section class="u-clearfix u-section-2" id="sec-757c">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <h3 class="u-custom-font u-font-arial u-text u-text-default u-text-1">Task1: Cine reconstruction</h3>
-      <h3 class="u-custom-font u-font-arial u-text u-text-default u-text-2">Background</h3>
-      <p class="u-align-justify u-custom-font u-font-arial u-text u-text-default u-text-grey-60 u-text-3">Cine
-        is the current gold standard for the noninvasive evaluation of cardiac
-        functional parameters. Typically,&nbsp; cine
-        MRI is obtained by retrospective electrocardiography (ECG)-gated segmented
-        sequence since the full k-space cannot be obtained within one acquisition
-        window, where the segments of the entire k-space are read out over multiple
-        cardiac cycles. For patients with voluntary breath-holds or cardiac arrhythmia,
-        image degradation will occur during the long acquisition window&nbsp; because of motions, thus affecting the
-        image
-        quality. Accelerated cine MRI has the capability to address these limitations,
-        in which the k-space of all temporal phases can be filled up in a less R-R
-        interval and the cine images covering the entire left ventricle can be acquired
-        in a single breath-hold. It is also possible to perform “real-time” imaging by
-        accelerated reconstructions, therefore artifacts associated with respiratory
-        motion and arrhythmia can be largely reduced. This challenge aims to provide a
-        benchmark platform for the existing cine CMR reconstruction approaches to
-        promote advances in this area of research.
-        <!--EndFragment-->
-        <style>
-          <!--
-          /* Font Definitions */
-          @font-face {
-            font-family: "Cambria Math";
-            panose-1: 2 4 5 3 5 4 6 3 2 4;
-            mso-font-charset: 0;
-            mso-generic-font-family: roman;
-            mso-font-pitch: variable;
-            mso-font-signature: -536870145 1107305727 0 0 415 0;
-          }
-
-          @font-face {
-            font-family: DengXian;
-            panose-1: 2 1 6 0 3 1 1 1 1 1;
-            mso-font-alt: 等线;
-            mso-font-charset: 134;
-            mso-generic-font-family: auto;
-            mso-font-pitch: variable;
-            mso-font-signature: -1610612033 953122042 22 0 262159 0;
-          }
-
-          @font-face {
-            font-family: "\@等线";
-            panose-1: 2 1 6 0 3 1 1 1 1 1;
-            mso-font-alt: "\@DengXian";
-            mso-font-charset: 134;
-            mso-generic-font-family: auto;
-            mso-font-pitch: variable;
-            mso-font-signature: -1610612033 953122042 22 0 262159 0;
-          }
-
-          /* Style Definitions */
-          p.MsoNormal,
-          li.MsoNormal,
-          div.MsoNormal {
-            mso-style-unhide: no;
-            mso-style-parent: "";
-            margin-top: 3.0pt;
-            margin-right: 0cm;
-            margin-bottom: 3.0pt;
-            margin-left: 0cm;
-            line-height: 130%;
-            mso-pagination: none;
-            layout-grid-mode: char;
-            font-size: 11.0pt;
-            font-family: DengXian;
-            mso-ascii-font-family: DengXian;
-            mso-ascii-theme-font: minor-latin;
-            mso-fareast-font-family: DengXian;
-            mso-fareast-theme-font: minor-fareast;
-            mso-hansi-font-family: DengXian;
-            mso-hansi-theme-font: minor-latin;
-            mso-bidi-font-family: "Times New Roman";
-            mso-bidi-theme-font: minor-bidi;
-            color: #333333;
-            mso-font-kerning: 1.0pt;
-          }
-
-          .MsoChpDefault {
-            mso-style-type: export-only;
-            mso-default-props: yes;
-            font-size: 11.0pt;
-            mso-ansi-font-size: 11.0pt;
-            mso-bidi-font-size: 11.0pt;
-            font-family: DengXian;
-            mso-bidi-font-family: "Times New Roman";
-            mso-bidi-theme-font: minor-bidi;
-            color: #333333;
-          }
-
-          .MsoPapDefault {
-            mso-style-type: export-only;
-            margin-top: 3.0pt;
-            margin-right: 0cm;
-            margin-bottom: 3.0pt;
-            margin-left: 0cm;
-            line-height: 130%;
-            layout-grid-mode: char;
-          }
-
-          /* Page Definitions */
-          @page {
-            mso-page-border-surround-header: no;
-            mso-page-border-surround-footer: no;
-          }
-
-          @page WordSection1 {
-            size: 612.0pt 792.0pt;
-            margin: 72.0pt 90.0pt 72.0pt 90.0pt;
-            mso-header-margin: 36.0pt;
-            mso-footer-margin: 36.0pt;
-            mso-paper-source: 0;
-          }
-
-          div.WordSection1 {
-            page: WordSection1;
-          }
-          -->
-        </style>
-      </p>
-    </div>
-  </section>
-  <section class="u-clearfix u-section-3" id="sec-b88f">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <h3 class="u-custom-font u-font-arial u-text u-text-default u-text-1">Data</h3>
-      <p class="u-align-justify u-custom-font u-font-arial u-text u-text-grey-60 u-text-2">
-        <span style="font-weight: 700;">Scanner:</span> Siemens 3T MRI scanner (MAGNETOM Vida).&nbsp;<br>
-        <br>
-        <!--[if gte mso 9]><xml>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-4" id="sec-b88f">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-custom-font u-font-arial u-text u-text-default u-text-1">Data</h3>
+        <p class="u-align-justify u-custom-font u-font-arial u-text u-text-grey-60 u-text-2">
+          <span style="font-weight: 700;">Scanner:</span> Siemens 3T MRI scanner (MAGNETOM Vida).&nbsp;<br>
+          <br><!--[if gte mso 9]><xml>
  <w:WordDocument>
   <w:View>Normal</w:View>
   <w:Zoom>0</w:Zoom>
@@ -316,8 +426,7 @@
    <m:intLim m:val="subSup"></m:intLim>
    <m:naryLim m:val="undOvr"></m:naryLim>
   </m:mathPr></w:WordDocument>
-</xml><![endif]-->
-        <!--[if gte mso 9]><xml>
+</xml><![endif]--><!--[if gte mso 9]><xml>
  <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
   DefSemiHidden="false" DefQFormat="false" DefPriority="99"
   LatentStyleCount="376">
@@ -897,107 +1006,85 @@
    Name="Smart Link"></w:LsdException>
  </w:LatentStyles>
 </xml><![endif]-->
-        <style>
-          <!--
-          /* Font Definitions */
-          @font-face {
-            font-family: "Cambria Math";
-            panose-1: 2 4 5 3 5 4 6 3 2 4;
-            mso-font-charset: 0;
-            mso-generic-font-family: roman;
-            mso-font-pitch: variable;
-            mso-font-signature: -536870145 1107305727 0 0 415 0;
-          }
-
-          @font-face {
-            font-family: DengXian;
-            panose-1: 2 1 6 0 3 1 1 1 1 1;
-            mso-font-alt: 等线;
-            mso-font-charset: 134;
-            mso-generic-font-family: auto;
-            mso-font-pitch: variable;
-            mso-font-signature: -1610612033 953122042 22 0 262159 0;
-          }
-
-          @font-face {
-            font-family: "\@等线";
-            panose-1: 2 1 6 0 3 1 1 1 1 1;
-            mso-font-alt: "\@DengXian";
-            mso-font-charset: 134;
-            mso-generic-font-family: auto;
-            mso-font-pitch: variable;
-            mso-font-signature: -1610612033 953122042 22 0 262159 0;
-          }
-
-          /* Style Definitions */
-          p.MsoNormal,
-          li.MsoNormal,
-          div.MsoNormal {
-            mso-style-unhide: no;
-            mso-style-parent: "";
-            margin-top: 3.0pt;
-            margin-right: 0cm;
-            margin-bottom: 3.0pt;
-            margin-left: 0cm;
-            line-height: 130%;
-            mso-pagination: none;
-            layout-grid-mode: char;
-            font-size: 11.0pt;
-            font-family: DengXian;
-            mso-ascii-font-family: DengXian;
-            mso-ascii-theme-font: minor-latin;
-            mso-fareast-font-family: DengXian;
-            mso-fareast-theme-font: minor-fareast;
-            mso-hansi-font-family: DengXian;
-            mso-hansi-theme-font: minor-latin;
-            mso-bidi-font-family: "Times New Roman";
-            mso-bidi-theme-font: minor-bidi;
-            color: #333333;
-            mso-font-kerning: 1.0pt;
-          }
-
-          .MsoChpDefault {
-            mso-style-type: export-only;
-            mso-default-props: yes;
-            font-size: 11.0pt;
-            mso-ansi-font-size: 11.0pt;
-            mso-bidi-font-size: 11.0pt;
-            font-family: DengXian;
-            mso-bidi-font-family: "Times New Roman";
-            mso-bidi-theme-font: minor-bidi;
-            color: #333333;
-          }
-
-          .MsoPapDefault {
-            mso-style-type: export-only;
-            margin-top: 3.0pt;
-            margin-right: 0cm;
-            margin-bottom: 3.0pt;
-            margin-left: 0cm;
-            line-height: 130%;
-            layout-grid-mode: char;
-          }
-
-          /* Page Definitions */
-          @page {
-            mso-page-border-surround-header: no;
-            mso-page-border-surround-footer: no;
-          }
-
-          @page WordSection1 {
-            size: 612.0pt 792.0pt;
-            margin: 72.0pt 90.0pt 72.0pt 90.0pt;
-            mso-header-margin: 36.0pt;
-            mso-footer-margin: 36.0pt;
-            mso-paper-source: 0;
-          }
-
-          div.WordSection1 {
-            page: WordSection1;
-          }
-          -->
-        </style>
-        <!--[if gte mso 10]>
+          <style> <!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:等线;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 953122042 22 0 262159 0;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:"\@DengXian";
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 953122042 22 0 262159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-parent:"";
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	line-height:130%;
+	mso-pagination:none;
+	layout-grid-mode:char;
+	font-size:11.0pt;
+	font-family:DengXian;
+	mso-ascii-font-family:DengXian;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:DengXian;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:DengXian;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:#333333;
+	mso-font-kerning:1.0pt;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:11.0pt;
+	mso-ansi-font-size:11.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:DengXian;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:#333333;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	line-height:130%;
+	layout-grid-mode:char;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+--> </style><!--[if gte mso 10]>
 <style>
  /* Style Definitions */
  table.MsoNormalTable
@@ -1026,289 +1113,240 @@
 	color:#333333;
 	mso-font-kerning:1.0pt;}
 </style>
-<![endif]-->
-        <!--StartFragment-->
-        <span style="font-weight: 700;"> CMR acquisition:</span>&nbsp;We
-        follow the recommendations of CMR exams reported in the previous publication
-        (doi: 10.1007/s43657-02100018x, 10.1007/s43657-021-00018-x). We use the clinical
-        sequence ‘TrueFISP’ for CINE imaging. The collected imaging planes include
-        short-axis (SA) and two-chamber (2CH), three-chamber (3CH) and
-        four-chamber(4CH) long-axis (LA) views. Typically 5~10 slices are acquired for&nbsp; SA cine, while one slice is
-        acquired for
-        other views. The cardiac cycle is segmented into 15–25 phases with a temporal
-        resolution 50 ms. For this challenge, we only provide raw k-space data of the
-        SA and LA with all frames. Typical scan parameters: spatial resolution 2.0×2.0
-        mm2, slice thickness 8.0 mm, and slice gap 4.0 mm.<br>
-        <br>
-        <span style="font-weight: 700;">Pre-processing: <span style="font-weight: 400;">T</span>
-        </span>he
-        raw k-space data exported from the scanner will be processed and transformed to
-        HDF5 format. A readme file will be provided to describe the content and usage of
-        the data.&nbsp;
-        <!--EndFragment-->
-        <!--EndFragment-->
-        <style>
-          <!--
-          /* Font Definitions */
-          @font-face {
-            font-family: "Cambria Math";
-            panose-1: 2 4 5 3 5 4 6 3 2 4;
-            mso-font-charset: 0;
-            mso-generic-font-family: roman;
-            mso-font-pitch: variable;
-            mso-font-signature: -536870145 1107305727 0 0 415 0;
-          }
-
-          @font-face {
-            font-family: DengXian;
-            panose-1: 2 1 6 0 3 1 1 1 1 1;
-            mso-font-alt: 等线;
-            mso-font-charset: 134;
-            mso-generic-font-family: auto;
-            mso-font-pitch: variable;
-            mso-font-signature: -1610612033 953122042 22 0 262159 0;
-          }
-
-          @font-face {
-            font-family: "\@等线";
-            panose-1: 2 1 6 0 3 1 1 1 1 1;
-            mso-font-alt: "\@DengXian";
-            mso-font-charset: 134;
-            mso-generic-font-family: auto;
-            mso-font-pitch: variable;
-            mso-font-signature: -1610612033 953122042 22 0 262159 0;
-          }
-
-          /* Style Definitions */
-          p.MsoNormal,
-          li.MsoNormal,
-          div.MsoNormal {
-            mso-style-unhide: no;
-            mso-style-parent: "";
-            margin-top: 3.0pt;
-            margin-right: 0cm;
-            margin-bottom: 3.0pt;
-            margin-left: 0cm;
-            line-height: 130%;
-            mso-pagination: none;
-            layout-grid-mode: char;
-            font-size: 11.0pt;
-            font-family: DengXian;
-            mso-ascii-font-family: DengXian;
-            mso-ascii-theme-font: minor-latin;
-            mso-fareast-font-family: DengXian;
-            mso-fareast-theme-font: minor-fareast;
-            mso-hansi-font-family: DengXian;
-            mso-hansi-theme-font: minor-latin;
-            mso-bidi-font-family: "Times New Roman";
-            mso-bidi-theme-font: minor-bidi;
-            color: #333333;
-            mso-font-kerning: 1.0pt;
-          }
-
-          .MsoChpDefault {
-            mso-style-type: export-only;
-            mso-default-props: yes;
-            font-size: 11.0pt;
-            mso-ansi-font-size: 11.0pt;
-            mso-bidi-font-size: 11.0pt;
-            font-family: DengXian;
-            mso-bidi-font-family: "Times New Roman";
-            mso-bidi-theme-font: minor-bidi;
-            color: #333333;
-          }
-
-          .MsoPapDefault {
-            mso-style-type: export-only;
-            margin-top: 3.0pt;
-            margin-right: 0cm;
-            margin-bottom: 3.0pt;
-            margin-left: 0cm;
-            line-height: 130%;
-            layout-grid-mode: char;
-          }
-
-          /* Page Definitions */
-          @page {
-            mso-page-border-surround-header: no;
-            mso-page-border-surround-footer: no;
-          }
-
-          @page WordSection1 {
-            size: 612.0pt 792.0pt;
-            margin: 72.0pt 90.0pt 72.0pt 90.0pt;
-            mso-header-margin: 36.0pt;
-            mso-footer-margin: 36.0pt;
-            mso-paper-source: 0;
-          }
-
-          div.WordSection1 {
-            page: WordSection1;
-          }
-          -->
-        </style>
-        <style>
-          <!--
-          /* Font Definitions */
-          @font-face {
-            font-family: "Cambria Math";
-            panose-1: 2 4 5 3 5 4 6 3 2 4;
-            mso-font-charset: 0;
-            mso-generic-font-family: roman;
-            mso-font-pitch: variable;
-            mso-font-signature: -536870145 1107305727 0 0 415 0;
-          }
-
-          @font-face {
-            font-family: DengXian;
-            panose-1: 2 1 6 0 3 1 1 1 1 1;
-            mso-font-alt: 等线;
-            mso-font-charset: 134;
-            mso-generic-font-family: auto;
-            mso-font-pitch: variable;
-            mso-font-signature: -1610612033 953122042 22 0 262159 0;
-          }
-
-          @font-face {
-            font-family: "\@等线";
-            panose-1: 2 1 6 0 3 1 1 1 1 1;
-            mso-font-alt: "\@DengXian";
-            mso-font-charset: 134;
-            mso-generic-font-family: auto;
-            mso-font-pitch: variable;
-            mso-font-signature: -1610612033 953122042 22 0 262159 0;
-          }
-
-          /* Style Definitions */
-          p.MsoNormal,
-          li.MsoNormal,
-          div.MsoNormal {
-            mso-style-unhide: no;
-            mso-style-parent: "";
-            margin-top: 3.0pt;
-            margin-right: 0cm;
-            margin-bottom: 3.0pt;
-            margin-left: 0cm;
-            line-height: 130%;
-            mso-pagination: none;
-            layout-grid-mode: char;
-            font-size: 11.0pt;
-            font-family: DengXian;
-            mso-ascii-font-family: DengXian;
-            mso-ascii-theme-font: minor-latin;
-            mso-fareast-font-family: DengXian;
-            mso-fareast-theme-font: minor-fareast;
-            mso-hansi-font-family: DengXian;
-            mso-hansi-theme-font: minor-latin;
-            mso-bidi-font-family: "Times New Roman";
-            mso-bidi-theme-font: minor-bidi;
-            color: #333333;
-            mso-font-kerning: 1.0pt;
-          }
-
-          .MsoChpDefault {
-            mso-style-type: export-only;
-            mso-default-props: yes;
-            font-size: 11.0pt;
-            mso-ansi-font-size: 11.0pt;
-            mso-bidi-font-size: 11.0pt;
-            font-family: DengXian;
-            mso-bidi-font-family: "Times New Roman";
-            mso-bidi-theme-font: minor-bidi;
-            color: #333333;
-          }
-
-          .MsoPapDefault {
-            mso-style-type: export-only;
-            margin-top: 3.0pt;
-            margin-right: 0cm;
-            margin-bottom: 3.0pt;
-            margin-left: 0cm;
-            line-height: 130%;
-            layout-grid-mode: char;
-          }
-
-          /* Page Definitions */
-          @page {
-            mso-page-border-surround-header: no;
-            mso-page-border-surround-footer: no;
-          }
-
-          @page WordSection1 {
-            size: 612.0pt 792.0pt;
-            margin: 72.0pt 90.0pt 72.0pt 90.0pt;
-            mso-header-margin: 36.0pt;
-            mso-footer-margin: 36.0pt;
-            mso-paper-source: 0;
-          }
-
-          div.WordSection1 {
-            page: WordSection1;
-          }
-          -->
-        </style>
+<![endif]--><!--StartFragment-->
+          <span style="font-weight: 700;"> CMR acquisition:</span>&nbsp;We
+follow the recommendations of CMR exams reported in the previous publication
+(doi: 10.1007/s43657-02100018x, 10.1007/s43657-021-00018-x). We use the clinical
+sequence ‘TrueFISP’ for CINE imaging. The collected imaging planes include
+short-axis (SA) and two-chamber (2CH), three-chamber (3CH) and
+four-chamber(4CH) long-axis (LA) views. Typically 5~10 slices are acquired for&nbsp; SA cine, while one slice is acquired for
+other views. The cardiac cycle is segmented into 15–25 phases with a temporal
+resolution 50 ms. For this challenge, we only provide raw k-space data of the
+SA and LA with all frames. Typical scan parameters: spatial resolution 2.0×2.0
+mm2, slice thickness 8.0 mm, and slice gap 4.0 mm.<br>
+          <br>
+          <span style="font-weight: 700;">Pre-processing: <span style="font-weight: 400;">T</span>
+          </span>he
+raw k-space data exported from the scanner will be processed and transformed to
+HDF5 format. A readme file will be provided to describe the content and usage of
+the data.&nbsp; <!--EndFragment--><!--EndFragment-->
+          <style> <!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:等线;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 953122042 22 0 262159 0;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:"\@DengXian";
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 953122042 22 0 262159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-parent:"";
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	line-height:130%;
+	mso-pagination:none;
+	layout-grid-mode:char;
+	font-size:11.0pt;
+	font-family:DengXian;
+	mso-ascii-font-family:DengXian;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:DengXian;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:DengXian;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:#333333;
+	mso-font-kerning:1.0pt;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:11.0pt;
+	mso-ansi-font-size:11.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:DengXian;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:#333333;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	line-height:130%;
+	layout-grid-mode:char;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+--> </style>
+          <style> <!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:等线;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 953122042 22 0 262159 0;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:"\@DengXian";
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 953122042 22 0 262159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-parent:"";
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	line-height:130%;
+	mso-pagination:none;
+	layout-grid-mode:char;
+	font-size:11.0pt;
+	font-family:DengXian;
+	mso-ascii-font-family:DengXian;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:DengXian;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:DengXian;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:#333333;
+	mso-font-kerning:1.0pt;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:11.0pt;
+	mso-ansi-font-size:11.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:DengXian;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:#333333;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	line-height:130%;
+	layout-grid-mode:char;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+--> </style>
+        </p>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-5" id="sec-c5bf">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-text u-text-default u-text-1">Metrics &amp; Ranking</h3>
+        <ul class="u-align-justify u-text u-text-grey-60 u-text-2">
+          <li><b>
+              <span style="font-weight: 400;">Metrics:&nbsp;</span></b>PSNR,
+SSIM, RMSE and Radiologists' scoring
+          </li>
+          <li><b>
+              <span style="font-weight: 400;">Ranking method:&nbsp;</span></b>We
+will use a two-stage evaluation, where quantitative metrics will be used to
+select the top 5 submissions. These finalists will then be sent to radiologists
+to determine the winners. We use the SSIM as our quantitative image quality index for ranking submissions prior to
+submission to clinical radiologists. The final ranking will be decided based on
+the weighting of the quantitative metrics and the qualitative scoring. <span style="font-weight: 700;">Participating
+teams are required to submit docker containers and process all the cases in the
+test set. </span>For the cases without valid output, we will assign it to the lowest
+value of metric.
+          </li>
+          <li>PSNR,
+SSIM and RMSE are commonly used metric and proven valid in previous challenges.</li>
+        </ul>
+        <h3 class="u-text u-text-default u-text-3">Submission</h3>
+        <p class="u-align-justify u-text u-text-grey-60 u-text-4">The submission instructions will be released on the<a href="https://www.synapse.org/#!Synapse:syn51386469/wiki/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-2-base u-btn-1"> Synapse</a> platform.<br>
+        </p>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-custom-color-6 u-footer u-footer" id="sec-e835"><div class="u-clearfix u-sheet u-sheet-1">
+        <img class="u-image u-image-contain u-image-default u-image-1" src="images/FDU-removebg-preview1.png" alt="" data-image-width="274" data-image-height="262">
+        <p class="u-align-left u-text u-text-default u-text-1">Contact us:<br>
+        </p>
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2" src="images/1.png" alt="" data-image-width="200" data-image-height="200">
+        <a href="mailto:CMRxRecon@outlook.com" class="u-active-none u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-top-left-radius-0 u-top-right-radius-0 u-btn-1">CMRxRecon@outlook.com</a>
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-3" src="images/twitter.png" alt="" data-image-width="200" data-image-height="200">
+        <a href="https://twitter.com/CMRxRecon" class="u-active-none u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-text-body-alt-color u-top-left-radius-0 u-top-right-radius-0 u-btn-2">CMRxRecon</a>
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-4" src="images/hongkongpolytecnic1-removebg-preview.png" alt="" data-image-width="223" data-image-height="226">
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-5" src="images/utd-removebg-preview.png" alt="" data-image-width="225" data-image-height="225">
+        <img class="u-image u-image-contain u-image-default u-image-6" src="images/IC-removebg-preview.png" alt="" data-image-width="494" data-image-height="186">
+        <a href="https://www.synapse.org/#!Synapse:syn51386469/wiki/" class="u-active-none u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-top-left-radius-0 u-top-right-radius-0 u-btn-3">Synapse Link</a>
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-7" src="images/image27.png" alt="" data-image-width="123" data-image-height="132">
+        <img class="u-image u-image-contain u-image-default u-image-8" src="images/ZS-removebg-preview.png" alt="" data-image-width="402" data-image-height="162">
+        <img class="u-image u-image-contain u-image-default u-image-9" src="images/simens-removebg-preview.png" alt="" data-image-width="450" data-image-height="112">
+        <img class="u-image u-image-contain u-image-default u-image-10" src="images/pp-removebg-preview.png" alt="" data-image-width="453" data-image-height="551">
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Website Templates</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
       </p>
-    </div>
-  </section>
-  <section class="u-clearfix u-section-4" id="sec-c5bf">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <h3 class="u-text u-text-default u-text-1">Metrics &amp; Ranking</h3>
-      <ul class="u-align-justify u-text u-text-grey-60 u-text-2">
-        <li><b>
-            <span style="font-weight: 400;">Metrics:&nbsp;</span></b>PSNR,
-          SSIM, RMSE and Radiologists' scoring
-        </li>
-        <li><b>
-            <span style="font-weight: 400;">Ranking method:&nbsp;</span></b>We
-          will use a two-stage evaluation, where quantitative metrics will be used to
-          select the top 5 submissions. These finalists will then be sent to radiologists
-          to determine the winners. We use the SSIM as our quantitative image quality index for ranking submissions
-          prior to
-          submission to clinical radiologists. The final ranking will be decided based on
-          the weighting of the quantitative metrics and the qualitative scoring. Participating
-          teams are required to submit docker containers and process all the cases in the
-          test set. For the cases without valid output, we will assign it to the lowest
-          value of metric.
-        </li>
-        <li>PSNR,
-          SSIM and RMSE are commonly used metric and proven valid in previous challenges.</li>
-      </ul>
-      <h3 class="u-text u-text-default u-text-3">Submission</h3>
-      <p class="u-align-justify u-text u-text-grey-60 u-text-4">The submission instructions will be released on the<a
-          href="https://www.synapse.org/#!Synapse:syn51386469/wiki/"
-          class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">
-          Synapse</a> platform.<br>
-      </p>
-    </div>
-  </section>
-
-
-  <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-e835">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <p class="u-align-left u-text u-text-default u-text-1">Contact us:<br>
-      </p>
-      <a href="mailto:CMRxRecon@outlook.com"
-        class="u-active-none u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-top-left-radius-0 u-top-right-radius-0 u-btn-1">CMRxRecon@outlook.com</a>
-      <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="images/1.png" alt=""
-        data-image-width="200" data-image-height="200">
-      <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2" src="images/twitter.png"
-        alt="" data-image-width="200" data-image-height="200">
-      <a href="https://twitter.com/CMRxRecon"
-        class="u-active-none u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-text-body-alt-color u-top-left-radius-0 u-top-right-radius-0 u-btn-2">CMRxRecon</a>
-    </div>
-  </footer>
-  <section class="u-backlink u-clearfix u-grey-80">
-    <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-      <span>Website Templates</span>
-    </a>
-    <p class="u-text">
-      <span>created with</span>
-    </p>
-    <a class="u-link" href="" target="_blank">
-      <span>Website Builder Software</span>
-    </a>.
-  </section>
-
-</body>
-
-</html>
+      <a class="u-link" href="" target="_blank">
+        <span>Website Builder Software</span>
+      </a>. 
+    </section>
+  
+</body></html>
