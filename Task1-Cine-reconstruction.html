@@ -21,11 +21,13 @@
 
 
 
-	<script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": ""
-}</script>
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Organization",
+			"name": ""
+		}
+	</script>
 	<meta name="theme-color" content="#478ac9">
 	<meta property="og:title" content="Task1 Cine reconstruction">
 	<meta property="og:type" content="website">
@@ -169,8 +171,8 @@
 		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
 			<h3 class="u-custom-font u-font-arial u-text u-text-default u-text-grey-80 u-text-1">Task1: Cine
 				reconstruction</h3>
-			<img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/2023-04-273.48.381.png"
-				alt="" data-image-width="2450" data-image-height="838">
+			<img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/12.png" alt=""
+				data-image-width="5124" data-image-height="1760">
 		</div>
 	</section>
 	<section class="u-clearfix u-section-2" id="sec-757c">
@@ -189,8 +191,8 @@
 				possible to perform “real-time” imaging by further accelerated reconstructions, therefore artifacts
 				associated with respiratory motion and arrhythmia can be largely reduced.<b> This challenge aims to
 					establish a platform for fast cine reconstruction and provide a benchmark multi-view dataset that
-					enables the broad research community to promote advances in this area of
-					research.</b><!--EndFragment-->
+					enables the broad research community to promote advances in this area of research.</b>
+				<!--EndFragment-->
 				<style>
 					<!--
 					/* Font Definitions */
@@ -295,31 +297,34 @@
 		</div>
 	</section>
 	<section class="u-clearfix u-section-3" id="sec-b88f">
-		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+		<div class="u-clearfix u-sheet u-sheet-1">
 			<h3 class="u-custom-font u-font-arial u-text u-text-default u-text-grey-80 u-text-1">Data</h3>
-			<p class="u-align-justify u-custom-font u-font-arial u-text u-text-grey-60 u-text-2">
-				<span style="font-weight: 700;"> Scanner:</span> Siemens 3T MRI scanner (MAGNETOM Vida).&nbsp;<br>
-				<br>
-				<span style="font-weight: 700;"></span>
-				<span style="font-weight: 700;">I</span><b>mage acquisition:</b>&nbsp;&nbsp;We followed the
+			<p class="u-align-justify u-text u-text-2">
+				<span style="font-weight: 700;"> Scanner:</span> Siemens 3T MRI scanner (MAGNETOM Vida).&nbsp;
+			</p>
+			<p class="u-align-justify u-text u-text-3">
+				<span style="font-weight: 700;"></span> <b>Image acquisition:</b>&nbsp;&nbsp;We followed the
 				recommendations of CMR imaging reported in the previous publication (<a
 					href="https://link.springer.com/article/10.1007/s43657-021-00018-x"
-					class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-60 u-btn-1">doi:
-					<span style="text-decoration: underline !important;">10.1007/s43657-02100018x,
+					class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-60 u-btn-1">
+					<span style="font-size: 1rem;"></span>
+					<span style="text-decoration: underline !important;">doi: 10.1007/s43657-02100018x,
 						10.1007/s43657-021-00018-x</span>
 				</a>[w.c.y.1]&nbsp;). <b>The ‘TrueFISP’ readout was used for CINE acquisition. The collected imaging
 					include short-axis (SA), two-chamber (2CH), three-chamber (3CH) and four-chamber(4CH) long-axis (LA)
 					views.</b> Typically 5~10 slices were acquired for&nbsp; SA cine, while a single slice was acquired
 				for the other views. The cardiac cycle was segmented into 12–25 phases with a temporal resolution 50 ms.
 				For this challenge, we provided raw k-space data of both SA (multi-slices) and LA (multi-views). Typical
-				scan parameters: spatial resolution 2.0×2.0 mm2, slice thickness 8.0 mm, and slice gap 4.0 mm.&nbsp;<br>
-				<br><b>Pre-processing: </b>The raw k-space data exported from the scanner will be pre-processed and
-				transformed to .mat format (MATLAB). The data were compressed to 10 virtual coils (Zhang et. al MRM
-				2013;69(2):571-82.) for standardization and to save storages. The image quality is highly consistent
-				before and after coil compression. The partial Fourier data was filled up using POCS algorithm (provided
-				by michael.voelker@mr-bavaria.de). We will provide a README file that describes the content of the data
-				and how to use it. <b>Taking Long axis (Lax) cine as an example, the format of data is as
-					follows:</b>&nbsp;<br>
+				scan parameters: spatial resolution 2.0×2.0 mm2, slice thickness 8.0 mm, and slice gap 4.0 mm.&nbsp;
+			</p>
+			<p class="u-align-justify u-custom-font u-font-arial u-text u-text-grey-60 u-text-4">
+				<span style="font-weight: 700;"></span><b>Pre-processing: </b>The raw k-space data exported from the
+				scanner will be pre-processed and transformed to .mat format (MATLAB). The data were compressed to 10
+				virtual coils (Zhang et. al MRM 2013;69(2):571-82.) for standardization and to save storages. The image
+				quality is highly consistent before and after coil compression. The partial Fourier data was filled up
+				using POCS algorithm (provided by michael.voelker@mr-bavaria.de). We will provide a README file that
+				describes the content of the data and how to use it. <b>Taking Long axis (Lax) cine as an example, the
+					format of data is as follows:</b>&nbsp;<br>
 				<br><b>1. Multi-coil data</b><b>Data:&nbsp;</b>
 				<br><b>Data: cine_lax.mat</b>&nbsp;<br># cine with long axis view (including 3ch, 2ch and 4ch views
 				within the sz dimension).&nbsp;<br># variable name:&nbsp;&nbsp;<br># "kspace_full" for full
@@ -362,8 +367,9 @@
 				<br><b>Data: cine_lax_label.nii.gz</b>&nbsp;<br># manual annotated labels in nifti format
 				# label 1 for left ventricle&nbsp;<br># label 2 for myocardium
 				# label 3 for right ventricle&nbsp;&nbsp;<br>-sx: matrix size in x-axis&nbsp;<br>-sy: matrix size in
-				y-axis&nbsp;<br>-sz: slice number (short axis view); slice group (long axis
-				view)&nbsp;<br><!--EndFragment--><!--EndFragment-->
+				y-axis&nbsp;<br>-sz: slice number (short axis view); slice group (long axis view)&nbsp;<br>
+				<!--EndFragment-->
+				<!--EndFragment-->
 				<style>
 					<!--
 					/* Font Definitions */
@@ -573,7 +579,9 @@
 			<p class="u-align-justify u-custom-font u-font-arial u-text u-text-default u-text-grey-60 u-text-2">
 				Radiologists' scoring according to the Likert score system will be performed on the top 5 participant
 				groups in regard to the image overall the quality, artifacts, sharpness and contrast-to-noise ratio
-				using the ground truth as the reference.&nbsp;&nbsp;<!--EndFragment--><!--EndFragment-->
+				using the ground truth as the reference.&nbsp;&nbsp;
+				<!--EndFragment-->
+				<!--EndFragment-->
 				<style>
 					<!--
 					/* Font Definitions */
@@ -848,7 +856,8 @@
 		<div class="u-clearfix u-sheet u-sheet-1">
 			<p class="u-align-left u-text u-text-black u-text-default u-text-1">
 				<a class="u-active-none u-border-0 u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-1"
-					href="http://cmr.miccai.cloud/">CMRxMotion&nbsp;<br>
+					href="http://cmr.miccai.cloud/">
+					<span style="text-decoration: underline !important;">CMRxMotion</span>&nbsp;<br>
 					<span style="font-size: 1rem;">(</span>
 					<span style="font-size: 1rem;">Previous Challenge)</span>
 					<br>
@@ -884,7 +893,7 @@
 						fill="currentColor" p-id="3528"></path>
 				</svg></span>
 			<a href="mailto:CMRxMotion@163.com"
-				class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-3">CMRxMotion@163.com</a><span
+				class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-90 u-btn-3">CMRxMotion@163.com</a><span
 				class="u-icon u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice"
 					viewBox="0 0 1024 1024" style="">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-48bf"></use>
@@ -947,7 +956,7 @@
 						fill="currentColor" p-id="6889"></path>
 				</svg></span>
 			<a href="https://www.synapse.org/#!Synapse:syn28503327/wiki/617822"
-				class="u-active-none u-border-0 u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-7">Synapse
+				class="u-active-none u-border-0 u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-90 u-btn-7">Synapse
 				Link</a><span class="u-icon u-icon-7"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice"
 					viewBox="0 0 1024 1024" style="">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f8e3"></use>
@@ -970,7 +979,6 @@
 			<p class="u-align-center u-text u-text-grey-80 u-text-7">© Copyright 2023 CMRxRecon Working Group</p>
 		</div>
 	</footer>
-
 
 </body>
 

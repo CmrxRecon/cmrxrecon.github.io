@@ -42373,14 +42373,14 @@ a.u-link.u-text-hover-grey-90:hover {
   background-image: none;
   font-size: 0.875rem;
   text-decoration: underline !important;
-  margin: -24px 65px 0 auto;
+  margin: -22px 65px 0 auto;
   padding: 0;
 }
 
 .u-footer .u-icon-7 {
   width: 30px;
   height: 30px;
-  margin: -14px auto 0 0;
+  margin: -16px auto 0 0;
   padding: 0;
 }
 
@@ -42502,12 +42502,11 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 
   .u-footer .u-btn-7 {
-    margin-top: -24px;
     margin-right: 0;
   }
 
   .u-footer .u-icon-7 {
-    margin-top: -14px;
+    margin-top: -16px;
   }
 
   .u-footer .u-text-6 {

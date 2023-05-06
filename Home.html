@@ -26,6 +26,7 @@
 
 
 
+
   <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -206,9 +207,9 @@
           </div>
         </div>
       </div>
-      <p class="u-align-left u-text u-text-grey-60 u-text-2">
-        <span style="font-weight: 700; font-size: 1rem;">Welcome to the Cardiac MRI Reconstruction Challenge
-          (CMRxRecon)！</span>
+      <p class="u-align-justify u-text u-text-grey-60 u-text-2">
+        <span style="font-weight: 700; font-size: 1rem;" class="u-text-palette-2-base">Welcome to the Cardiac MRI
+          Reconstruction Challenge (CMRxRecon)！</span>
         <span style="font-size: 1rem;">&nbsp;</span>
         <br>
         <span
@@ -298,20 +299,19 @@ div.WordSection1
     </div>
   </section>
   <section class="u-clearfix u-white u-section-4" id="sec-b272">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+    <div class="u-clearfix u-sheet u-sheet-1">
       <h3 class="u-text u-text-default u-text-grey-80 u-text-1">Background</h3>
       <p class="u-align-justify u-text u-text-default u-text-grey-60 u-text-2">Cardiac magnetic resonance imaging (CMR)
         has become an important imaging modality for diagnosing cardiac disease due to its superior soft tissue contrast
         and non-invasiveness.&nbsp;<b>However, an inherent drawback of MRI is that the imaging speed is particularly
-          slow, which will cause discomfort to patients and intr​oduce motion artifacts into images.&nbsp;</b>&nbsp;CMR
-        image reconstruction from highly under-sampled k-space (raw data) has become a hot topic in recent
-        years.&nbsp;<br>So far, a large number of AI-based image reconstruction algorithms have shown the potential to
-        improve imaging performance through highly under-sampling data. <b>However, the field of CMR reconstruction
-          still lacks public, standardized, and high-quality datasets. </b>To date, NYU Langone Health has released
-        'fastMRI' dataset, containing multi-channel knee and brain MRI raw data. However, these images are inadequate
-        for 3D+1D (time domain) applications in cardiac imaging. The goal of establishing the 'CMRxRecon' dataset is to
-        provide a platform that enables the broad research community to participate in this important
-        work.&nbsp;&nbsp;<br>
+          slow, which will cause discomfort to patients and intr​oduce motion artifacts into images.&nbsp;</b>CMR image
+        reconstruction from highly under-sampled k-space (raw data) has become a hot topic in recent years.&nbsp;<br>So
+        far, a large number of AI-based image reconstruction algorithms have shown the potential to improve imaging
+        performance through highly under-sampling data. <b>However, the field of CMR reconstruction still lacks public,
+          standardized, and high-quality datasets. </b>To date, NYU Langone Health has released 'fastMRI' dataset,
+        containing multi-channel knee and brain MRI raw data. However, these images are inadequate for 3D+1D (time
+        domain) applications in cardiac imaging. The goal of establishing the 'CMRxRecon' dataset is to provide a
+        platform that enables the broad research community to participate in this important work.&nbsp;&nbsp;<br>
       </p>
     </div>
   </section>
@@ -334,8 +334,8 @@ div.WordSection1
             class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-60 u-btn-2">Task
             1. Accelerated cine Construction</a></b>
       </p>
-      <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/2023-04-273.48.381.png" alt=""
-        data-image-width="2450" data-image-height="838">
+      <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/12.png" alt=""
+        data-image-width="5124" data-image-height="1760">
       <p class="u-align-justify u-text u-text-default u-text-grey-60 u-text-4">2) <a href="Task2-T1-T2-mapping.html"
           class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-60 u-btn-3">Accelerated
           T1/T2 mapping</a>
@@ -350,46 +350,11 @@ div.WordSection1
             class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-60 u-btn-4">Task
             2. Accelerated T1/T2 Mapping</a></b>
       </p>
-      <img class="u-image u-image-default u-preserve-proportions u-image-2" src="images/2023-04-273.49.261.png" alt=""
-        data-image-width="2656" data-image-height="1060">
+      <img class="u-image u-image-default u-preserve-proportions u-image-2" src="images/2.png" alt=""
+        data-image-width="5784" data-image-height="2227">
     </div>
   </section>
-  <section class="u-clearfix u-white u-section-6" id="sec-afbc">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <h3 class="u-text u-text-default u-text-grey-80 u-text-1">CMR&nbsp;acquisition desgin</h3>
-      <p class="u-align-justify u-text u-text-default u-text-grey-60 u-text-2">
-        <span style="font-weight: 700;"> Scanner:&nbsp;</span>Siemens 3T MRI scanner (MAGNETOM Vida).
-      </p>
-      <p class="u-align-justify u-text u-text-default u-text-grey-60 u-text-3">
-        <span style="font-weight: 700;"></span><b>Image acquisition:</b>&nbsp;We followed the recommendations of CMR
-        imaging reported in the previous publication (doi: <a
-          href="https://link.springer.com/article/10.1007/s43657-021-00018-x"
-          class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-60 u-btn-1">
-          <span style="text-decoration: underline !important;">10.1007/s43657-02100018x,
-            10.1007/s43657-021-00018-x[w.c.y.1]&nbsp;</span>
-        </a>).&nbsp;&nbsp;<br>1)&nbsp;<b>Cine: The ‘TrueFISP’ readout was used for CINE acquisition. The collected
-          imaging include short-axis (SA), two-chamber (2CH), three-chamber (3CH) and four-chamber(4CH) long-axis (LA)
-          views.</b> Typically 5~10 slices were acquired for&nbsp; SA cine, while a single slice was acquired for the
-        other views. The cardiac cycle was segmented into 12–25 phases with a temporal resolution 50 ms. For this
-        challenge, we provided raw k-space data of both SA (multi-slices) and LA
-        (multi-views).&nbsp;&nbsp;<br>2)&nbsp;<b>Mapping: T1 mapping was conducted using a modified look-locker
-          inversion recovery (MOLLI) sequence, which acquired nine images with different T1 weightings (using the
-          4-(1)-3-(1)-2 scheme). </b>T1 mapping was performed in SA view only. Signals were collected at the end of the
-        diastole with ECG triggering. <b>T2 mapping was performed using T2-prepared (T2prep)-FLASH sequence with three
-          T2 weightings in SA view, with identical geometrical parameters as used in T1 mapping.</b>&nbsp;<br>
-      </p>
-      <p class="u-align-justify u-text u-text-default u-text-grey-60 u-text-4">
-        <span style="font-weight: 700;"></span>
-        <span style="font-weight: 700;">Pre-processing:&nbsp;</span> The raw k-space data exported from the scanner will
-        be pre-processed and transformed to .mat format (MATLAB). The data were compressed to 10 virtual coils (Zhang
-        et. al MRM 2013;69(2):571-82.) for standardization and to save storages. The image quality is highly consistent
-        before and after coil compression. The partial Fourier data was filled up using POCS algorithm (provided by
-        michael.voelker@mr-bavaria.de). We will provide a README file that describes the content of the data and how to
-        use it.&nbsp;
-      </p>
-    </div>
-  </section>
-  <section class="u-clearfix u-section-7" id="sec-2cd6">
+  <section class="u-clearfix u-section-6" id="sec-2cd6">
     <div class="u-clearfix u-sheet u-sheet-1">
       <h3 class="u-text u-text-default u-text-grey-80 u-text-1">Awards</h3>
       <p class="u-text u-text-grey-60 u-text-2"> We will provide monetary awards for <b>
@@ -557,7 +522,57 @@ div.WordSection1
       </ul>
     </div>
   </section>
-  <!-- <section class="u-clearfix u-white u-section-8" id="sec-0895">
+  <section class="u-clearfix u-white u-section-7" id="sec-6966">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <h3 class="u-text u-text-default u-text-grey-80 u-text-1">Study Cohort</h3>
+      <p class="u-align-justify u-text u-text-default u-text-grey-60 u-text-2">
+        <span style="font-weight: 700;"></span>A total of 300 healthy volunteers from a single center were included in
+        this study.&nbsp;<br>The released dataset include 120 training data, 40 validation data and 140 test
+        data.<br>Training data include fully sampled k-space data, auto-calibration lines (ACS, 24 lines) and
+        reconstructed images in .m format will be provided. <br>Validation data include under-sampled k-space data with
+        acceleration factors of 4, 8 and 10, sampling mask, and auto-calibration lines (ACS, 24 lines) will be provided.
+        We will withhold the ground truth images of the validation set. <br>Test data include under-sampled k-space data
+        with acceleration factors of 4, 8 and 10, sampling mask, auto-calibration lines (ACS, 24 lines) and
+        reconstructed images. The test data will not be available to the participants.
+      </p>
+    </div>
+  </section>
+  <section class="u-clearfix u-white u-section-8" id="sec-afbc">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <h3 class="u-text u-text-default u-text-grey-80 u-text-1">CMR&nbsp;acquisition desgin</h3>
+      <p class="u-align-justify u-text u-text-default u-text-grey-60 u-text-2">
+        <span style="font-weight: 700;"> Scanner:&nbsp;</span>Siemens 3T MRI scanner (MAGNETOM Vida).
+      </p>
+      <p class="u-align-justify u-text u-text-default u-text-grey-60 u-text-3">
+        <span style="font-weight: 700;"></span><b>Image acquisition:</b>&nbsp;We followed the recommendations of CMR
+        imaging reported in the previous publication (doi: <a
+          href="https://link.springer.com/article/10.1007/s43657-021-00018-x"
+          class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-60 u-btn-1">
+          <span style="text-decoration: underline !important;">10.1007/s43657-02100018x,
+            10.1007/s43657-021-00018-x[w.c.y.1]&nbsp;</span>
+        </a>).&nbsp;&nbsp;<br>1)&nbsp;<b>Cine: The ‘TrueFISP’ readout was used for CINE acquisition. The collected
+          imaging include short-axis (SA), two-chamber (2CH), three-chamber (3CH) and four-chamber(4CH) long-axis (LA)
+          views.</b> Typically 5~10 slices were acquired for&nbsp; SA cine, while a single slice was acquired for the
+        other views. The cardiac cycle was segmented into 12–25 phases with a temporal resolution 50 ms. For this
+        challenge, we provided raw k-space data of both SA (multi-slices) and LA
+        (multi-views).&nbsp;&nbsp;<br>2)&nbsp;<b>Mapping: T1 mapping was conducted using a modified look-locker
+          inversion recovery (MOLLI) sequence, which acquired nine images with different T1 weightings (using the
+          4-(1)-3-(1)-2 scheme). </b>T1 mapping was performed in SA view only. Signals were collected at the end of the
+        diastole with ECG triggering. <b>T2 mapping was performed using T2-prepared (T2prep)-FLASH sequence with three
+          T2 weightings in SA view, with identical geometrical parameters as used in T1 mapping.</b>&nbsp;<br>
+      </p>
+      <p class="u-align-justify u-text u-text-default u-text-grey-60 u-text-4">
+        <span style="font-weight: 700;"></span>
+        <span style="font-weight: 700;">Pre-processing:&nbsp;</span> The raw k-space data exported from the scanner will
+        be pre-processed and transformed to .mat format (MATLAB). The data were compressed to 10 virtual coils (Zhang
+        et. al MRM 2013;69(2):571-82.) for standardization and to save storages. The image quality is highly consistent
+        before and after coil compression. The partial Fourier data was filled up using POCS algorithm (provided by
+        michael.voelker@mr-bavaria.de). We will provide a README file that describes the content of the data and how to
+        use it.&nbsp;
+      </p>
+    </div>
+  </section>
+  <!-- <section class="u-clearfix u-white u-section-9" id="sec-0895">
     <div class="u-clearfix u-sheet u-sheet-1">
       <h3 class="u-text u-text-default u-text-grey-80 u-text-1">Principal of participation</h3>
       <div class="u-expanded-width u-table u-table-responsive u-table-1">
@@ -577,7 +592,8 @@ div.WordSection1
                 Duty</td>
               <td
                 class="u-align-center u-border-1 u-border-grey-60 u-custom-font u-font-arial u-grey-10 u-table-cell u-text-grey-60 u-table-cell-3">
-                Rights</td>
+                <b>Rights</b>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -606,28 +622,29 @@ div.WordSection1
                 Docker container and workshop paper submitted</td>
               <td
                 class="u-align-center u-border-1 u-border-grey-60 u-custom-font u-font-arial u-table-cell u-text-grey-60">
-                Workshop paper received for publication</td>
+                Workshop paper accepted for publication after peer review</td>
+              <td
+                class="u-align-center u-border-1 u-border-grey-60 u-custom-font u-font-arial u-table-cell u-text-grey-60">
+                Training code submitted to Docker and agree to share the code</td>
               <td
                 class="u-align-center u-border-1 u-border-grey-60 u-custom-font u-font-arial u-table-cell u-text-grey-60">
                 Top 3 winners</td>
               <td
                 class="u-align-center u-border-1 u-border-grey-60 u-custom-font u-font-arial u-table-cell u-text-grey-60">
-                Training code shared to docker</td>
-              <td
-                class="u-align-center u-border-1 u-border-grey-60 u-custom-font u-font-arial u-table-cell u-text-grey-60">
                 Training data download</td>
               <td
                 class="u-align-center u-border-1 u-border-grey-60 u-custom-font u-font-arial u-table-cell u-text-grey-60">
-                Validation and test data provided after the embargo period (3 months)；executable demo code provided</td>
+                Gold standard validation and test data provided after the embargo period (3 months)；executable demo code
+                provided</td>
               <td
                 class="u-align-center u-border-1 u-border-grey-60 u-custom-font u-font-arial u-table-cell u-text-grey-60">
-                Source PI reconstruction code provided&nbsp;</td>
+                Source reconstruction code provided&nbsp;</td>
+              <td
+                class="u-align-center u-border-1 u-border-grey-60 u-custom-font u-font-arial u-table-cell u-text-grey-60">
+                Access to enter into the code sharing pool</td>
               <td
                 class="u-align-center u-border-1 u-border-grey-60 u-custom-font u-font-arial u-table-cell u-text-grey-60">
                 Summary paper involved</td>
-              <td
-                class="u-align-center u-border-1 u-border-grey-60 u-custom-font u-font-arial u-table-cell u-text-grey-60">
-                Top ranking code shared</td>
             </tr>
             <tr style="height: 34px;">
               <td
@@ -701,39 +718,55 @@ div.WordSection1
             </tr>
           </tbody>
         </table>
-      </div><span class="u-file-icon u-icon u-icon-1"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-2"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-3"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-4"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-5"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-6"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-7"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-8"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-9"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-10"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-11"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-12"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-13"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-14"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-15"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-16"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-17"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-18"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-19"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-20"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-21"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-22"><img src="images/3502463.png" alt=""></span><span
-        class="u-file-icon u-icon u-icon-23"><img src="images/3502463.png" alt=""></span>
+      </div><span class="u-file-icon u-icon u-text-custom-color-1 u-icon-1"><img src="images/3502463-5c040923.png"
+          alt=""></span><span class="u-file-icon u-icon u-text-palette-3-base u-icon-2"><img
+          src="images/3502463-8db0a12b.png" alt=""></span><span
+        class="u-file-icon u-icon u-text-palette-3-base u-icon-3"><img src="images/3502463-8db0a12b.png"
+          alt=""></span><span class="u-file-icon u-icon u-text-palette-3-base u-icon-4"><img
+          src="images/3502463-8db0a12b.png" alt=""></span><span
+        class="u-file-icon u-icon u-text-palette-3-base u-icon-5"><img src="images/3502463-8db0a12b.png"
+          alt=""></span><span class="u-file-icon u-icon u-text-palette-3-base u-icon-6"><img
+          src="images/3502463-8db0a12b.png" alt=""></span><span
+        class="u-file-icon u-icon u-text-palette-3-base u-icon-7"><img src="images/3502463-8db0a12b.png"
+          alt=""></span><span class="u-file-icon u-icon u-text-custom-color-1 u-icon-8"><img
+          src="images/3502463-5c040923.png" alt=""></span><span
+        class="u-file-icon u-icon u-text-palette-1-base u-icon-9"><img src="images/3502463-7c245ce4.png"
+          alt=""></span><span class="u-file-icon u-icon u-text-palette-1-base u-icon-10"><img
+          src="images/3502463-7c245ce4.png" alt=""></span><span
+        class="u-file-icon u-icon u-text-palette-3-base u-icon-11"><img src="images/3502463-8db0a12b.png"
+          alt=""></span><span class="u-file-icon u-icon u-text-palette-3-base u-icon-12"><img
+          src="images/3502463-8db0a12b.png" alt=""></span><span
+        class="u-file-icon u-icon u-text-palette-3-base u-icon-13"><img src="images/3502463-8db0a12b.png"
+          alt=""></span><span class="u-file-icon u-icon u-text-palette-1-base u-icon-14"><img
+          src="images/3502463-7c245ce4.png" alt=""></span><span
+        class="u-file-icon u-icon u-text-palette-1-base u-icon-15"><img src="images/3502463-7c245ce4.png"
+          alt=""></span><span class="u-file-icon u-icon u-text-palette-1-base u-icon-16"><img
+          src="images/3502463-7c245ce4.png" alt=""></span><span
+        class="u-file-icon u-icon u-text-custom-color-1 u-icon-17"><img src="images/3502463-5c040923.png"
+          alt=""></span><span class="u-file-icon u-icon u-text-palette-1-base u-icon-18"><img
+          src="images/3502463-7c245ce4.png" alt=""></span><span
+        class="u-file-icon u-icon u-text-palette-1-base u-icon-19"><img src="images/3502463-7c245ce4.png"
+          alt=""></span><span class="u-file-icon u-icon u-text-palette-1-base u-icon-20"><img
+          src="images/3502463-7c245ce4.png" alt=""></span><span
+        class="u-file-icon u-icon u-text-palette-1-base u-icon-21"><img src="images/3502463-7c245ce4.png"
+          alt=""></span><span class="u-file-icon u-icon u-text-palette-1-base u-icon-22"><img
+          src="images/3502463-7c245ce4.png" alt=""></span><span
+        class="u-file-icon u-icon u-text-palette-1-base u-icon-23"><img src="images/3502463-7c245ce4.png" alt=""></span>
     </div>
   </section> -->
-  <section class="u-clearfix u-section-9" id="sec-4d5e">
+  <section class="u-clearfix u-section-10" id="sec-4d5e">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
       <h3 class="u-text u-text-default u-text-grey-80 u-text-1">Principal of participation</h3>
       <img class="u-expanded-width u-image u-image-contain u-image-default u-preserve-proportions u-image-1"
-        src="images/2023-05-061.20.14.png" alt="" data-image-width="2298" data-image-height="1068">
+        src="images/2023-05-065.28.32.png" alt="" data-image-width="2292" data-image-height="1110">
+      <p class="u-align-justify u-text u-text-grey-60 u-text-2">
+        <span style="font-weight: 700;"></span>
+        <span style="font-weight: 700;"></span>Note: Participants are not required to upload the complete training code.
+        But teams willing to upload the original training code will be automatically entered into the code sharing pool.
+      </p><span class="u-file-icon u-icon u-icon-1"><img src="images/6897039.png" alt=""></span>
     </div>
   </section>
-  <section class="u-clearfix u-white u-section-10" id="sec-6aef">
+  <section class="u-clearfix u-white u-section-11" id="sec-6aef">
     <div class="u-clearfix u-sheet u-sheet-1">
       <h3 class="u-text u-text-default u-text-grey-80 u-text-1">Timeline</h3>
       <p class="u-text u-text-grey-60 u-text-2"> The schedule of the challenge is as follows. All deadline are Pacific
@@ -746,43 +779,42 @@ div.WordSection1
           </colgroup>
           <tbody class="u-table-body">
             <tr style="height: 55px;">
-              <td class="u-grey-10 u-table-cell u-text-palette-2-base u-table-cell-1">01 - May</td>
-              <td class="u-grey-10 u-table-cell u-text-palette-2-base u-table-cell-2">website opens for registration
-              </td>
+              <td class="u-custom-font u-grey-10 u-table-cell u-text-font u-text-grey-50 u-table-cell-1">01 - May</td>
+              <td class="u-grey-10 u-table-cell u-text-grey-50 u-table-cell-2">website opens for registration</td>
             </tr>
             <tr style="height: 55px;">
               <td class="u-table-cell u-text-palette-2-base u-table-cell-3">10 - May</td>
               <td class="u-table-cell u-text-palette-2-base u-table-cell-4">release training and validation data</td>
             </tr>
             <tr style="height: 55px;">
-              <td class="u-grey-10 u-table-cell u-text-grey-60 u-table-cell-5">20 - May</td>
-              <td class="u-grey-10 u-table-cell u-text-grey-60 u-table-cell-6"> release demo code for PI reconstruction
+              <td class="u-grey-10 u-table-cell u-text-grey-90 u-table-cell-5">20 - May</td>
+              <td class="u-grey-10 u-table-cell u-text-grey-90 u-table-cell-6"> release demo code for PI reconstruction
               </td>
             </tr>
             <tr style="height: 55px;">
-              <td class="u-table-cell u-text-grey-60">30 - May</td>
-              <td class="u-table-cell u-text-grey-60"> submission system opens for validation </td>
+              <td class="u-table-cell u-text-grey-80">30 - May</td>
+              <td class="u-table-cell u-text-grey-80"> submission system opens for validation </td>
             </tr>
             <tr style="height: 55px;">
-              <td class="u-grey-10 u-table-cell u-text-grey-60 u-table-cell-9">01 - Jun</td>
-              <td class="u-grey-10 u-table-cell u-text-grey-60 u-table-cell-10">release test data </td>
+              <td class="u-grey-10 u-table-cell u-text-grey-90 u-table-cell-9">01 - Jun</td>
+              <td class="u-grey-10 u-table-cell u-text-grey-90 u-table-cell-10">release test data </td>
             </tr>
             <tr style="height: 55px;">
-              <td class="u-table-cell u-text-grey-60">15 - Jul</td>
-              <td class="u-table-cell u-text-grey-60"> submission system opens for test set</td>
+              <td class="u-table-cell u-text-grey-80">15 - Jul</td>
+              <td class="u-table-cell u-text-grey-80"> submission system opens for test set</td>
             </tr>
             <tr style="height: 55px;">
-              <td class="u-grey-10 u-table-cell u-text-grey-60 u-table-cell-13">01 - Aug</td>
-              <td class="u-grey-10 u-table-cell u-text-grey-60 u-table-cell-14">deadline for STACOM placeholder paper
+              <td class="u-grey-10 u-table-cell u-text-grey-90 u-table-cell-13">01 - Aug</td>
+              <td class="u-grey-10 u-table-cell u-text-grey-90 u-table-cell-14">deadline for STACOM placeholder paper
                 submission</td>
             </tr>
             <tr style="height: 55px;">
-              <td class="u-table-cell u-text-grey-60">05 - Sep</td>
-              <td class="u-table-cell u-text-grey-60">registration and docker submission deadline</td>
+              <td class="u-table-cell u-text-grey-80">05 - Sep</td>
+              <td class="u-table-cell u-text-grey-80">registration and docker submission deadline</td>
             </tr>
             <tr style="height: 55px;">
-              <td class="u-grey-10 u-table-cell u-text-grey-60 u-table-cell-17">12 - Oct</td>
-              <td class="u-grey-10 u-table-cell u-text-grey-60 u-table-cell-18">release final results</td>
+              <td class="u-grey-10 u-table-cell u-text-grey-90 u-table-cell-17">12 - Oct</td>
+              <td class="u-grey-10 u-table-cell u-text-grey-90 u-table-cell-18">release final results</td>
             </tr>
           </tbody>
         </table>
@@ -795,7 +827,8 @@ div.WordSection1
     <div class="u-clearfix u-sheet u-sheet-1">
       <p class="u-align-left u-text u-text-black u-text-default u-text-1">
         <a class="u-active-none u-border-0 u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-1"
-          href="http://cmr.miccai.cloud/">CMRxMotion&nbsp;<br>
+          href="http://cmr.miccai.cloud/">
+          <span style="text-decoration: underline !important;">CMRxMotion</span>&nbsp;<br>
           <span style="font-size: 1rem;">(</span>
           <span style="font-size: 1rem;">Previous Challenge)</span>
           <br>
@@ -830,7 +863,7 @@ div.WordSection1
             fill="currentColor" p-id="3528"></path>
         </svg></span>
       <a href="mailto:CMRxMotion@163.com"
-        class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-3">CMRxMotion@163.com</a><span
+        class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-90 u-btn-3">CMRxMotion@163.com</a><span
         class="u-icon u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 1024 1024"
           style="">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-48bf"></use>
@@ -892,7 +925,7 @@ div.WordSection1
             fill="currentColor" p-id="6889"></path>
         </svg></span>
       <a href="https://www.synapse.org/#!Synapse:syn28503327/wiki/617822"
-        class="u-active-none u-border-0 u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-7">Synapse
+        class="u-active-none u-border-0 u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-90 u-btn-7">Synapse
         Link</a><span class="u-icon u-icon-7"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice"
           viewBox="0 0 1024 1024" style="">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f8e3"></use>

@@ -1,5 +1,5 @@
 .u-section-1 .u-sheet-1 {
-  min-height: 482px;
+  min-height: 502px;
 }
 
 .u-section-1 .u-text-1 {
@@ -8,8 +8,8 @@
 }
 
 .u-section-1 .u-image-1 {
-  width: 1030px;
-  height: 352px;
+  width: 1082px;
+  height: 372px;
   margin: 29px auto;
 }
 
@@ -20,7 +20,7 @@
 
   .u-section-1 .u-image-1 {
     width: 940px;
-    height: 321px;
+    height: 323px;
   }
 }
 
@@ -31,13 +31,13 @@
 
   .u-section-1 .u-image-1 {
     width: 720px;
-    height: 246px;
+    height: 247px;
   }
 }
 
 @media (max-width: 767px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 315px;
+    min-height: 304px;
   }
 
   .u-section-1 .u-image-1 {
@@ -48,7 +48,7 @@
 
 @media (max-width: 575px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 246px;
+    min-height: 166px;
   }
 
   .u-section-1 .u-image-1 {
@@ -56,7 +56,7 @@
     height: 116px;
   }
 }.u-section-2 .u-sheet-1 {
-  min-height: 342px;
+  min-height: 454px;
 }
 
 .u-section-2 .u-text-1 {
@@ -66,13 +66,8 @@
 
 .u-section-2 .u-text-2 {
   font-size: 1rem;
+  line-height: 3;
   margin: 25px 0;
-}
-
-@media (max-width: 1199px) {
-  .u-section-2 .u-text-2 {
-    line-height: 2;
-  }
 }
 
 @media (max-width: 575px) {
@@ -80,17 +75,21 @@
     min-height: 570px;
   }
 }.u-section-3 .u-sheet-1 {
-  min-height: 2519px;
+  min-height: 3655px;
 }
 
 .u-section-3 .u-text-1 {
   font-weight: 400;
-  margin: 26px auto 0 0;
+  margin: 25px auto 0 0;
 }
 
 .u-section-3 .u-text-2 {
-  font-size: 1rem;
-  margin: 24px 0 26px;
+  margin: 25px 0 0;
+}
+
+.u-section-3 .u-text-3 {
+  line-height: 3;
+  margin: 14px 0 0;
 }
 
 .u-section-3 .u-btn-1 {
@@ -99,16 +98,16 @@
   padding: 0;
 }
 
-@media (max-width: 1199px) {
-  .u-section-3 .u-text-2 {
-    line-height: 2;
-  }
+.u-section-3 .u-text-4 {
+  font-size: 1rem;
+  line-height: 3;
+  margin: 14px 0 46px;
 } .u-section-4 {
   background-image: none;
 }
 
 .u-section-4 .u-sheet-1 {
-  min-height: 507px;
+  min-height: 547px;
 }
 
 .u-section-4 .u-text-1 {
@@ -118,7 +117,7 @@
 
 .u-section-4 .u-text-2 {
   font-size: 1rem;
-  line-height: 1.8;
+  line-height: 3;
   margin: 25px 0 0;
 }
 
@@ -187,7 +186,7 @@
 
 .u-section-5 .u-text-2 {
   font-size: 1rem;
-  line-height: 1.8;
+  line-height: 3;
   margin: 23px 0 0;
 }
 
