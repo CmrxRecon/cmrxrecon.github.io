@@ -21,13 +21,11 @@
 
 
 
-	<script type="application/ld+json">
-		{
-			"@context": "http://schema.org",
-			"@type": "Organization",
-			"name": ""
-		}
-	</script>
+	<script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
 	<meta name="theme-color" content="#478ac9">
 	<meta property="og:title" content="Task1 Cine reconstruction">
 	<meta property="og:type" content="website">
@@ -87,16 +85,16 @@
 				<ul class="u-border-2 u-border-white u-nav u-unstyled u-v-spacing-13 u-nav-2">
 				  <li class="u-nav-item"><a
 					  class="u-active-palette-2-base u-button-style u-hover-grey-10 u-nav-link u-white"
-					  href="STACOM.html">STACOM workshop paper</a>
-				  </li>
-				  <li class="u-nav-item"><a
-					  class="u-active-palette-2-base u-button-style u-hover-grey-10 u-nav-link u-white"
-					  href="Validation.html">Validatoin submission</a>
+					  href="Validation.html">Validation submission</a>
 				  </li>
 				  <li class="u-nav-item"><a
 					class="u-active-palette-2-base u-button-style u-hover-grey-10 u-nav-link u-white"
 					href="Testing.html">Testing submission</a>
 				</li>
+				<li class="u-nav-item"><a
+				  class="u-active-palette-2-base u-button-style u-hover-grey-10 u-nav-link u-white"
+				  href="STACOM.html">STACOM workshop paper</a>
+			  </li>
 				</ul>
 			  </div>
 			</li>
@@ -168,7 +166,7 @@
 	  </div>
 	</header>
 	<section class="u-clearfix u-section-1" id="sec-9e79">
-		<div class="u-clearfix u-sheet u-sheet-1">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
 			<h3 class="u-custom-font u-font-arial u-text u-text-default u-text-grey-80 u-text-1">Task1: Cine
 				reconstruction</h3>
 			<img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/2023-04-273.48.381.png"
@@ -191,8 +189,8 @@
 				possible to perform “real-time” imaging by further accelerated reconstructions, therefore artifacts
 				associated with respiratory motion and arrhythmia can be largely reduced.<b> This challenge aims to
 					establish a platform for fast cine reconstruction and provide a benchmark multi-view dataset that
-					enables the broad research community to promote advances in this area of research.</b>
-				<!--EndFragment-->
+					enables the broad research community to promote advances in this area of
+					research.</b><!--EndFragment-->
 				<style>
 					<!--
 					/* Font Definitions */
@@ -297,7 +295,7 @@
 		</div>
 	</section>
 	<section class="u-clearfix u-section-3" id="sec-b88f">
-		<div class="u-clearfix u-sheet u-sheet-1">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
 			<h3 class="u-custom-font u-font-arial u-text u-text-default u-text-grey-80 u-text-1">Data</h3>
 			<p class="u-align-justify u-custom-font u-font-arial u-text u-text-grey-60 u-text-2">
 				<span style="font-weight: 700;"> Scanner:</span> Siemens 3T MRI scanner (MAGNETOM Vida).&nbsp;<br>
@@ -323,8 +321,8 @@
 				and how to use it. <b>Taking Long axis (Lax) cine as an example, the format of data is as
 					follows:</b>&nbsp;<br>
 				<br><b>1. Multi-coil data</b><b>Data:&nbsp;</b>
-				<br><b>&nbsp; &nbsp; cine_lax.mat</b>&nbsp;<br># cine with long axis view (including 3ch, 2ch and 4ch
-				views within the sz dimension).&nbsp;<br># variable name:&nbsp;&nbsp;<br># "kspace_full" for full
+				<br><b>Data: cine_lax.mat</b>&nbsp;<br># cine with long axis view (including 3ch, 2ch and 4ch views
+				within the sz dimension).&nbsp;<br># variable name:&nbsp;&nbsp;<br># "kspace_full" for full
 				kspace&nbsp;<br># "kspace_sub04" for subsampling factor of 4 along ky&nbsp;<br># "kspace_sub08" for
 				subsampling factor of 8 along ky&nbsp;<br># "kspace_sub10" for subsampling factor of 10 along
 				ky&nbsp;<br># data type: complex kspace data with the dimensions (kx,ky,kc,kz,t), the central 24 lines
@@ -332,41 +330,40 @@
 				(kspace)&nbsp;<br>-ky: matrix size in y-axis (kspace)&nbsp;<br>-sc: coil array number (compressed to
 				10)&nbsp;<br>-sz: slice number (short axis view); slice group (long axis, i.e., 3ch, 2ch and 4ch
 				views)&nbsp;<br>-t: time frame&nbsp; &nbsp;<br>
-				<br><b></b>&nbsp; &nbsp;&nbsp;<b>Data: cine_lax_mask.mat</b>&nbsp;<br># subsampling mask with long axis
-				view (including 3ch, 2ch and 4ch views within the sz dimension), the mask is fixed among different sc,
-				sz and t.&nbsp;<br># variable name:&nbsp;&nbsp;<br># "mask04" for subsampling factor of 4 along
-				ky&nbsp;<br># "mask08" for subsampling factor of 8 along ky&nbsp;<br># "mask10" for subsampling factor
-				of 10 along ky&nbsp;<br># data type: binary data with the dimensions (kx,ky), the central 24 lines (ky)
-				are always full sampled to be used as calibration lines&nbsp;<br>-kx: matrix size in x-axis
-				(kspace)&nbsp;<br>-ky: matrix size in y-axis (kspace)&nbsp; &nbsp;<br>
-				<br>
-				<br><b>2. Single-coil data</b><b>Data:&nbsp;</b>
-				<br>&nbsp; &nbsp;&nbsp;<b>cine_lax.mat</b>&nbsp;<br># cine with long axis view (including 3ch, 2ch and
-				4ch views within the sz dimension).&nbsp;<br># variable name:&nbsp;
-				# "kspace_single_full" for full kspace
-				# "kspace_single_sub04" for subsampling factor of 4 along ky&nbsp;<br># "kspace_single_sub08" for
-				subsampling factor of 8 along ky&nbsp;<br># "kspace_single_sub10" for subsampling factor of 10 along
-				ky&nbsp;<br># data type: complex kspace data with the dimensions (kx,ky,kz,t), the central 24 lines (ky)
-				are always full sampled to be used as calibration lines&nbsp;<br>-kx: matrix size in x-axis
-				(kspace)&nbsp;<br>-ky: matrix size in y-axis (kspace)&nbsp;<br>-sz: slice number (short axis view);
-				slice group (long axis, i.e., 3ch, 2ch and 4ch views)&nbsp;<br>-t: time frame&nbsp; &nbsp;<br>
-				<br>&nbsp; &nbsp;&nbsp;<b>Data: cine_lax_mask.mat</b>&nbsp;<br># subsampling mask with long axis view
-				(including 3ch, 2ch and 4ch views within the sz dimension), the mask is fixed among different sc, sz and
-				t.&nbsp;<br># variable name:&nbsp;<br># "mask04" for subsampling factor of 4 along ky&nbsp;<br>#
+				<br><b></b><b>Data: cine_lax_mask.mat</b>&nbsp;<br># subsampling mask with long axis view (including
+				3ch, 2ch and 4ch views within the sz dimension), the mask is fixed among different sc, sz and
+				t.&nbsp;<br># variable name:&nbsp;&nbsp;<br># "mask04" for subsampling factor of 4 along ky&nbsp;<br>#
 				"mask08" for subsampling factor of 8 along ky&nbsp;<br># "mask10" for subsampling factor of 10 along
 				ky&nbsp;<br># data type: binary data with the dimensions (kx,ky), the central 24 lines (ky) are always
 				full sampled to be used as calibration lines&nbsp;<br>-kx: matrix size in x-axis (kspace)&nbsp;<br>-ky:
 				matrix size in y-axis (kspace)&nbsp; &nbsp;<br>
-				<br>&nbsp; &nbsp;&nbsp;<b>Data: cine_lax_forlabel.nii.gz</b>&nbsp;<br># reconstructed images in nifti
-				format (for reference of manual annotation)&nbsp;<br>-sx: matrix size in x-axis<br>-sy: matrix size in
-				y-axis&nbsp;<br>-sz: slice number (short axis view); slice group (long axis view)&nbsp; &nbsp;<br>
-				<br>&nbsp; &nbsp;&nbsp;<b>Data: cine_lax_label.nii.gz</b>&nbsp;<br># manual annotated labels in nifti
-				format
+				<br>
+				<br><b>2. Single-coil data</b><b>Data:&nbsp;</b>
+				<br>
+				<span style="font-weight: 700;">Data:&nbsp;</span><b>cine_lax.mat</b>&nbsp;<br># cine with long axis
+				view (including 3ch, 2ch and 4ch views within the sz dimension).&nbsp;<br># variable
+				name:&nbsp;&nbsp;<br># "kspace_single_full" for full kspace&nbsp;<br># "kspace_single_sub04" for
+				subsampling factor of 4 along ky&nbsp;<br># "kspace_single_sub08" for subsampling factor of 8 along
+				ky&nbsp;<br># "kspace_single_sub10" for subsampling factor of 10 along ky&nbsp;<br># data type: complex
+				kspace data with the dimensions (kx,ky,kz,t), the central 24 lines (ky) are always full sampled to be
+				used as calibration lines&nbsp;<br>-kx: matrix size in x-axis (kspace)&nbsp;<br>-ky: matrix size in
+				y-axis (kspace)&nbsp;<br>-sz: slice number (short axis view); slice group (long axis, i.e., 3ch, 2ch and
+				4ch views)&nbsp;<br>-t: time frame&nbsp; &nbsp;<br>
+				<br><b>Data: cine_lax_mask.mat</b>&nbsp;<br># subsampling mask with long axis view (including 3ch, 2ch
+				and 4ch views within the sz dimension), the mask is fixed among different sc, sz and t.&nbsp;<br>#
+				variable name:&nbsp;<br># "mask04" for subsampling factor of 4 along ky&nbsp;<br># "mask08" for
+				subsampling factor of 8 along ky&nbsp;<br># "mask10" for subsampling factor of 10 along ky&nbsp;<br>#
+				data type: binary data with the dimensions (kx,ky), the central 24 lines (ky) are always full sampled to
+				be used as calibration lines&nbsp;<br>-kx: matrix size in x-axis (kspace)&nbsp;<br>-ky: matrix size in
+				y-axis (kspace)&nbsp; &nbsp;<br>
+				<br><b>Data: cine_lax_forlabel.nii.gz</b>&nbsp;<br># reconstructed images in nifti format (for reference
+				of manual annotation)&nbsp;<br>-sx: matrix size in x-axis<br>-sy: matrix size in y-axis&nbsp;<br>-sz:
+				slice number (short axis view); slice group (long axis view)&nbsp; &nbsp;<br>
+				<br><b>Data: cine_lax_label.nii.gz</b>&nbsp;<br># manual annotated labels in nifti format
 				# label 1 for left ventricle&nbsp;<br># label 2 for myocardium
 				# label 3 for right ventricle&nbsp;&nbsp;<br>-sx: matrix size in x-axis&nbsp;<br>-sy: matrix size in
-				y-axis&nbsp;<br>-sz: slice number (short axis view); slice group (long axis view)&nbsp;<br>
-				<!--EndFragment-->
-				<!--EndFragment-->
+				y-axis&nbsp;<br>-sz: slice number (short axis view); slice group (long axis
+				view)&nbsp;<br><!--EndFragment--><!--EndFragment-->
 				<style>
 					<!--
 					/* Font Definitions */
@@ -571,14 +568,12 @@
 		</div>
 	</section>
 	<section class="u-clearfix u-white u-section-4" id="sec-e375">
-		<div class="u-clearfix u-sheet u-sheet-1">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
 			<h3 class="u-custom-font u-font-arial u-text u-text-default u-text-grey-80 u-text-1">Annotation</h3>
 			<p class="u-align-justify u-custom-font u-font-arial u-text u-text-default u-text-grey-60 u-text-2">
 				Radiologists' scoring according to the Likert score system will be performed on the top 5 participant
 				groups in regard to the image overall the quality, artifacts, sharpness and contrast-to-noise ratio
-				using the ground truth as the reference.&nbsp;&nbsp;
-				<!--EndFragment-->
-				<!--EndFragment-->
+				using the ground truth as the reference.&nbsp;&nbsp;<!--EndFragment--><!--EndFragment-->
 				<style>
 					<!--
 					/* Font Definitions */
@@ -823,7 +818,7 @@
 		</div>
 	</section>
 	<section class="u-clearfix u-section-5" id="sec-c5bf">
-		<div class="u-clearfix u-sheet u-sheet-1">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
 			<h3 class="u-text u-text-default u-text-grey-80 u-text-1">Metrics &amp; Ranking</h3>
 			<ul class="u-align-justify u-text u-text-grey-60 u-text-2">
 				<li><b>
@@ -972,9 +967,10 @@
 			<div
 				class="u-border-1 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-opacity u-opacity-30 u-line-1">
 			</div>
-			<p class="u-align-center u-text u-text-grey-80 u-text-7">© Copyright 2023 Fudan University</p>
+			<p class="u-align-center u-text u-text-grey-80 u-text-7">© Copyright 2023 CMRxRecon Working Group</p>
 		</div>
 	</footer>
+
 
 </body>
 
