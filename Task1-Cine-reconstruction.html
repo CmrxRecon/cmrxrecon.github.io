@@ -7,9 +7,9 @@
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<title>CMRxRecon</title>
+  	<link rel="icon" type="image/svg+xml" href="images/cmrlogo.jpeg" />
 	<link rel="stylesheet" href="nicepage.css" media="screen">
 	<link rel="stylesheet" href="Task1-Cine-reconstruction.css" media="screen">
-	<link rel="icon" type="image/svg+xml" href="images/cmrlogo.jpeg" />
 	<script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
 	<script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
 	<meta name="generator" content="Nicepage 5.8.2, nicepage.com">
@@ -33,7 +33,6 @@
 	<meta property="og:type" content="website">
 	<meta data-intl-tel-input-cdn-path="intlTelInput/">
 </head>
-
 <body class="u-body u-white u-xl-mode" data-lang="en">
 	<header class="u-clearfix u-header u-header" id="sec-2bff">
 	  <div class="u-clearfix u-sheet u-sheet-1">
@@ -90,13 +89,13 @@
 					  href="Validation.html">Validation submission</a>
 				  </li>
 				  <li class="u-nav-item"><a
+					  class="u-active-palette-2-base u-button-style u-hover-grey-10 u-nav-link u-white"
+					  href="Testing.html">Testing submission</a>
+				  </li>
+				  <li class="u-nav-item"><a
 					class="u-active-palette-2-base u-button-style u-hover-grey-10 u-nav-link u-white"
-					href="Testing.html">Testing submission</a>
+					href="STACOM.html">STACOM workshop paper</a>
 				</li>
-				<li class="u-nav-item"><a
-				  class="u-active-palette-2-base u-button-style u-hover-grey-10 u-nav-link u-white"
-				  href="STACOM.html">STACOM workshop paper</a>
-			  </li>
 				</ul>
 			  </div>
 			</li>
@@ -117,17 +116,16 @@
 		  <div class="u-custom-menu u-nav-container-collapse">
 			<div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
 			  <div class="u-inner-container-layout u-sidenav-overflow">
-				<ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3">
+				<ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-4">
 				  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
 				  </li>
 				  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">Task</a>
 					<div class="u-nav-popup">
-					  <ul class="u-border-2 u-border-white u-nav u-unstyled u-v-spacing-13 u-nav-4">
+					  <ul class="u-border-2 u-border-white u-nav u-unstyled u-v-spacing-13 u-nav-5">
 						<li class="u-nav-item"><a class="u-button-style u-nav-link"
-							href="Task1-Cine-reconstruction.html">Task1 Cine reconstruction</a>
+							href="Task1-Cine-reconstruction.html">Task1: Cine reconstruction</a>
 						</li>
-						<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Task2-T1-T2-mapping.html">Task2
-							T1 T2 mapping</a>
+						<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Task2-T1-T2-mapping.html">Task2: T1/T2 mapping</a>
 						</li>
 					  </ul>
 					</div>
@@ -137,13 +135,13 @@
 				  </li>
 				  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">Submission</a>
 					<div class="u-nav-popup">
-					  <ul class="u-border-2 u-border-white u-nav u-unstyled u-v-spacing-13 u-nav-4">
+					  <ul class="u-border-2 u-border-white u-nav u-unstyled u-v-spacing-13 u-nav-5">
 						<li class="u-nav-item"><a class="u-button-style u-nav-link"
-							href="STACOM.html">STACOM workshop paper</a>
+							href="Validation.html">Validation submission</a>
 						</li>
-						<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Validation.html">Validation Submission</a>
+						<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Testing.html">Testing submission</a>
 						</li>
-						<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Testing.html">Testing Submission</a>
+						<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Testing.html">STACOM workshop paper</a>
 						</li>
 					  </ul>
 					</div>
@@ -184,10 +182,11 @@
 				the current gold standard for the noninvasive evaluation of cardiac functional parameters. Typically,
 				cine MRI is obtained by electrocardiography (ECG) -gated segmented sequence since the full k-space
 				cannot be obtained within one acquisition window, where the segments of the entire k-space are read out
-				over multiple cardiac cycles. For patients with voluntary breath-holds or cardiac arrhythmia, image
-				degradation will occur during the long acquisition time and motions, thus affecting the further
-				diagnosis. Accelerated cine MRI has the capability to address these limitations, in which the k-space of
-				all temporal phases can be filled up in a less cardiac cycles and in a single breath-hold. It is also
+				over multiple cardiac cycles. For patients with <span class="u-text-palette-2-base"
+					style="font-weight: 700;">voluntary breath-holds</span> or cardiac arrhythmia, image degradation
+				will occur during the long acquisition time and motions, thus affecting the further diagnosis.
+				Accelerated cine MRI has the capability to address these limitations, in which the k-space of all
+				temporal phases can be filled up in a fewer cardiac cycles and in a single breath-hold. It is also
 				possible to perform “real-time” imaging by further accelerated reconstructions, therefore artifacts
 				associated with respiratory motion and arrhythmia can be largely reduced.<b> This challenge aims to
 					establish a platform for fast cine reconstruction and provide a benchmark multi-view dataset that
@@ -303,14 +302,15 @@
 				<span style="font-weight: 700;"> Scanner:</span> Siemens 3T MRI scanner (MAGNETOM Vida).&nbsp;
 			</p>
 			<p class="u-align-justify u-text u-text-3">
-				<span style="font-weight: 700;"></span> <b>Image acquisition:</b>&nbsp;&nbsp;We followed the
+				<span style="font-weight: 700;"></span>
+				<span style="font-weight: 700;"> I</span><b>mage acquisition:</b>&nbsp;&nbsp;We followed the
 				recommendations of CMR imaging reported in the previous publication (<a
 					href="https://link.springer.com/article/10.1007/s43657-021-00018-x"
 					class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-60 u-btn-1">
-					<span style="font-size: 1rem;"></span>
-					<span style="text-decoration: underline !important;">doi: 10.1007/s43657-02100018x,
+					<span style="font-size: 1rem;">d</span>
+					<span style="text-decoration: underline !important;">oi: 10.1007/s43657-02100018x,
 						10.1007/s43657-021-00018-x</span>
-				</a>[w.c.y.1]&nbsp;). <b>The ‘TrueFISP’ readout was used for CINE acquisition. The collected imaging
+				</a>[w.c.y.1]&nbsp;). <b>The ‘TrueFISP’ readout was used for CINE acquisition. The collected images
 					include short-axis (SA), two-chamber (2CH), three-chamber (3CH) and four-chamber(4CH) long-axis (LA)
 					views.</b> Typically 5~10 slices were acquired for&nbsp; SA cine, while a single slice was acquired
 				for the other views. The cardiac cycle was segmented into 12–25 phases with a temporal resolution 50 ms.
@@ -325,7 +325,7 @@
 				using POCS algorithm (provided by michael.voelker@mr-bavaria.de). We will provide a README file that
 				describes the content of the data and how to use it. <b>Taking Long axis (Lax) cine as an example, the
 					format of data is as follows:</b>&nbsp;<br>
-				<br><b>1. Multi-coil data</b><b>Data:&nbsp;</b>
+				<br><b>1. Multi-coil data</b><b>:&nbsp;</b>
 				<br><b>Data: cine_lax.mat</b>&nbsp;<br># cine with long axis view (including 3ch, 2ch and 4ch views
 				within the sz dimension).&nbsp;<br># variable name:&nbsp;&nbsp;<br># "kspace_full" for full
 				kspace&nbsp;<br># "kspace_sub04" for subsampling factor of 4 along ky&nbsp;<br># "kspace_sub08" for
@@ -343,7 +343,7 @@
 				full sampled to be used as calibration lines&nbsp;<br>-kx: matrix size in x-axis (kspace)&nbsp;<br>-ky:
 				matrix size in y-axis (kspace)&nbsp; &nbsp;<br>
 				<br>
-				<br><b>2. Single-coil data</b><b>Data:&nbsp;</b>
+				<br><b>2. Single-coil data</b><b>:&nbsp;</b>
 				<br>
 				<span style="font-weight: 700;">Data:&nbsp;</span><b>cine_lax.mat</b>&nbsp;<br># cine with long axis
 				view (including 3ch, 2ch and 4ch views within the sz dimension).&nbsp;<br># variable
@@ -573,12 +573,31 @@
 			</p>
 		</div>
 	</section>
-	<section class="u-clearfix u-white u-section-4" id="sec-e375">
-		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+	<section class="u-clearfix u-section-4" id="sec-c5bf">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-text u-text-default u-text-grey-80 u-text-1">Metrics &amp; Ranking</h3>
+			<ul class="u-align-justify u-text u-text-grey-60 u-text-2">
+				<li><b>
+						<span style="font-weight: 400;"></span></b> Metrics:&nbsp;PSNR, SSIM, RMSE and Radiologists'
+					scoring&nbsp;&nbsp;
+				</li>
+				<li>Ranking method:&nbsp;We will use a two-stage evaluation, where quantitative metrics will be used to
+					select the top 5 submissions. These finalists will then be sent to radiologists to determine the
+					winners. We use the <b>SSIM</b> as our quantitative image quality index for ranking submissions
+					prior to the scoring by radiologists. The final ranking will be decided based on the weighting of
+					the quantitative metrics and the qualitative scoring. <b>Participating teams are required to submit
+						docker containers and process all the cases in the test set. </b>For the cases without valid
+					output, we will assign it to the lowest value of metric.&nbsp;
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="u-clearfix u-white u-section-5" id="sec-e375">
+		<div class="u-clearfix u-sheet u-sheet-1">
 			<h3 class="u-custom-font u-font-arial u-text u-text-default u-text-grey-80 u-text-1">Annotation</h3>
 			<p class="u-align-justify u-custom-font u-font-arial u-text u-text-default u-text-grey-60 u-text-2">
 				Radiologists' scoring according to the Likert score system will be performed on the top 5 participant
-				groups in regard to the image overall the quality, artifacts, sharpness and contrast-to-noise ratio
+				groups in regard to the images' overall the quality, artifacts, sharpness and contrast-to-noise ratio
 				using the ground truth as the reference.&nbsp;&nbsp;
 				<!--EndFragment-->
 				<!--EndFragment-->
@@ -823,28 +842,9 @@
 					</tbody>
 				</table>
 			</div>
-		</div>
-	</section>
-	<section class="u-clearfix u-section-5" id="sec-c5bf">
-		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-			<h3 class="u-text u-text-default u-text-grey-80 u-text-1">Metrics &amp; Ranking</h3>
-			<ul class="u-align-justify u-text u-text-grey-60 u-text-2">
-				<li><b>
-						<span style="font-weight: 400;"></span></b> Metrics:&nbsp;PSNR, SSIM, RMSE and Radiologists'
-					scoring&nbsp;&nbsp;
-				</li>
-				<li>Ranking method:&nbsp;We will use a two-stage evaluation, where quantitative metrics will be used to
-					select the top 5 submissions. These finalists will then be sent to radiologists to determine the
-					winners. We use the <b>SSIM</b> as our quantitative image quality index for ranking submissions
-					prior to submission to clinical radiologists. The final ranking will be decided based on the
-					weighting of the quantitative metrics and the qualitative scoring. <b>Participating teams are
-						required to submit docker containers and process all the cases in the test set. </b>For the
-					cases without valid output, we will assign it to the lowest value of metric.&nbsp;
-				</li>
-			</ul>
-			<h3 class="u-text u-text-default u-text-grey-80 u-text-3">Submission</h3>
-			<p class="u-align-justify u-text u-text-grey-60 u-text-4">The submission instructions will be released on
-				the<a href="https://www.synapse.org/#!Synapse:syn51386469/wiki/"
+			<h3 class="u-text u-text-default u-text-grey-80 u-text-4">Submission</h3>
+			<p class="u-text u-text-grey-60 u-text-5">The submission instructions will be released on the<a
+					href="https://www.synapse.org/#!Synapse:syn51386469/wiki/"
 					class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-2-base u-btn-1">
 					Synapse</a> platform.<br>
 			</p>
@@ -979,7 +979,6 @@
 			<p class="u-align-center u-text u-text-grey-80 u-text-7">© Copyright 2023 CMRxRecon Working Group</p>
 		</div>
 	</footer>
-
 </body>
 
 </html>
