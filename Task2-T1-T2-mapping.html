@@ -17,6 +17,8 @@
     
     
     
+    
+    
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -880,19 +882,8 @@ preparation time.<br>
           <br>
           <br>
           <br>
-          <br><b>Taking T1 mapping as an example, the format of data is as follows:</b>
-          <br><b>1. Multi-coil data</b><b>:&nbsp;</b>
-          <br><b>Data: T1map.mat</b>&nbsp;<br># mapping with short axis view (including several slices within the sz dimension).&nbsp;<br># variable name:&nbsp;&nbsp;<br># "kspace_full" for full kspace&nbsp;<br># "kspace_sub04" for subsampling factor of 4 along ky&nbsp;<br># "kspace_sub08" for subsampling factor of 8 along ky&nbsp;<br># "kspace_sub10" for subsampling factor of 10 along ky&nbsp;<br># data type: complex kspace data with the dimensions (kx,ky,kc,kz,w), the central 24 lines (ky) are always full sampled to be used as calibration lines&nbsp;<br>-kx: matrix size in x-axis (kspace)&nbsp;<br>-ky: matrix size in y-axis (kspace)&nbsp;<br>-sc: coil array number (compressed to 10)&nbsp;<br>-sz: slice number (short axis view)&nbsp;<br>-w: number of weighted images&nbsp; &nbsp;<br>
-          <br><b>Data: T1map_mask.mat</b>&nbsp;<br># subsampling mask with short axis view, the mask is fixed among different sc, sz and w.&nbsp;<br># variable name:&nbsp;&nbsp;<br># "mask04" for subsampling factor of 4 along ky&nbsp;<br># "mask08" for subsampling factor of 8 along ky&nbsp;<br># "mask10" for subsampling factor of 10 along ky&nbsp;<br># data type: binary data with the dimensions (kx,ky), the central 24 lines (ky) are always full sampled to be used as calibration lines&nbsp;<br>-kx: matrix size in x-axis (kspace)&nbsp;<br>-ky: matrix size in y-axis (kspace)&nbsp; &nbsp;<br>
-          <br><b>2. Single-coil data</b><b>:&nbsp;</b>
-          <br>
-          <span style="font-weight: 700;">Data:&nbsp;</span><b>T1map.mat</b>&nbsp;<br># mapping with short axis view (including several slices within the sz dimension).&nbsp;<br># variable name:&nbsp;&nbsp;<br># "kspace_single_full" for full kspace
-# "kspace_single_sub04" for subsampling factor of 4 along ky&nbsp;<br># "kspace_single_sub08" for subsampling factor of 8 along ky&nbsp;<br># "kspace_single_sub10" for subsampling factor of 10 along ky&nbsp;<br># data type: complex kspace data with the dimensions (kx,ky,kz,t), the central 24 lines (ky) are always full sampled to be used as calibration lines&nbsp;<br>-kx: matrix size in x-axis (kspace)&nbsp;<br>-ky: matrix size in y-axis (kspace)&nbsp;<br>-sz: slice number (short axis view)&nbsp;<br>-w: number of weighted images&nbsp; &nbsp;<br>
-          <br><b>Data: T1map_mask.mat</b>&nbsp;<br># subsampling mask with short axis view, the mask is fixed among different sc, sz and w.&nbsp;<br># variable name:&nbsp;&nbsp;<br># "mask04" for subsampling factor of 4 along ky&nbsp;<br># "mask08" for subsampling factor of 8 along ky&nbsp;<br># "mask10" for subsampling factor of 10 along ky&nbsp;<br># data type: binary data with the dimensions (kx,ky), the central 24 lines (ky) are always full sampled to be used as calibration lines&nbsp;<br>-kx: matrix size in x-axis (kspace)&nbsp;<br>-ky: matrix size in y-axis (kspace)&nbsp; &nbsp;<br>
-          <br><b>Data: T1map_forlabel.nii.gz</b>&nbsp;<br># reconstructed images in nifti format (for reference of manual annotation)&nbsp;<br>-sx: matrix size in x-axis
--sy: matrix size in y-axis
--sz: slice number (short axis view)&nbsp; &nbsp;<br>
-          <br><b>Data: T1map_label.nii.gz</b>&nbsp;<br># manual annotated labels in nifti format&nbsp;<br># label 1 for left ventricle&nbsp;<br># label 2 for myocardium&nbsp;<br># label 3 for right ventricle&nbsp;&nbsp;<br>-sx: matrix size in x-axis&nbsp;<br>-sy: matrix size in y-axis&nbsp;<br>-sz: slice number (short axis view)&nbsp;<br><!--[if gte mso 9]><xml>
+          <br><b></b>
+          <br><!--[if gte mso 9]><xml>
  <w:WordDocument>
   <w:View>Normal</w:View>
   <w:Zoom>0</w:Zoom>
@@ -1877,8 +1868,38 @@ div.WordSection1
         <img class="u-image u-image-contain u-image-default u-image-4" src="images/27851683645093_.pic.jpg" alt="" data-image-width="3854" data-image-height="1122">
       </div>
     </section>
-    <section class="u-clearfix u-section-4" id="sec-c5bf">
+    <section class="u-clearfix u-section-4" id="sec-412d">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-align-center u-text u-text-1"><b>&nbsp;</b>Details of the Data Types of T1 and T2 Mapping<!--EndFragment-->
+        </p>
+        <img class="u-expanded-width u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="images/2023-05-319.34.29.png" alt="" data-image-width="1842" data-image-height="1070">
+        <p class="u-align-justify u-text u-text-grey-60 u-text-2">
+          <span style="font-weight: 700;"></span>
+          <span style="font-weight: 700;"></span>Note: ​
+​kx: matrix size in x-axis (k-space); ky: matrix size in y-axis (k-space); sc: coil array number (compressed to 10); sx: matrix size in x-axis (image); sy: matrix size in y-axis (image); sz: slice number for short axis view; w: number of weighted images.
+        </p><span class="u-file-icon u-icon u-icon-1"><img src="images/6897039.png" alt=""></span>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-5" id="sec-bf0f">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <p class="u-text u-text-default u-text-1"><b>Taking T1 mapping as an example, the format of data is as follows:</b>
+          <br><b>1. Multi-coil data</b><b>:&nbsp;</b>
+          <br><b>Data: T1map.mat</b>&nbsp;<br># mapping with short axis view (including several slices within the sz dimension).&nbsp;<br># variable name:&nbsp;&nbsp;<br># "kspace_full" for full kspace&nbsp;<br># "kspace_sub04" for subsampling factor of 4 along ky&nbsp;<br># "kspace_sub08" for subsampling factor of 8 along ky&nbsp;<br># "kspace_sub10" for subsampling factor of 10 along ky&nbsp;<br># data type: complex kspace data with the dimensions (kx,ky,kc,kz,w), the central 24 lines (ky) are always full sampled to be used as calibration lines&nbsp;<br>-kx: matrix size in x-axis (kspace)&nbsp;<br>-ky: matrix size in y-axis (kspace)&nbsp;<br>-sc: coil array number (compressed to 10)&nbsp;<br>-sz: slice number (short axis view)&nbsp;<br>-w: number of weighted images&nbsp; &nbsp;<br>
+          <br><b>Data: T1map_mask.mat</b>&nbsp;<br># subsampling mask with short axis view, the mask is fixed among different sc, sz and w.&nbsp;<br># variable name:&nbsp;&nbsp;<br># "mask04" for subsampling factor of 4 along ky&nbsp;<br># "mask08" for subsampling factor of 8 along ky&nbsp;<br># "mask10" for subsampling factor of 10 along ky&nbsp;<br># data type: binary data with the dimensions (kx,ky), the central 24 lines (ky) are always full sampled to be used as calibration lines&nbsp;<br>-kx: matrix size in x-axis (kspace)&nbsp;<br>-ky: matrix size in y-axis (kspace)&nbsp; &nbsp;<br>
+          <br><b>2. Single-coil data</b><b>:&nbsp;</b>
+          <br>
+          <span style="font-weight: 700;">Data:&nbsp;</span><b>T1map.mat</b>&nbsp;<br># mapping with short axis view (including several slices within the sz dimension).&nbsp;<br># variable name:&nbsp;&nbsp;<br># "kspace_single_full" for full kspace
+# "kspace_single_sub04" for subsampling factor of 4 along ky&nbsp;<br># "kspace_single_sub08" for subsampling factor of 8 along ky&nbsp;<br># "kspace_single_sub10" for subsampling factor of 10 along ky&nbsp;<br># data type: complex kspace data with the dimensions (kx,ky,kz,t), the central 24 lines (ky) are always full sampled to be used as calibration lines&nbsp;<br>-kx: matrix size in x-axis (kspace)&nbsp;<br>-ky: matrix size in y-axis (kspace)&nbsp;<br>-sz: slice number (short axis view)&nbsp;<br>-w: number of weighted images&nbsp; &nbsp;<br>
+          <br><b>Data: T1map_mask.mat</b>&nbsp;<br># subsampling mask with short axis view, the mask is fixed among different sc, sz and w.&nbsp;<br># variable name:&nbsp;&nbsp;<br># "mask04" for subsampling factor of 4 along ky&nbsp;<br># "mask08" for subsampling factor of 8 along ky&nbsp;<br># "mask10" for subsampling factor of 10 along ky&nbsp;<br># data type: binary data with the dimensions (kx,ky), the central 24 lines (ky) are always full sampled to be used as calibration lines&nbsp;<br>-kx: matrix size in x-axis (kspace)&nbsp;<br>-ky: matrix size in y-axis (kspace)&nbsp; &nbsp;<br>
+          <br><b>Data: T1map_forlabel.nii.gz</b>&nbsp;<br># reconstructed images in nifti format (for reference of manual annotation)&nbsp;<br>-sx: matrix size in x-axis
+-sy: matrix size in y-axis
+-sz: slice number (short axis view)&nbsp; &nbsp;<br>
+          <br><b>Data: T1map_label.nii.gz</b>&nbsp;<br># manual annotated labels in nifti format&nbsp;<br># label 1 for left ventricle&nbsp;<br># label 2 for myocardium&nbsp;<br># label 3 for right ventricle&nbsp;&nbsp;<br>-sx: matrix size in x-axis&nbsp;<br>-sy: matrix size in y-axis&nbsp;<br>-sz: slice number (short axis view)&nbsp;
+        </p>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-6" id="sec-c5bf">
+      <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-text u-text-default u-text-grey-80 u-text-1">Metrics &amp; Ranking</h3>
         <ul class="u-align-justify u-text u-text-grey-60 u-text-2">
           <li> Metrics: Root Mean Square Error (RMSE) of measurements&nbsp;&nbsp;</li>
@@ -1888,7 +1909,7 @@ div.WordSection1
         </ul>
       </div>
     </section>
-    <section class="u-clearfix u-section-5" id="sec-f021">
+    <section class="u-clearfix u-section-7" id="sec-f021">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-justify u-text u-text-default u-text-grey-80 u-text-1">Annotation</h3>
         <ul class="u-align-justify u-custom-font u-font-arial u-text u-text-grey-60 u-text-2">
@@ -1937,5 +1958,16 @@ div.WordSection1
         <div class="u-border-1 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-opacity u-opacity-30 u-line-1"></div>
         <p class="u-align-center u-text u-text-grey-80 u-text-7">© Copyright 2023 CMRxRecon Working Group</p>
       </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/html-templates" target="_blank">
+        <span>HTML Template</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="" target="_blank">
+        <span>Website Builder Software</span>
+      </a>. 
+    </section>
   
 </body></html>

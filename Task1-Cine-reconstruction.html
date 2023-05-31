@@ -17,6 +17,8 @@
     
     
     
+    
+    
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -208,9 +210,26 @@ div.WordSection1
           </a>[w.c.y.1]&nbsp;). <b>The ‘TrueFISP’ readout was used for CINE acquisition. The collected images include short-axis (SA), two-chamber (2CH), three-chamber (3CH) and four-chamber(4CH) long-axis (LA) views.</b> Typically 5~10 slices were acquired for&nbsp; SA cine, while a single slice was acquired for the other views. The cardiac cycle was segmented into 12–25 phases with a temporal resolution 50 ms. For this challenge, we provided raw k-space data of both SA (multi-slices) and LA (multi-views). Typical scan parameters: spatial resolution 2.0×2.0 mm2, slice thickness 8.0 mm, and slice gap 4.0 mm.&nbsp;
         </p>
         <img class="u-image u-image-contain u-image-default u-image-1" src="images/27841683645093_.pic.jpg" alt="" data-image-width="3866" data-image-height="1064">
-        <p class="u-align-justify u-custom-font u-font-arial u-text u-text-grey-60 u-text-4">
-          <span style="font-weight: 700;"></span><b>Pre-processing: </b>The raw k-space data exported from the scanner will be pre-processed and transformed to .mat format (MATLAB). The data were compressed to 10 virtual coils (Zhang et. al MRM 2013;69(2):571-82.) for standardization and to save storages. The image quality is highly consistent before and after coil compression. The partial Fourier data was filled up using POCS algorithm (provided by michael.voelker@mr-bavaria.de). We will provide a README file that describes the content of the data and how to use it. <b>Taking Long axis (Lax) cine as an example, the format of data is as follows:</b>&nbsp;<br>
-          <br><b>1. Multi-coil data</b><b>:&nbsp;</b>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-4" id="sec-9d7c">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-align-left u-text u-text-1"><b>Pre-processing: </b>The raw k-space data exported from the scanner will be pre-processed and transformed to .mat format (MATLAB). The data were compressed to 10 virtual coils (Zhang et. al MRM 2013;69(2):571-82.) for standardization and to save storages. The image quality is highly consistent before and after coil compression. The partial Fourier data was filled up using POCS algorithm (provided by michael.voelker@mr-bavaria.de). We will provide a README file that describes the content of the data and how to use it. <b>Taking Long axis (Lax) cine as an example, the format of data is as follows:</b>&nbsp;
+        </p>
+        <p class="u-align-center u-text u-text-2"><b>&nbsp;</b>Details of the Data Types of Cardiac Cine
+        </p>
+        <img class="u-expanded-width u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="images/2023-05-305.01.07.png" alt="" data-image-width="1840" data-image-height="872">
+        <p class="u-align-justify u-text u-text-grey-60 u-text-3">
+          <span style="font-weight: 700;"></span>
+          <span style="font-weight: 700;"></span>Note: ​
+kx: matrix size in x-axis (k-space); ky: matrix size in y-axis (k-space); sc: coil array number (compressed to 10); sx: matrix size in x-axis (image); sy: matrix size in y-axis (image); sz: slice number for short axis view, or slice group for long axis (i.e., 3ch, 2ch and 4ch views); t: time frame.
+        </p><span class="u-file-icon u-icon u-icon-1"><img src="images/6897039.png" alt=""></span>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-5" id="sec-6a4c">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <p class="u-align-justify u-custom-font u-font-arial u-text u-text-grey-60 u-text-1">
+          <span style="font-weight: 700;"></span><b>1. Multi-coil data</b><b>:&nbsp;</b>
           <br><b>Data: cine_lax.mat</b>&nbsp;<br># cine with long axis view (including 3ch, 2ch and 4ch views within the sz dimension).&nbsp;<br># variable name:&nbsp;&nbsp;<br># "kspace_full" for full kspace&nbsp;<br># "kspace_sub04" for subsampling factor of 4 along ky&nbsp;<br># "kspace_sub08" for subsampling factor of 8 along ky&nbsp;<br># "kspace_sub10" for subsampling factor of 10 along ky&nbsp;<br># data type: complex kspace data with the dimensions (kx,ky,kc,kz,t), the central 24 lines (ky) are always full sampled to be used as calibration lines&nbsp;<br>-kx: matrix size in x-axis (kspace)&nbsp;<br>-ky: matrix size in y-axis (kspace)&nbsp;<br>-sc: coil array number (compressed to 10)&nbsp;<br>-sz: slice number (short axis view); slice group (long axis, i.e., 3ch, 2ch and 4ch views)&nbsp;<br>-t: time frame&nbsp; &nbsp;<br>
           <br><b></b><b>Data: cine_lax_mask.mat</b>&nbsp;<br># subsampling mask with long axis view (including 3ch, 2ch and 4ch views within the sz dimension), the mask is fixed among different sc, sz and t.&nbsp;<br># variable name:&nbsp;&nbsp;<br># "mask04" for subsampling factor of 4 along ky&nbsp;<br># "mask08" for subsampling factor of 8 along ky&nbsp;<br># "mask10" for subsampling factor of 10 along ky&nbsp;<br># data type: binary data with the dimensions (kx,ky), the central 24 lines (ky) are always full sampled to be used as calibration lines&nbsp;<br>-kx: matrix size in x-axis (kspace)&nbsp;<br>-ky: matrix size in y-axis (kspace)&nbsp; &nbsp;<br>
           <br>
@@ -383,7 +402,7 @@ div.WordSection1
         </p>
       </div>
     </section>
-    <section class="u-clearfix u-section-4" id="sec-c5bf">
+    <section class="u-clearfix u-section-6" id="sec-c5bf">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-text u-text-default u-text-grey-80 u-text-1">Metrics &amp; Ranking</h3>
         <ul class="u-align-justify u-text u-text-grey-60 u-text-2">
@@ -395,7 +414,7 @@ div.WordSection1
         </ul>
       </div>
     </section>
-    <section class="u-clearfix u-white u-section-5" id="sec-e375">
+    <section class="u-clearfix u-white u-section-7" id="sec-e375">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-custom-font u-font-arial u-text u-text-default u-text-grey-80 u-text-1">Annotation</h3>
         <p class="u-align-justify u-custom-font u-font-arial u-text u-text-default u-text-grey-60 u-text-2">Radiologists' scoring according to the Likert score system will be performed on the top 5 participant groups in regard to the images' overall the quality, artifacts, sharpness and contrast-to-noise ratio using the ground truth as the reference.&nbsp;&nbsp;<!--EndFragment--><!--EndFragment-->
@@ -631,6 +650,16 @@ div.WordSection1
         <div class="u-border-1 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-opacity u-opacity-30 u-line-1"></div>
         <p class="u-align-center u-text u-text-grey-80 u-text-7">© Copyright 2023 CMRxRecon Working Group</p>
       </div></footer>
-
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Website Templates</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="" target="_blank">
+        <span>Website Builder Software</span>
+      </a>. 
+    </section>
   
 </body></html>
