@@ -902,11 +902,19 @@
 
 .u-section-11 .u-table-cell-5 {
   background-image: none;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .u-section-11 .u-table-cell-6 {
   background-image: none;
+  font-weight: 400;
+}
+
+.u-section-11 .u-table-cell-7 {
+  font-weight: 700;
+}
+
+.u-section-11 .u-table-cell-8 {
   font-weight: 700;
 }
 

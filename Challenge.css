@@ -175,7 +175,7 @@
   font-size: 1rem;
   padding: 0;
 }.u-section-4 .u-sheet-1 {
-  min-height: 313px;
+  min-height: 319px;
 }
 
 .u-section-4 .u-text-1 {
@@ -185,7 +185,7 @@
 .u-section-4 .u-text-2 {
   font-size: 1rem;
   line-height: 3;
-  margin: 26px auto 26px 0;
+  margin: 27px auto 25px 0;
 }
 
 .u-section-4 .u-btn-1 {
@@ -210,11 +210,17 @@
 .u-section-4 .u-btn-4 {
   background-image: none;
   font-size: 1rem;
-  text-decoration: underline !important;
   padding: 0;
 }
 
 .u-section-4 .u-btn-5 {
+  background-image: none;
+  font-size: 1rem;
+  text-decoration: underline !important;
+  padding: 0;
+}
+
+.u-section-4 .u-btn-6 {
   background-image: none;
   font-size: 1rem;
   padding: 0;
