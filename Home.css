@@ -911,11 +911,11 @@
 }
 
 .u-section-11 .u-table-cell-7 {
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .u-section-11 .u-table-cell-8 {
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .u-section-11 .u-table-cell-9 {
@@ -924,6 +924,14 @@
 
 .u-section-11 .u-table-cell-10 {
   background-image: none;
+}
+
+.u-section-11 .u-table-cell-11 {
+  font-weight: 700;
+}
+
+.u-section-11 .u-table-cell-12 {
+  font-weight: 700;
 }
 
 .u-section-11 .u-table-cell-13 {
