@@ -15,7 +15,17 @@
     <link id="u-theme-google-font" rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
 
+    <script>
+        function toggleAccordion(accordionId) {
+            var accordion = document.getElementById(accordionId);
 
+            if (accordion.style.display === 'none') {
+                accordion.style.display = 'block';
+            } else {
+                accordion.style.display = 'none';
+            }
+        }
+    </script>
 
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
@@ -189,23 +199,131 @@
                 <br><br><br>
             </p>
             <h2 class="u-text u-text-1">FAQ</h2>
-            <p class="u-text u-text-2">
-                <br><br><br>
-            </p>
+            <div class="u-clearfix u-sheet u-sheet-1">
+                <div class="u-accordion u-expanded-width u-faq u-spacing-20 u-accordion-1">
+                    <div class="u-accordion-item">
+                        <a class="active u-accordion-link u-border-1 u-border-active-grey-75 u-border-grey-15 u-border-hover-grey-75 u-border-no-left u-border-no-right u-border-no-top u-button-style u-text-grey-80 u-accordion-link-1"
+                            id="link-accordion-6327" aria-controls="accordion-6327" aria-selected="true"
+                            onclick="toggleAccordion('accordion-6327')">
+                            <span style="font-weight:bold;font-size: large;color:#2d7553" class="u-accordion-link-text">
+                                What is the estimated time for
+                                approval of participation request after sending the signed challenge rule?
+                            </span><span class="u-accordion-link-icon u-icon u-text-black u-icon-1"><svg
+                                    class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16"
+                                    style="height: 20px;">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8021"></use>
+                                </svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-8021"
+                                    style="height:20px">
+                                    <path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+            c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path>
+                                </svg></span>
+                        </a>
+                        <div style="display: none;"
+                            class="u-accordion-active u-accordion-pane u-container-style u-accordion-pane-1"
+                            id="accordion-6327" aria-labelledby="link-accordion-6327">
+                            <div class="u-container-layout u-container-layout-1">
+                                <div class="fr-view u-clearfix u-rich-text u-text">
+                                    <p>
+                                        <span class="u-text-grey-60">If the signed challenge rule document is filled out
+                                            correctly, the participation request will be approved within 2-4 business
+                                            days.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-accordion-item">
+                        <a class="active u-accordion-link u-border-1 u-border-active-grey-75 u-border-grey-15 u-border-hover-grey-75 u-border-no-left u-border-no-right u-border-no-top u-button-style u-text-grey-80 u-accordion-link-1"
+                            id="link-accordion-4aab" aria-controls="accordion-4aab" aria-selected="true"
+                            onclick="toggleAccordion('accordion-4aab')">
+                            <span style="font-weight:bold;font-size: large;color:#2d7553" class="u-accordion-link-text">
+                                Is it possible to download the challenge dataset without participating in the challenge?
+                            </span><span class="u-accordion-link-icon u-icon u-text-black u-icon-1"><svg
+                                    class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16"
+                                    style="height: 20px;">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8021"></use>
+                                </svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-8021"
+                                    style="height:20px">
+                                    <path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+            c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path>
+                                </svg></span>
+                        </a>
+                        <div style="display: none;"
+                            class="u-accordion-active u-accordion-pane u-container-style u-accordion-pane-1"
+                            id="accordion-4aab" aria-labelledby="link-accordion-4aab">
+                            <div class="u-container-layout u-container-layout-1">
+                                <div class="fr-view u-clearfix u-rich-text u-text">
+                                    <p>
+                                        <span class="u-text-grey-60">No, the dataset is only available to participants
+                                            during the challenge to ensure enough submissions.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-accordion-item">
+                        <a class="active u-accordion-link u-border-1 u-border-active-grey-75 u-border-grey-15 u-border-hover-grey-75 u-border-no-left u-border-no-right u-border-no-top u-button-style u-text-grey-80 u-accordion-link-1"
+                            id="link-accordion-eb1f" aria-controls="accordion-eb1f" aria-selected="true"
+                            onclick="toggleAccordion('accordion-eb1f')">
+                            <span style="font-weight:bold;font-size: large;color:#2d7553" class="u-accordion-link-text">
+                                Can other datasets or pre-trained models be used to develop the reconstrction algorithms?
+                            </span><span class="u-accordion-link-icon u-icon u-text-black u-icon-1"><svg
+                                    class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16"
+                                    style="height: 20px;">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8021"></use>
+                                </svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-8021"
+                                    style="height:20px">
+                                    <path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+            c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path>
+                                </svg></span>
+                        </a>
+                        <div style="display: none;"
+                            class="u-accordion-active u-accordion-pane u-container-style u-accordion-pane-1"
+                            id="accordion-eb1f" aria-labelledby="link-accordion-eb1f">
+                            <div class="u-container-layout u-container-layout-1">
+                                <div class="fr-view u-clearfix u-rich-text u-text">
+                                    <p>
+                                        <span class="u-text-grey-60">No, only the challenge dataset is allowed for developing the reconstruction algorithms.
+                                            <br>Data augmentation based on the training dataset is allowed                                            
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <h2 class="u-text u-text-1">Rules</h2>
             <p class="u-text u-text-2">
                 <br>
-                1. All individuals who wish to participate in this challenge are required to register using their <span style="font-weight: bold;">real name, affiliation details (including department, university /institute/company name in full, country), and affiliation E-mails</span>. Incomplete and repetitive registrations will be removed without any prior notice. Each team is permitted to have <span style="font-weight: bold;">a maximum of six members</span>.<br><br>
+                1. All individuals who wish to participate in this challenge are required to register using their <span
+                    style="font-weight: bold;color: #2d7553;">real name, affiliation details (including department,
+                    university /institute/company name in full, country), and affiliation E-mails</span>. Incomplete and
+                repetitive registrations will be removed without any prior notice. Each team is permitted to have <span
+                    style="font-weight: bold;color: #2d7553;">a maximum of six members</span>.<br><br>
 
-                2. During the validation and training phase, all participants must <span style="font-weight: bold;">submit a complete solution</span> to this challenge, which includes <span style="font-weight: bold;">a Docker image</span>(in tar file format) and <span style="font-weight: bold;">a qualified methodology paper</span> (of at least 8 pages, in LNCS format).<br><br>
-                
-                3. <span style="font-weight: bold;">All participants must agree that the short papers they submit can be made publicly available on the challenge website, and that organizers can use information provided by participants, including scores, predicted labels, and papers.</span><br><br>
-                
-                4. Participants are <span style="font-weight: bold;">not allowed to register multiple teams or accounts</span>.The CMRxRecon Organizers reserve the right to disqualify such participants.<br><br>
-                
-                5. <span style="font-weight: bold;">Redistribution or transfer of data or data links is prohibited.</span> Participants must use the data solely for their own purposes. <br><br>
-                
-                6. Participants should <span style="font-weight: bold;">develop fully automated methods based solely on the training set</span>, and <span style="font-weight: bold;">no manual interventions</span> (such as manual annotation of cases) are allowed. <br>
+                2. During the validation and training phase, all participants must <span
+                    style="font-weight: bold;color: #2d7553;">submit a complete solution</span> to this challenge, which
+                includes <span style="font-weight: bold;color: #2d7553;">a Docker image</span>(in tar file format) and
+                <span style="font-weight: bold;color: #2d7553;">a qualified methodology paper</span> (of at least 8
+                pages, in LNCS format).<br><br>
+
+                3. <span style="font-weight: bold;color: #2d7553;">All participants must agree that the short papers
+                    they submit can be made publicly available on the challenge website, and that organizers can use
+                    information provided by participants, including scores, predicted labels, and papers.</span><br><br>
+
+                4. Participants are <span style="font-weight: bold;color: #2d7553;">not allowed to register multiple
+                    teams or accounts</span>.The CMRxRecon Organizers reserve the right to disqualify such
+                participants.<br><br>
+
+                5. <span style="font-weight: bold;color: #2d7553;">Redistribution or transfer of data or data links is
+                    prohibited.</span> Participants must use the data solely for their own purposes. <br><br>
+
+                6. Participants should <span style="font-weight: bold;color: #2d7553;">develop fully automated methods
+                    based solely on the training set</span>, and <span style="font-weight: bold;color: #2d7553;">no
+                    manual interventions</span> (such as manual annotation of cases) are allowed. <br>
                 <br>
             </p>
     </section>
@@ -249,51 +367,46 @@
                         </div>
                         <div class="u-container-style u-layout-cell u-size-26 u-layout-cell-2">
                             <div class="u-container-layout u-container-layout-2">
-                                <img style="position:absolute;margin:55px auto 0 375px;width: 56px;height: auto;"
-                                    src="images/1200px-Xiamen_University_logo.svg.png">
-                                <img style="position:absolute;margin:55px auto 0 300px;width: 56px;height: auto;"
-                                    src="images/hong-kong-polytechnic-university-logo-00FF467BCA-seeklogo.com.png"
-                                    alt="" data-image-width="222" data-image-height="222">
-                                <img style="position:absolute;margin:55px auto 0 225px;width: 56px;height: auto;"
-                                    src="images/Shield_of_Imperial_College_London.svg.png" alt="" data-image-width="222"
-                                    data-image-height="222">
-                                <img style="position:absolute;margin:55px auto 0 40px;width: 56px;height: auto;"
-                                    src="images/fudan-logo.png" alt="" data-image-width="222" data-image-height="222">
-                                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-4"
-                                    src="images/BWHandVeritasSeals.webp" alt="" data-image-width="182"
-                                    data-image-height="104">
-                                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-6"
-                                    src="images/header-logo.6433430.png" alt="" data-image-width="145"
-                                    data-image-height="92">
-                                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-7"
-                                    src="images/header-logo.6433430.png" alt="" data-image-width="145"
-                                    data-image-height="92">
-                                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-8"
-                                    src="images/Siemens_Healthineers_logo.svg.png" alt="" data-image-width="1200"
-                                    data-image-height="300">
-                                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-9"
-                                    src="images/Siemens_Healthineers_logo.svg.png" alt="" data-image-width="1200"
-                                    data-image-height="300">
-                                <img class="u-image u-image-default u-preserve-proportions u-image-10"
-                                    src="images/640px-Philips_logo.svg.png" alt="" data-image-width="640"
-                                    data-image-height="128">
-                                <img class="u-image u-image-default u-preserve-proportions u-image-11"
-                                    src="images/640px-Philips_logo.svg.png" alt="" data-image-width="640"
-                                    data-image-height="128">
-                                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-12"
-                                    src="images/Renji_hospital_logo.png" alt="" data-image-width="318"
-                                    data-image-height="313">
-                                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-13"
-                                    src="images/Renji_hospital_logo.png" alt="" data-image-width="318"
-                                    data-image-height="313">
-                                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-14"
-                                    src="images/JITRI.png" alt="" data-image-width="294" data-image-height="294">
-                                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-15"
-                                    src="images/Ruijin_Hospital_Shanghai_Jiaotong_University_School_Of_Medicine_logo.png"
-                                    alt="" data-image-width="207" data-image-height="224">
-                                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-16"
-                                    src="images/Ruijin_Hospital_Shanghai_Jiaotong_University_School_Of_Medicine_logo.png"
-                                    alt="" data-image-width="207" data-image-height="224">
+                                <img style="position:absolute;margin:55px auto 0 365px;width: 56px;height: auto;"
+                                src="images/1200px-Xiamen_University_logo.svg.png">
+                            <img style="position:absolute;margin:55px auto 0 295px;width: 56px;height: auto;"
+                                src="images/hong-kong-polytechnic-university-logo-00FF467BCA-seeklogo.com.png"
+                                alt="" data-image-width="222" data-image-height="222">
+                            <img style="position:absolute;margin:55px auto 0 235px;width: 45px;height: auto;"
+                                src="images/Shield_of_Imperial_College_London.svg.png" alt="" data-image-width="222"
+                                data-image-height="222">
+                            <img style="position:absolute;margin:55px auto 0 50px;width: 58px;height: auto;"
+                                src="images/fudan-logo.png" alt="" data-image-width="222" data-image-height="222">
+                            <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-4"
+                                src="images/BWHandVeritasSeals.webp" alt="" data-image-width="182"
+                                data-image-height="104">
+                            <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-6"
+                                src="images/header-logo.6433430.png" alt="" data-image-width="145"
+                                data-image-height="92">
+                            <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-7"
+                                src="images/header-logo.6433430.png" alt="" data-image-width="145"
+                                data-image-height="92">
+                            <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-8"
+                                src="images/Siemens_Healthineers_logo.svg.png" alt="" data-image-width="1200"
+                                data-image-height="300">
+                            <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-9"
+                                src="images/Siemens_Healthineers_logo.svg.png" alt="" data-image-width="1200"
+                                data-image-height="300">
+                            <img class="u-image u-image-default u-preserve-proportions u-image-10"
+                                src="images/640px-Philips_logo.svg.png" alt="" data-image-width="640"
+                                data-image-height="128">
+                            <img class="u-image u-image-default u-preserve-proportions u-image-11"
+                                src="images/640px-Philips_logo.svg.png" alt="" data-image-width="640"
+                                data-image-height="128">
+                            <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-12"
+                                src="images/Renji_hospital_logo.png" alt="" data-image-width="318"
+                                data-image-height="313">
+                            <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-14"
+                                src="images/JITRI.png" alt="" data-image-width="294" data-image-height="294">
+                            <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-15"
+                                src="images/Ruijin_Hospital_Shanghai_Jiaotong_University_School_Of_Medicine_logo.png"
+                                alt="" data-image-width="207" data-image-height="224">
+
                                 <p class="u-text u-text-custom-color-3 u-text-4">Previous Challenges:<br>
                                 </p>
                                 <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-5"
