@@ -37,7 +37,7 @@
 <body data-path-to-root="/" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
   <header class="u-clearfix u-header u-sticky u-sticky-7dd4 u-white u-header" id="sec-7922">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="768" data-image-height="333">
+      <a href="https://conferences.miccai.org/2024/en/default.asp" class="u-image u-logo u-image-1" data-image-width="768" data-image-height="333">
         <img src="images/miccai2023-logo.png" class="u-logo-image u-logo-image-1">
       </a>
       <img class="u-image u-image-contain u-image-default u-image-2" src="images/CMRxRecon-logo.png" alt=""
@@ -199,55 +199,105 @@
         potential for improved image quality. The need for a universal model therefore arises
         from the diverse sampling schemes of cardiac image acquisition: Different CMR
         protocols often require distinct k-space sampling trajectories and acceleration
-        factors. <span style="font-weight: 700;">Traditional reconstruction methods struggle to adapt to these
+        factors. <span style="font-weight: 700;color:#2d7553;">Traditional reconstruction methods struggle to adapt to
+          these
           variations, as they typically rely on sampling-specific algorithms.</span> A universal
         model offers a unified framework that can handle different sampling
         trajectories and acceleration factors, providing flexibility and efficiency in
         the reconstruction process. This approach is necessary to achieve consistent
         and reliable reconstructions across diverse CMR imaging scenarios.&nbsp;<br>
-        <br>The primary objective of this research is to develop a
-        universal model that can robustly reconstruct CMR images from randomly-sampled
-        k-space trajectories (uniformly sampling and variable-density sampling) at
-        different acceleration factors (acceleration factors from 3x to 20x). The
-        proposed approach is supposed to leverage deep learning algorithms to exploit
-        the potential of random sampling, enabling faster acquisition times while
-        maintaining high-quality image reconstructions.
+        <br><span style="font-weight: 700;color:#2d7553;">The goal of this chanllege</span> is to develop a
+        sampling-universal model that can robustly reconstruct CMR images 1) from different k-space trajectories
+        (uniform, Guassian, and pseudo radial undersampling with temporal/parametric interleaving); 2) at different
+        acceleration factors (acceleration factors from 4x to 24x, ACS not included for calculations). The proposed
+        method is supposed to leverage deep learning algorithms to exploit the potential of random sampling, enabling
+        faster acquisition times while maintaining high-quality image reconstructions. <br><br><span
+          style="font-weight:bold;color: indianred;">Note:</span> In TASK 2, participants are
+        allowed to train <span style="font-weight: 700;color:#2d7553;">only one universal model</span> to reconstruct
+        various data at the aforementioned different
+        undersampling scenarios.
+
       </p>
     </div>
   </section>
   <section class="u-align-left u-clearfix u-section-3" id="carousel_651a">
     <div class="u-clearfix u-sheet u-sheet-1">
-      <h3 class="u-text u-text-1">Data</h3>
-      <p class="u-text u-text-2">
-        <span style="font-weight: 700;">Scanner:&nbsp; </span> Siemens
-        3T MRI scanner (MAGNETOM Vida)<br>
+      <h2 class="u-text u-text-1">Data</h2>
+      <p class="u-align-left u-text u-text-2">
         <br>
-        <span style="font-weight: 700;">Image acquisition:&nbsp;</span> We
-        follow the recommendations of CMR exams reported in the previous publication
-        (doi: 10.1007/s43657-02100018x, 10.1007/s43657-021-00018-x).&nbsp;<br>
+        <span style="font-weight: 700;color:#2d7553"> 1) Scanner: </span>&nbsp;
+        Siemens 3T MRI scanner (MAGNETOM Vida)
         <br>
-        <span style="font-weight: 700;">1) Cine: </span>We use ‘TrueFISP’
-        for cine, PC and tagging, and ‘FLASH’ for mapping and dark-blood imaging. The
-        collected imaging planes include long-axis (2-chamber, 3-chamber, and
-        4-chamber), short-axis, outflow tract, and aortic (cross-sectional and sagittal
-        views). Typically 5~15 slices are acquired.&nbsp;<br>
+        <br><span style="font-weight: 700;color:#2d7553">2) Image acquisition: </span>We follow the recommendations of
+        CMR exams reported in the previous publication (doi: 10.1007/s43657-02100018x, 10.1007/s43657-021-00018-x).
         <br>
-        <span style="font-weight: 700;">2) Mapping: </span>For mapping, signal data were
-        collected at the end of the diastole with ECG triggering. The cardiac cycle is
-        segmented into 15–25 phases with a temporal resolution of around 50 ms. Typical
-        geometrical parameters include: spatial resolution 2.0×2.0 mm2,
-        slice thickness 8.0 mm, and slice gap 4.0 mm.<br>
         <br>
-        <span style="font-weight: 700;">Pre-processing methods: </span>The
-        raw k-space data exported from the scanner will be processed and transformed to
-        ‘.mat’ format using the script provided by our vendor. A readme file will be
-        provided to describe the content and usage of the data.&nbsp;<br>
+        <span style="font-weight: 700;color:#2d7553">3) Dataset overview: </span>The dataset will include multi-contrast
+        k-space data, consisting of cardiac cine, T1/T2 mapping, tagging, phase-contrast (i.e., flow2d), and dark-blood
+        imaging. It also includes imaging of different anatomical views like long-axis (LAX, including 2-chamber,
+        3-chamber, and 4-chamber), short-axis (SAX), left ventricul aroutflow tract (LVOT), and aortic (transversal and
+        sagittal views).
+        <br>
+        <br>
+        <span style="font-weight: 700;color:#2d7553">4) Scan protocol: </span>We use 'TrueFISP' sequence for cine,
+        phase-constrast (i.e., flow2d), and tagging, and 'FLASH' sequence for T1/T2 mapping and dark-blood imaging. For
+        T1/T2 mapping, signals are collected at the end of the diastole with ECG triggering. Typically, 5~15 slices are
+        acquired for each contrast. The cardiac cycle is segmented into 15~25 phases with a temporal resolution of
+        around 50 ms. Typical geometrical parameters include: spatial resolution 1.5×1.5 mm2, slice thickness 8.0 mm,
+        and slice gap 4.0 mm.
+        <br>
+        <br>
+        <span style="font-weight: 700;color:#2d7553">5) Pre-processing:</span>The raw k-space data exported from the
+        scanner will be processed and transformed to '.mat' format using the script provided by our vendor. A readme
+        file will be provided to describe the content and usage of the data.
+        <br>
+      </p>
+      <img src="images/home-3.png" style="width:800px;height:auto;margin:auto;display:block;">
+      <br>
+      <p class="u-align-left u-text u-text-2">
+        <span style="font-weight: 700;color:#2d7553">Taking multi-coil long-axis (LAX) cine as an example, the format of data is as follows:</span>
+        <br><br><span style="font-weight: 700;color:#2d7553">1) Data in folder 'FullSample': cine_lax.mat</span>
+        <br># cine with long-axis view (including 3CH, 2CH, and 4CH views within the nz dimension).
+        <br># variable name:
+        <br># 'kspace_full' for fully sampled kspace
+        <br># data type: complex kspace data with the dimensions (nx,ny,nc,nz,nt)
+        <br>-nx: matrix size in x-axis (kspace)
+        <br>-ny: matrix size in y-axis (kspace)
+        <br>-nc: coil array number (compressed to 10)
+        <br>-nz: slice number (for SAX) or slice group (for LAX, i.e., 3CH, 2CH, and 4CH views)
+        <br>-nt: temporal/parametric frame
+        <br><br><span style="font-weight: 700;color:#2d7553">2) Data in folder 'UnderSample_Task2': cine_lax_kus_xxx.mat</span>
+        <br># cine with long-axis view (including 3CH, 2CH, and 4CH views within the nz dimension).
+        <br># 'xxx' is the corresponding undersampling scenarios. For example, 'ktUniform4' means uniform undersampling with
+        temporal interleaving at acceleration factor 4x (ACS not included for calculations)
+        <br># variable name:
+        <br># 'kus' for undersampled kspace
+        <br># data type: complex kspace data with the dimensions (nx,ny,nc,nz,nt), the central 16 lines (ny) or central
+        16*16 regions (nx*ny) are always fully sampled to be used as autocalibration signals (ACS)
+        <br>-nx: matrix size in x-axis (kspace)
+        <br>-ny: matrix size in y-axis (kspace)
+        <br>-nc: coil array number (compressed to 10)
+        <br>-nz: slice number (for SAX) or slice group (for LAX, i.e., 3CH, 2CH, and 4CH views)
+        <br>-nt: temporal/parametric frame
+        <br><br><span style="font-weight: 700;color:#2d7553">3) Data in folder 'Mask_Task2': cine_lax_mask_xxx.mat</span>
+        <br># undersampling mask with long-axis view, the mask is fixed among different nc and nz. But the mask is
+        interleaved along nt.
+        <br># 'xxx' is the corresponding undersampling scenarios. For example, 'ktUniform4' means uniform undersampling with
+        temporal interleaving at acceleration factor 4x (ACS not included for calculations)
+        <br># variable name:
+        <br># "mask" for undersampling mask with temporal interleaving
+        <br># data type: 3D binary data with the dimensions (nx,ny,nt), the central 16 lines (ny) or central 16*16 regions
+        (nx*ny) are always fully sampled to be used as autocalibration signals (ACS)
+        <br>-nx: matrix size in x-axis (kspace)
+        <br>-ny: matrix size in y-axis (kspace) 
+        <br>-nt: temporal/parametric frame
+        <br>
       </p>
     </div>
   </section>
   <section class="u-align-left u-clearfix u-section-4" id="carousel_7411">
     <div class="u-clearfix u-sheet u-sheet-1">
-      <h3 class="u-text u-text-1"> Metrics &amp; Ranking</h3>
+      <h2 class="u-text u-text-1"> Metrics &amp; Ranking</h2>
       <p class="u-text u-text-2">
         <span style="font-weight: 700;"> Metrics:</span>
         <br>PSNR,
@@ -257,22 +307,31 @@
         <span style="font-weight: 700;">Ranking methods:</span>
         <br>During the testing
         and ranking phase, we will invite three radiologists to independently score the
-        top five teams ranked by SSIM. <span style="font-weight: 700;">The scoring will cover three aspects: image
+        top five teams ranked by SSIM. <span style="font-weight: 700;color:#2d7553">The scoring will cover three aspects: image
           quality, image artifacts, and clinical utility. </span>We will consider both the
         radiologists' scores and the SSIM results to generate a comprehensive ranking.
         We
         will calculate PSNR, SSIM and NMSE for quantitative evaluations, while we only use
         SSIM as our final ranking score.<br>
-        <span style="font-weight: 700;">Participating
+        <span style="font-weight: 700;color:#2d7553">Participating
           teams are required to submit docker containers and process all the cases in the
           test set on our server. </span>For the cases without valid output, we will assign it
         to the lowest value of metric.<br>
+      </p>
+      <h2 class="u-text u-text-1"> Rules</h2>
+      <p class="u-text u-text-2">
+        1) To ensure the fairness of this challenge, you are only allowed to use the datasets provided by fastMRI,
+        CMRxRecon2023, and CMRxRecon2024. Data augmentation based on the training dataset is allowed.
+        <br><br>2) In TASK 1, participants are allowed to train <span style="font-weight: 700;color: #2d7553;">three individual contrast-universal models</span> to respectively
+        reconstruct multi-contrast data at three acceleration factors.
+
+        <br>
       </p>
     </div>
   </section>
   <section class="u-align-left u-clearfix u-section-5" id="carousel_2d4d">
     <div class="u-clearfix u-sheet u-sheet-1">
-      <h3 class="u-text u-text-1">Submission</h3>
+      <h2 class="u-text u-text-1">Submission</h2>
       <p class="u-text u-text-2">
         <span style="font-weight: 700;"></span>The submission instructions will be released on the&nbsp;<a
           href="https://www.synapse.org/#!Synapse:syn51471091/wiki/622170"
@@ -285,100 +344,105 @@
 
   <footer class="u-clearfix u-custom-color-2 u-footer" id="sec-0201">
     <div class="u-clearfix u-sheet u-sheet-1">
-      <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
-        <div class="u-gutter-0 u-layout">
-          <div class="u-layout-row">
-            <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-17 u-layout-cell-1">
-              <div class="u-container-layout u-container-layout-1">
-                <p class="u-large-text u-text u-text-variant u-text-1"> Contact us:<br>
-                </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-1"><img
-                    src="images/2669570-68c79634.png" alt=""></span>
-                <p class="u-text u-text-2">
-                  <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"
-                    data-href="mailto:CMRxRecon@outlook.com">CMRxRecon@outlook.com<br>
-                  </a>
-                </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-2"><img
-                    src="images/733635-bd022505.png" alt=""></span>
-                <p class="u-text u-text-3">
-                  <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-2"
-                    data-href="mailto:CMRxRecon@outlook.com" href="https://twitter.com/CMRxRecon"
-                    target="_blank">CMRxRecon<br>
-                  </a>
-                </p>
-                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-3"
-                  data-href="mailto:CMRxRecon@outlook.com"
-                  href="https://www.synapse.org/#!Synapse:syn51471091/wiki/622170" target="_blank">Synapse Link</a><span
-                  class="u-file-icon u-icon u-text-custom-color-3 u-icon-3"><img src="images/10276957-f66d7f95.png"
-                    alt=""></span>
-                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-4"
-                  data-href="mailto:CMRxRecon@outlook.com" href="https://github.com/CmrxRecon/"
-                  target="_blank">CMRxRecon </a><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-4"><img
-                    src="images/25231-9e47ce63.png" alt=""></span>
-              </div>
-            </div>
-            <div class="u-container-style u-layout-cell u-size-26 u-layout-cell-2">
-              <div class="u-container-layout u-container-layout-2">
-                <img style="position:absolute;margin:55px auto 0 365px;width: 56px;height: auto;"
-                  src="images/1200px-Xiamen_University_logo.svg.png">
-                <img style="position:absolute;margin:55px auto 0 295px;width: 56px;height: auto;"
-                  src="images/hong-kong-polytechnic-university-logo-00FF467BCA-seeklogo.com.png" alt=""
-                  data-image-width="222" data-image-height="222">
-                <img style="position:absolute;margin:55px auto 0 235px;width: 45px;height: auto;"
-                  src="images/Shield_of_Imperial_College_London.svg.png" alt="" data-image-width="222"
-                  data-image-height="222">
-                <img style="position:absolute;margin:55px auto 0 50px;width: 58px;height: auto;"
-                  src="images/fudan-logo.png" alt="" data-image-width="222" data-image-height="222">
-                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-4"
-                  src="images/BWHandVeritasSeals.webp" alt="" data-image-width="182" data-image-height="104">
-                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-6"
-                  src="images/nice-logo.png" alt="" data-image-width="145" data-image-height="92">
-                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-8"
-                  src="images/Siemens_Healthineers_logo.svg.png" alt="" data-image-width="1200" data-image-height="300">
-                <img class="u-image u-image-default u-preserve-proportions u-image-10"
-                  src="images/640px-Philips_logo.svg.png" alt="" data-image-width="640" data-image-height="128">
-                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-12"
-                  src="images/Renji_hospital_logo.png" alt="" data-image-width="318" data-image-height="313">
-                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-14"
-                  src="images/jitri_logo.png" alt="" data-image-width="294" data-image-height="294">
-                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-15"
-                  src="images/Ruijin_Hospital_Shanghai_Jiaotong_University_School_Of_Medicine_logo.png" alt=""
-                  data-image-width="207" data-image-height="224">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+            <div class="u-gutter-0 u-layout">
+                <div class="u-layout-row">
+                    <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-17 u-layout-cell-1">
+                        <div class="u-container-layout u-container-layout-1">
+                            <p class="u-large-text u-text u-text-variant u-text-1"> Contact us:<br>
+                            </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-1"><img
+                                    src="images/2669570-68c79634.png" alt=""></span>
+                            <p class="u-text u-text-2">
+                                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"
+                                    data-href="mailto:CMRxRecon@outlook.com">CMRxRecon@outlook.com<br>
+                                </a>
+                            </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-2"><img
+                                    src="images/733635-bd022505.png" alt=""></span>
+                            <p class="u-text u-text-3">
+                                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-2"
+                                    href="https://twitter.com/CMRxRecon"
+                                    target="_blank">CMRxRecon<br>
+                                </a>
+                            </p>
+                            <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-3"
+                                href="https://www.synapse.org/#!Synapse:syn51471091/wiki/622170"
+                                target="_blank">Synapse Link</a><span
+                                class="u-file-icon u-icon u-text-custom-color-3 u-icon-3"><img
+                                    src="images/10276957-f66d7f95.png" alt=""></span>
+                            <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-4"
+                                href="https://github.com/CmrxRecon/"
+                                target="_blank">CMRxRecon </a><span
+                                class="u-file-icon u-icon u-text-custom-color-3 u-icon-4"><img
+                                    src="images/25231-9e47ce63.png" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-26 u-layout-cell-2">
+                        <div class="u-container-layout u-container-layout-2">
+                            <img style="position:absolute;margin:92px auto 0 50px;width: 65px;height: auto;"
+                                src="images/fudan-logo.png">
+                            <img style="position:absolute;margin:95px auto 0 130px;width: 55px;height: auto;"
+                                src="images/R-C.png">
+                            <img style="position:absolute;margin:95px auto 0 200px;width: 55px;height: auto;"
+                                src="images/Shield_of_Imperial_College_London.svg.png">
+                            <img style="position:absolute;margin:94px auto 0 270px;width: 60px;height: auto;"
+                                src="images/hong-kong-polytechnic-university-logo-00FF467BCA-seeklogo.com.png">
+                            <img style="position:absolute;margin:94px auto 0 345px;width: 60px;height: auto;"
+                                src="images/1200px-Xiamen_University_logo.svg.png">
 
-                <p class="u-text u-text-custom-color-3 u-text-4">Previous Challenges:<br>
-                </p>
-                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-5"
-                  href="https://cmrxrecon.github.io" target="_blank">CMRxRecon2023</a>
-              </div>
+                            <img style="position:absolute;margin:180px auto 0 -10px;width: 60px;height: auto;"
+                                src="images/Ruijin_Hospital_Shanghai_Jiaotong_University_School_Of_Medicine_logo.png">
+                            <img style="position:absolute;margin:183px auto 0 65px;width: 60px;height: auto;"
+                                src="images/Renji_hospital_logo.png">
+                            <img style="position:absolute;margin:190px auto 0 140px;width: 80px;height: auto;"
+                                src="images/philips-healthcare.png">
+                            <img style="position:absolute;margin:198px auto 0 240px;width: 100px;height: auto;"
+                                src="images/Siemens_Healthineers_logo.svg.png">
+                            <img style="position:absolute;margin:180px auto 0 350px;width: 56px;height: auto;"
+                                src="images/nice-logo.png">
+                            <img style="position:absolute;margin:180px auto 0 407px;width: 56px;height: auto;"
+                                src="images/jitri_logo.png">
+                            <br><br><br><br><br><br><br>
+
+                        </div>
+                    </div>
+                    <div
+                        class="u-align-left u-container-style u-layout-cell u-right-cell u-size-17 u-layout-cell-3">
+                        <div class="u-container-layout u-container-layout-3">
+                            <p class="u-large-text u-text u-text-variant u-text-5">CMRxRecon2023<br>
+                            </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
+                                    src="images/10276957-f66d7f95.png" alt=""></span>
+                            <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
+                                href="https://cmrxrecon.github.io" target="_blank">CMRxRecon2023 website</a>
+                            <span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
+                                    src="images/10276957-f66d7f95.png" alt=""></span>
+                            <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
+                                data-href="mailto:CMRxRecon@outlook.com"
+                                href="https://www.synapse.org/#!Synapse:syn51471091/wiki/622170"
+                                target="_blank">Synapse Link</a>
+                            <p class="u-large-text u-text u-text-variant u-text-5">CMRxMotion<br>
+                            </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
+                                    src="images/10276957-f66d7f95.png" alt=""></span>
+                            <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
+                                data-href="mailto:CMRxRecon@outlook.com" href="http://cmr.miccai.cloud/">CMRxMotion
+                                website<br>
+                            </a><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
+                                    src="images/10276957-f66d7f95.png" alt=""></span>
+                            <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
+                                data-href="mailto:CMRxRecon@outlook.com"
+                                href="https://www.synapse.org/#!Synapse:syn28503327/wiki/617822"
+                                target="_blank">Synapse Link</a>
+
+
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-17 u-layout-cell-3">
-              <div class="u-container-layout u-container-layout-3">
-                <p class="u-large-text u-text u-text-variant u-text-5">CMRxMotion<br>
-                </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-5"><img
-                    src="images/2669570-68c79634.png" alt=""></span>
-                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-6"
-                  data-href="mailto:CMRxRecon@outlook.com" href="mailto:CMRxMotion@163.com">CMRxMotion@163.com<br>
-                </a><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-6"><img
-                    src="images/733635-bd022505.png" alt=""></span>
-                <p class="u-text u-text-6">
-                  <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-7"
-                    data-href="mailto:CMRxRecon@outlook.com" href="https://twitter.com/cmrxmotion"
-                    target="_blank">CMRxMotion<br>
-                  </a>
-                </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
-                    src="images/10276957-f66d7f95.png" alt=""></span>
-                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
-                  data-href="mailto:CMRxRecon@outlook.com"
-                  href="https://www.synapse.org/#!Synapse:syn28503327/wiki/617822" target="_blank">Synapse Link</a>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="u-border-2 u-border-custom-color-3 u-line u-line-horizontal u-line-1"></div>
-      <p class="u-text u-text-custom-color-3 u-text-7"> © Copyright 2024 CMRxRecon Working Group<br>
-      </p>
+        <div class="u-border-2 u-border-custom-color-3 u-line u-line-horizontal u-line-1"></div>
+        <p class="u-text u-text-custom-color-3 u-text-7"> © Copyright 2024 CMRxRecon Working Group<br>
+        </p>
     </div>
-  </footer>
+</footer>
   <section class="u-backlink u-clearfix u-grey-80">
     <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
       <span>Website Templates</span>

@@ -51546,7 +51546,7 @@ blockquote {
 
 .u-header .u-image-2 {
   width: 145px;
-  margin: -145px auto 0 -25px;
+  margin: -130px auto 0 -25px;
 }
 
 .u-header .u-menu-1 {
@@ -51629,8 +51629,8 @@ blockquote {
 }
 
 .u-footer .u-icon-1 {
-  width: 36px;
-  height: 36px;
+  width: 35px;
+  height: auto;
   margin: 11px auto 0 33px;
   padding: 0;
 }
@@ -51647,8 +51647,8 @@ blockquote {
 }
 
 .u-footer .u-icon-2 {
-  width: 41px;
-  height: 41px;
+  width: 38px;
+  height: auto;
   margin: 21px auto 0 30px;
   padding: 0;
 }
@@ -51672,8 +51672,8 @@ blockquote {
 }
 
 .u-footer .u-icon-3 {
-  width: 45px;
-  height: 45px;
+  width: 42px;
+  height: auto;
   margin: -35px auto 0 26px;
   padding: 0;
 }
@@ -51686,8 +51686,8 @@ blockquote {
 }
 
 .u-footer .u-icon-4 {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: auto;
   margin: -31px auto 0 30px;
   padding: 0;
 }
@@ -51750,7 +51750,7 @@ blockquote {
 
 .u-footer .u-image-10 {
   width: 125px;
-  height: 25px;
+  height: auto;
   margin: -25px auto 0 133px;
 }
 
@@ -51864,16 +51864,16 @@ blockquote {
 }
 
 .u-footer .u-icon-7 {
-  width: 45px;
-  height: 45px;
-  margin: 24px auto 0 23px;
+  width: 30px;
+  height: auto;
+  margin: 10px auto 0 23px;
   padding: 0;
 }
 
 .u-footer .u-btn-8 {
   background-image: none;
   text-decoration: underline !important;
-  margin: -35px auto 0 81px;
+  margin: -30px auto 0 81px;
   padding: 0;
 }
 
