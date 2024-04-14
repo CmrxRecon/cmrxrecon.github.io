@@ -8,7 +8,7 @@
 }
 
 .u-section-1 .u-gallery-inner-1 {
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(3, auto);
   grid-gap: 0px;
 }
 
