@@ -27179,7 +27179,7 @@ a.pswp__share--download:hover {
   position: relative;
   display: inline;
   line-height: inherit;
-  font-size: 1em;
+  font-size: em;
   fill: currentColor;
   vertical-align: middle;
   white-space: nowrap;

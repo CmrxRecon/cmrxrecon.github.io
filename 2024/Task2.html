@@ -37,7 +37,8 @@
 <body data-path-to-root="/" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
   <header class="u-clearfix u-header u-sticky u-sticky-7dd4 u-white u-header" id="sec-7922">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <a href="https://conferences.miccai.org/2024/en/default.asp" class="u-image u-logo u-image-1" data-image-width="768" data-image-height="333">
+      <a href="https://conferences.miccai.org/2024/en/default.asp" class="u-image u-logo u-image-1"
+        data-image-width="768" data-image-height="333">
         <img src="images/miccai2023-logo.png" class="u-logo-image u-logo-image-1">
       </a>
       <img class="u-image u-image-contain u-image-default u-image-2" src="images/CMRxRecon-logo.png" alt=""
@@ -84,20 +85,16 @@
             </li>
             <li class="u-nav-item"><a
                 class="u-border-2 u-border-active-custom-color-2 u-border-hover-custom-color-2 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-custom-color-3 u-text-grey-90 u-text-hover-custom-color-3"
-                href="Join-the-Challenge!.html" style="padding: 10px 0px;">Join the Challenge!</a>
+                href="Join-the-Challenge.html" style="padding: 10px 0px;">Join the Challenge!</a>
             </li>
             <li class="u-nav-item"><a
                 class="u-border-2 u-border-active-custom-color-2 u-border-hover-custom-color-2 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-custom-color-3 u-text-grey-90 u-text-hover-custom-color-3"
-                href="Validation.html" style="padding: 10px 0px;">Submission</a>
+                href="Submission.html" style="padding: 10px 0px;">Submission</a>
               <div class="u-nav-popup">
                 <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2">
                   <li class="u-nav-item"><a
                       class="u-button-style u-hover-custom-color-4 u-nav-link u-text-active-custom-color-2 u-text-hover-white u-white"
-                      href="Validation.html">Validation submission</a>
-                  </li>
-                  <li class="u-nav-item"><a
-                      class="u-button-style u-hover-custom-color-4 u-nav-link u-text-active-custom-color-2 u-text-hover-white u-white"
-                      href="Testing.html">Testing submission</a>
+                      href="Submission.html">Submission</a>
                   </li>
                   <li class="u-nav-item"><a
                       class="u-button-style u-hover-custom-color-4 u-nav-link u-text-active-custom-color-2 u-text-hover-white u-white"
@@ -141,19 +138,15 @@
                     </ul>
                   </div>
                 </li>
-                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Join-the-Challenge!.html">Join the
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Join-the-Challenge.html">Join the
                     Challenge!</a>
                 </li>
-                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Validation.html">Submission</a>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Submission.html">Submission</a>
                   <div class="u-nav-popup">
                     <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-4">
                       <li class="u-nav-item"><a
                           class="u-button-style u-hover-custom-color-4 u-nav-link u-text-active-custom-color-2 u-text-hover-white u-white"
-                          href="Validation.html">Validation submission</a>
-                      </li>
-                      <li class="u-nav-item"><a
-                          class="u-button-style u-hover-custom-color-4 u-nav-link u-text-active-custom-color-2 u-text-hover-white u-white"
-                          href="Testing.html">Testing submission</a>
+                          href="Submission.html">Submission</a>
                       </li>
                       <li class="u-nav-item"><a
                           class="u-button-style u-hover-custom-color-4 u-nav-link u-text-active-custom-color-2 u-text-hover-white u-white"
@@ -190,7 +183,7 @@
   </section>
   <section class="u-align-left u-clearfix u-section-2" id="sec-939f">
     <div class="u-clearfix u-sheet u-sheet-1">
-      <h3 class="u-text u-text-1">Background </h3>
+      <h2 class="u-text u-text-1">Background </h2>
       <p class="u-text u-text-2"> CMR imaging is time-consuming due to the acquisition of a
         large amount of raw data in the k-space (raw signal measurement). To address
         this limitation, accelerated imaging techniques have been developed, which rely
@@ -206,9 +199,11 @@
         trajectories and acceleration factors, providing flexibility and efficiency in
         the reconstruction process. This approach is necessary to achieve consistent
         and reliable reconstructions across diverse CMR imaging scenarios.&nbsp;<br>
-        <br><span style="font-weight: 700;color:#2d7553;">The goal of this chanllege</span> is to develop a
-        sampling-universal model that can robustly reconstruct CMR images 1) from different k-space trajectories
-        (uniform, Guassian, and pseudo radial undersampling with temporal/parametric interleaving); 2) at different
+        <br><span style="font-weight: 700;color:#2d7553;">The goal of this challenge</span> is to develop a
+        sampling-universal model that can robustly reconstruct CMR images <span
+          style="font-weight: 700;color:#2d7553;">1)</span> from different k-space trajectories
+        (uniform, Guassian, and pseudo radial undersampling with temporal/parametric interleaving); <span
+          style="font-weight: 700;color:#2d7553;">2)</span> at different
         acceleration factors (acceleration factors from 4x to 24x, ACS not included for calculations). The proposed
         method is supposed to leverage deep learning algorithms to exploit the potential of random sampling, enabling
         faster acquisition times while maintaining high-quality image reconstructions. <br><br><span
@@ -218,13 +213,12 @@
         undersampling scenarios.
 
       </p>
+      <br>
     </div>
-  </section>
-  <section class="u-align-left u-clearfix u-section-3" id="carousel_651a">
     <div class="u-clearfix u-sheet u-sheet-1">
       <h2 class="u-text u-text-1">Data</h2>
       <p class="u-align-left u-text u-text-2">
-        <br>
+
         <span style="font-weight: 700;color:#2d7553"> 1) Scanner: </span>&nbsp;
         Siemens 3T MRI scanner (MAGNETOM Vida)
         <br>
@@ -255,7 +249,8 @@
       <img src="images/home-3.png" style="width:800px;height:auto;margin:auto;display:block;">
       <br>
       <p class="u-align-left u-text u-text-2">
-        <span style="font-weight: 700;color:#2d7553">Taking multi-coil long-axis (LAX) cine as an example, the format of data is as follows:</span>
+        <span style="font-weight: 700;color:#2d7553">Taking multi-coil long-axis (LAX) cine as an example, the format of
+          data is as follows:</span>
         <br><br><span style="font-weight: 700;color:#2d7553">1) Data in folder 'FullSample': cine_lax.mat</span>
         <br># cine with long-axis view (including 3CH, 2CH, and 4CH views within the nz dimension).
         <br># variable name:
@@ -266,9 +261,11 @@
         <br>-nc: coil array number (compressed to 10)
         <br>-nz: slice number (for SAX) or slice group (for LAX, i.e., 3CH, 2CH, and 4CH views)
         <br>-nt: temporal/parametric frame
-        <br><br><span style="font-weight: 700;color:#2d7553">2) Data in folder 'UnderSample_Task2': cine_lax_kus_xxx.mat</span>
+        <br><br><span style="font-weight: 700;color:#2d7553">2) Data in folder 'UnderSample_Task2':
+          cine_lax_kus_xxx.mat</span>
         <br># cine with long-axis view (including 3CH, 2CH, and 4CH views within the nz dimension).
-        <br># 'xxx' is the corresponding undersampling scenarios. For example, 'ktUniform4' means uniform undersampling with
+        <br># 'xxx' is the corresponding undersampling scenarios. For example, 'ktUniform4' means uniform undersampling
+        with
         temporal interleaving at acceleration factor 4x (ACS not included for calculations)
         <br># variable name:
         <br># 'kus' for undersampled kspace
@@ -279,23 +276,26 @@
         <br>-nc: coil array number (compressed to 10)
         <br>-nz: slice number (for SAX) or slice group (for LAX, i.e., 3CH, 2CH, and 4CH views)
         <br>-nt: temporal/parametric frame
-        <br><br><span style="font-weight: 700;color:#2d7553">3) Data in folder 'Mask_Task2': cine_lax_mask_xxx.mat</span>
+        <br><br><span style="font-weight: 700;color:#2d7553">3) Data in folder 'Mask_Task2':
+          cine_lax_mask_xxx.mat</span>
         <br># undersampling mask with long-axis view, the mask is fixed among different nc and nz. But the mask is
         interleaved along nt.
-        <br># 'xxx' is the corresponding undersampling scenarios. For example, 'ktUniform4' means uniform undersampling with
+        <br># 'xxx' is the corresponding undersampling scenarios. For example, 'ktUniform4' means uniform undersampling
+        with
         temporal interleaving at acceleration factor 4x (ACS not included for calculations)
         <br># variable name:
         <br># "mask" for undersampling mask with temporal interleaving
-        <br># data type: 3D binary data with the dimensions (nx,ny,nt), the central 16 lines (ny) or central 16*16 regions
+        <br># data type: 3D binary data with the dimensions (nx,ny,nt), the central 16 lines (ny) or central 16*16
+        regions
         (nx*ny) are always fully sampled to be used as autocalibration signals (ACS)
         <br>-nx: matrix size in x-axis (kspace)
-        <br>-ny: matrix size in y-axis (kspace) 
+        <br>-ny: matrix size in y-axis (kspace)
         <br>-nt: temporal/parametric frame
         <br>
       </p>
+      <br>
     </div>
-  </section>
-  <section class="u-align-left u-clearfix u-section-4" id="carousel_7411">
+
     <div class="u-clearfix u-sheet u-sheet-1">
       <h2 class="u-text u-text-1"> Metrics &amp; Ranking</h2>
       <p class="u-text u-text-2">
@@ -307,7 +307,8 @@
         <span style="font-weight: 700;">Ranking methods:</span>
         <br>During the testing
         and ranking phase, we will invite three radiologists to independently score the
-        top five teams ranked by SSIM. <span style="font-weight: 700;color:#2d7553">The scoring will cover three aspects: image
+        top five teams ranked by SSIM. <span style="font-weight: 700;color:#2d7553">The scoring will cover three
+          aspects: image
           quality, image artifacts, and clinical utility. </span>We will consider both the
         radiologists' scores and the SSIM results to generate a comprehensive ranking.
         We
@@ -318,25 +319,26 @@
           test set on our server. </span>For the cases without valid output, we will assign it
         to the lowest value of metric.<br>
       </p>
+      <br>
       <h2 class="u-text u-text-1"> Rules</h2>
       <p class="u-text u-text-2">
         1) To ensure the fairness of this challenge, you are only allowed to use the datasets provided by fastMRI,
         CMRxRecon2023, and CMRxRecon2024. Data augmentation based on the training dataset is allowed.
-        <br><br>2) In TASK 1, participants are allowed to train <span style="font-weight: 700;color: #2d7553;">three individual contrast-universal models</span> to respectively
-        reconstruct multi-contrast data at three acceleration factors.
-
+        <br><br>2) In TASK 2, participants are allowed to train <span style="font-weight: 700;color:#2d7553">only one
+          universal model</span> to reconstruct various data at the aforementioned different undersampling scenarios.
+          <br>
         <br>
       </p>
     </div>
-  </section>
-  <section class="u-align-left u-clearfix u-section-5" id="carousel_2d4d">
+
     <div class="u-clearfix u-sheet u-sheet-1">
       <h2 class="u-text u-text-1">Submission</h2>
       <p class="u-text u-text-2">
         <span style="font-weight: 700;"></span>The submission instructions will be released on the&nbsp;<a
-          href="https://www.synapse.org/#!Synapse:syn51471091/wiki/622170"
-          class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">Synapse</a>&nbsp;platform.<br>
+          href="https://www.synapse.org/#!Synapse:syn54951257/wiki/"
+          style="font-weight: bold;">Synapse</a>&nbsp;platform.<br>
       </p>
+      <br><br>
     </div>
   </section>
 
@@ -344,105 +346,98 @@
 
   <footer class="u-clearfix u-custom-color-2 u-footer" id="sec-0201">
     <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
-            <div class="u-gutter-0 u-layout">
-                <div class="u-layout-row">
-                    <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-17 u-layout-cell-1">
-                        <div class="u-container-layout u-container-layout-1">
-                            <p class="u-large-text u-text u-text-variant u-text-1"> Contact us:<br>
-                            </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-1"><img
-                                    src="images/2669570-68c79634.png" alt=""></span>
-                            <p class="u-text u-text-2">
-                                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"
-                                    data-href="mailto:CMRxRecon@outlook.com">CMRxRecon@outlook.com<br>
-                                </a>
-                            </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-2"><img
-                                    src="images/733635-bd022505.png" alt=""></span>
-                            <p class="u-text u-text-3">
-                                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-2"
-                                    href="https://twitter.com/CMRxRecon"
-                                    target="_blank">CMRxRecon<br>
-                                </a>
-                            </p>
-                            <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-3"
-                                href="https://www.synapse.org/#!Synapse:syn51471091/wiki/622170"
-                                target="_blank">Synapse Link</a><span
-                                class="u-file-icon u-icon u-text-custom-color-3 u-icon-3"><img
-                                    src="images/10276957-f66d7f95.png" alt=""></span>
-                            <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-4"
-                                href="https://github.com/CmrxRecon/"
-                                target="_blank">CMRxRecon </a><span
-                                class="u-file-icon u-icon u-text-custom-color-3 u-icon-4"><img
-                                    src="images/25231-9e47ce63.png" alt=""></span>
-                        </div>
-                    </div>
-                    <div class="u-container-style u-layout-cell u-size-26 u-layout-cell-2">
-                        <div class="u-container-layout u-container-layout-2">
-                            <img style="position:absolute;margin:92px auto 0 50px;width: 65px;height: auto;"
-                                src="images/fudan-logo.png">
-                            <img style="position:absolute;margin:95px auto 0 130px;width: 55px;height: auto;"
-                                src="images/R-C.png">
-                            <img style="position:absolute;margin:95px auto 0 200px;width: 55px;height: auto;"
-                                src="images/Shield_of_Imperial_College_London.svg.png">
-                            <img style="position:absolute;margin:94px auto 0 270px;width: 60px;height: auto;"
-                                src="images/hong-kong-polytechnic-university-logo-00FF467BCA-seeklogo.com.png">
-                            <img style="position:absolute;margin:94px auto 0 345px;width: 60px;height: auto;"
-                                src="images/1200px-Xiamen_University_logo.svg.png">
-
-                            <img style="position:absolute;margin:180px auto 0 -10px;width: 60px;height: auto;"
-                                src="images/Ruijin_Hospital_Shanghai_Jiaotong_University_School_Of_Medicine_logo.png">
-                            <img style="position:absolute;margin:183px auto 0 65px;width: 60px;height: auto;"
-                                src="images/Renji_hospital_logo.png">
-                            <img style="position:absolute;margin:190px auto 0 140px;width: 80px;height: auto;"
-                                src="images/philips-healthcare.png">
-                            <img style="position:absolute;margin:198px auto 0 240px;width: 100px;height: auto;"
-                                src="images/Siemens_Healthineers_logo.svg.png">
-                            <img style="position:absolute;margin:180px auto 0 350px;width: 56px;height: auto;"
-                                src="images/nice-logo.png">
-                            <img style="position:absolute;margin:180px auto 0 407px;width: 56px;height: auto;"
-                                src="images/jitri_logo.png">
-                            <br><br><br><br><br><br><br>
-
-                        </div>
-                    </div>
-                    <div
-                        class="u-align-left u-container-style u-layout-cell u-right-cell u-size-17 u-layout-cell-3">
-                        <div class="u-container-layout u-container-layout-3">
-                            <p class="u-large-text u-text u-text-variant u-text-5">CMRxRecon2023<br>
-                            </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
-                                    src="images/10276957-f66d7f95.png" alt=""></span>
-                            <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
-                                href="https://cmrxrecon.github.io" target="_blank">CMRxRecon2023 website</a>
-                            <span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
-                                    src="images/10276957-f66d7f95.png" alt=""></span>
-                            <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
-                                data-href="mailto:CMRxRecon@outlook.com"
-                                href="https://www.synapse.org/#!Synapse:syn51471091/wiki/622170"
-                                target="_blank">Synapse Link</a>
-                            <p class="u-large-text u-text u-text-variant u-text-5">CMRxMotion<br>
-                            </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
-                                    src="images/10276957-f66d7f95.png" alt=""></span>
-                            <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
-                                data-href="mailto:CMRxRecon@outlook.com" href="http://cmr.miccai.cloud/">CMRxMotion
-                                website<br>
-                            </a><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
-                                    src="images/10276957-f66d7f95.png" alt=""></span>
-                            <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
-                                data-href="mailto:CMRxRecon@outlook.com"
-                                href="https://www.synapse.org/#!Synapse:syn28503327/wiki/617822"
-                                target="_blank">Synapse Link</a>
-
-
-                        </div>
-                    </div>
-                </div>
+      <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+        <div class="u-gutter-0 u-layout">
+          <div class="u-layout-row">
+            <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-17 u-layout-cell-1">
+              <div class="u-container-layout u-container-layout-1">
+                <p class="u-large-text u-text u-text-variant u-text-1"> Contact us:<br>
+                </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-1"><img
+                    src="images/2669570-68c79634.png" alt=""></span>
+                <p class="u-text u-text-2">
+                  <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"
+                    data-href="mailto:CMRxRecon@outlook.com">CMRxRecon@outlook.com<br>
+                  </a>
+                </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-2"><img
+                    src="images/733635-bd022505.png" alt=""></span>
+                <p class="u-text u-text-3">
+                  <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-2"
+                    href="https://twitter.com/CMRxRecon" target="_blank">CMRxRecon<br>
+                  </a>
+                </p>
+                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-3"
+                  href="https://www.synapse.org/#!Synapse:syn54951257/wiki/" target="_blank">Synapse Link</a><span
+                  class="u-file-icon u-icon u-text-custom-color-3 u-icon-3"><img src="images/10276957-f66d7f95.png"
+                    alt=""></span>
+                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-4"
+                  href="https://github.com/CmrxRecon/" target="_blank">CMRxRecon </a><span
+                  class="u-file-icon u-icon u-text-custom-color-3 u-icon-4"><img src="images/25231-9e47ce63.png"
+                    alt=""></span>
+              </div>
             </div>
+            <div class="u-container-style u-layout-cell u-size-26 u-layout-cell-2">
+              <div class="u-container-layout u-container-layout-2">
+                <img style="position:absolute;margin:92px auto 0 50px;width: 65px;height: auto;"
+                  src="images/fudan-logo.png">
+                <img style="position:absolute;margin:95px auto 0 130px;width: 55px;height: auto;" src="images/R-C.png">
+                <img style="position:absolute;margin:95px auto 0 200px;width: 55px;height: auto;"
+                  src="images/Shield_of_Imperial_College_London.svg.png">
+                <img style="position:absolute;margin:94px auto 0 270px;width: 60px;height: auto;"
+                  src="images/hong-kong-polytechnic-university-logo-00FF467BCA-seeklogo.com.png">
+                <img style="position:absolute;margin:94px auto 0 345px;width: 60px;height: auto;"
+                  src="images/1200px-Xiamen_University_logo.svg.png">
+
+                <img style="position:absolute;margin:180px auto 0 -10px;width: 60px;height: auto;"
+                  src="images/Ruijin_Hospital_Shanghai_Jiaotong_University_School_Of_Medicine_logo.png">
+                <img style="position:absolute;margin:183px auto 0 65px;width: 60px;height: auto;"
+                  src="images/Renji_hospital_logo.png">
+                <img style="position:absolute;margin:190px auto 0 140px;width: 80px;height: auto;"
+                  src="images/philips-healthcare.png">
+                <img style="position:absolute;margin:198px auto 0 240px;width: 100px;height: auto;"
+                  src="images/Siemens_Healthineers_logo.svg.png">
+                <img style="position:absolute;margin:180px auto 0 350px;width: 56px;height: auto;"
+                  src="images/nice-logo.png">
+                <img style="position:absolute;margin:180px auto 0 407px;width: 56px;height: auto;"
+                  src="images/jitri_logo.png">
+                <br><br><br><br><br><br><br>
+
+              </div>
+            </div>
+            <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-17 u-layout-cell-3">
+              <div class="u-container-layout u-container-layout-3">
+                <p class="u-large-text u-text u-text-variant u-text-5">CMRxRecon2023<br>
+                </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
+                    src="images/10276957-f66d7f95.png" alt=""></span>
+                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
+                  href="https://cmrxrecon.github.io" target="_blank">CMRxRecon2023 website</a>
+                <span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img src="images/10276957-f66d7f95.png"
+                    alt=""></span>
+                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
+                  data-href="mailto:CMRxRecon@outlook.com"
+                  href="https://www.synapse.org/#!Synapse:syn54951257/wiki/" target="_blank">Synapse Link</a>
+                <p class="u-large-text u-text u-text-variant u-text-5">CMRxMotion<br>
+                </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
+                    src="images/10276957-f66d7f95.png" alt=""></span>
+                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
+                  data-href="mailto:CMRxRecon@outlook.com" href="http://cmr.miccai.cloud/">CMRxMotion
+                  website<br>
+                </a><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
+                    src="images/10276957-f66d7f95.png" alt=""></span>
+                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
+                  data-href="mailto:CMRxRecon@outlook.com"
+                  href="https://www.synapse.org/#!Synapse:syn28503327/wiki/617822" target="_blank">Synapse Link</a>
+
+
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="u-border-2 u-border-custom-color-3 u-line u-line-horizontal u-line-1"></div>
-        <p class="u-text u-text-custom-color-3 u-text-7"> © Copyright 2024 CMRxRecon Working Group<br>
-        </p>
+      </div>
+      <div class="u-border-2 u-border-custom-color-3 u-line u-line-horizontal u-line-1"></div>
+      <p class="u-text u-text-custom-color-3 u-text-7"> © Copyright 2024 CMRxRecon Working Group<br>
+      </p>
     </div>
-</footer>
+  </footer>
   <section class="u-backlink u-clearfix u-grey-80">
     <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
       <span>Website Templates</span>

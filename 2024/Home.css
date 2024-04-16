@@ -75,18 +75,18 @@
     margin-left: initial;
   }
 }.u-section-2 .u-sheet-1 {
-  min-height: 302px;
+  min-height: 100px;
 }
 
 .u-section-2 .u-group-1 {
-  min-height: 302px;
+  min-height: 100px;
   margin-top: 0;
   margin-bottom: 0;
   height: auto;
 }
 
 .u-section-2 .u-container-layout-1 {
-  padding: 30px;
+  padding: 10px;
 }
 
 .u-section-2 .u-text-1 {
