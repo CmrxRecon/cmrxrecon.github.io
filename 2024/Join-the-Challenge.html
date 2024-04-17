@@ -39,7 +39,8 @@
 <body data-path-to-root="/" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
   <header class="u-clearfix u-header u-sticky u-sticky-7dd4 u-white u-header" id="sec-7922">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <a href="https://conferences.miccai.org/2024/en/default.asp" class="u-image u-logo u-image-1" data-image-width="768" data-image-height="333">
+      <a href="https://conferences.miccai.org/2024/en/default.asp" class="u-image u-logo u-image-1"
+        data-image-width="768" data-image-height="333">
         <img src="images/miccai2023-logo.png" class="u-logo-image u-logo-image-1">
       </a>
       <img class="u-image u-image-contain u-image-default u-image-2" src="images/CMRxRecon-logo.png" alt=""
@@ -95,9 +96,9 @@
                 <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2">
                   <li class="u-nav-item"><a
                       class="u-button-style u-hover-custom-color-4 u-nav-link u-text-active-custom-color-2 u-text-hover-white u-white"
-                      href="Submission.html">Submission</a>
+                      href="Submission.html">Task Submission</a>
                   </li>
-                  
+
                   <li class="u-nav-item"><a
                       class="u-button-style u-hover-custom-color-4 u-nav-link u-text-active-custom-color-2 u-text-hover-white u-white"
                       href="STACOM.html">STACOM workshop paper</a>
@@ -189,32 +190,30 @@
           <p class="u-align-left u-text u-text-2"> 1. Sign up and apply to join the challenge on the&nbsp;<a
               href="https://www.synapse.org/#!Synapse:syn54951257/wiki/"
               class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">Synapse</a>&nbsp;website.<br>2.
-              Submit your team information <a href="https://www.wjx.top/vm/t9RMJ8I.aspx"
+            Submit your team information <a href="https://www.wjx.top/vm/t9RMJ8I.aspx"
               class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">here</a>.<br><br><br>
+          <h2 class="u-align-left u-text u-text-default u-text-1"> Download the data</h2>
+          <p class="u-align-left u-text u-text-2">
+            Download data <a href="https://www.synapse.org/#!Synapse:syn54951257/datasets/">here</a>.
+          </p><br><br>
           <h2 class="u-align-left u-text u-text-default u-text-1">Train the model</h2>
           <p class="u-align-left u-text u-text-2"> Participants are expected to train models in their
             local computational environments and to submit docker containers on Synapse
             platform. A leaderboard will be maintained on the Synapse
             platform during the validation phase.<br>
-          </p><br><br>
-          <h2 class="u-align-left u-text u-text-default u-text-1"> Download the data</h2>
-          <p class="u-align-left u-text u-text-2">
-            Download data <a href="https://www.synapse.org/#!Synapse:syn54951257/datasets/">here</a>.
           </p>
-        <br><br>
+          <br><br>
           <h2 class="u-align-left u-text u-text-default u-text-1"> Code availability</h2>
           <p class="u-align-left u-text u-text-2"> We provide the code to facilitate the use of the data we release
             at&nbsp;<a href="https://github.com/CmrxRecon/CMRxRecon2024"
               class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">https://github.com/CmrxRecon/CMRxRecon2024</a>.<br>A
-            brief description of the provided package is as follows:&nbsp;<br>
+            brief description of the provided package is as follows:&nbsp;<br><br>
+            <span style="font-weight:bold;color:#2d7553">- CMRxReconDemo:</span> contains parallel imaging reconstruction code<br>
+            <span style="font-weight:bold;color:#2d7553">- ChallengeDataFormat:</span> explains the challenge data and the rules for data submission<br>
+            <span style="font-weight:bold;color:#2d7553">- CMRxReconMaskGeneration:</span> contains code for varied undersampling mask generation in Task 1&2<br>
+            <span style="font-weight:bold;color:#2d7553">- Evaluation:</span> contains image quality evaluation code for validation and testing<br>
+            <span style="font-weight:bold;color:#2d7553">- Submission:</span> contains the structure for challenge submission<br><br><br>
           </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <div class="u-container-style u-expanded-width u-group u-group-1">
-        <div class="u-container-layout u-container-layout-1">
           <h2 class="u-align-left u-text u-text-default u-text-1"> Evaluation platform</h2>
           <p class="u-align-left u-text u-text-2"> Validation of the received docker on unseen test set will be
             performed on a cloud server with a configuration as follows:<br>
@@ -241,16 +240,18 @@
             Imaging Part. Phenomics. 2021, 1(4): 151-170.<a
               href="https://doi.org/10.1007/s43657-021-00018-x">https://doi.org/10.1007/s43657-021-00018-x</a><br>
             <br><span style="font-weight:bold;color:#2d7553">Other reference (optional for citation):</span><br>
-            1. Wang C, Jang J, Neisius U, et al. Black blood myocardial T2 mapping. Magnetic resonance in medicine. 2019,
+            1. Wang C, Jang J, Neisius U, et al. Black blood myocardial T2 mapping. Magnetic resonance in medicine.
+            2019,
             81(1): 153-166. <a href="https://doi.org/10.1002/mrm.27360">https://doi.org/10.1002/mrm.27360</a><br>
-            2. Lyu J, Li G, Wang C, et al. Region-focused multi-view transformer-based generative adversarial network for
+            2. Lyu J, Li G, Wang C, et al. Region-focused multi-view transformer-based generative adversarial network
+            for
             cardiac cine MRI reconstruction[J]. Medical Image Analysis, 2023:
             102760. <a
               href="https://doi.org/10.1016/j.media.2023.102760">https://doi.org/10.1016/j.media.2023.102760</a><br>
             3. Qin C, Schlemper J, Caballero J, et al. Convolutional recurrent neural networks for dynamic MR image
             reconstruction. IEEE transactions on medical imaging, 2018, 38(1):
             280-290. <a href="https://doi.org/10.1109/TMI.2018.2863670">https://doi.org/10.1109/TMI.2018.2863670</a><br>
-            4. Qin C, Duan J, Hammernik K, et al. Complementary time‐frequency domain networks for dynamic parallel MR
+            4. Qin C, Duan J, Hammernik K, et al. Complementary time-frequency domain networks for dynamic parallel MR
             image reconstruction. Magnetic Resonance in Medicine, 2021, 86(6):
             3274-3291. <a href="https://doi.org/10.1002/mrm.28917">https://doi.org/10.1002/mrm.28917</a><br>
             5. Lyu J, Tong X, Wang C. Parallel Imaging With a Combination of SENSE and Generative Adversarial Networks
@@ -268,7 +269,7 @@
             Accelerated MRI, IEEE Transactions on Medical Imaging, 42: 79-90, 2023.
             <a href="https://doi.org/10.1109/TMI.2022.3203312">https://doi.org/10.1109/TMI.2022.3203312</a><br>
             10. Wang Z, et al., Deep Separable Spatiotemporal Learning for Fast Dynamic Cardiac MRI, arXiv preprint
-            arXiv:2402.15939, 2024. <a  href="https://arxiv.org/abs/2402.15939">https://arxiv.org/abs/2402.15939</a><br>
+            arXiv:2402.15939, 2024. <a href="https://arxiv.org/abs/2402.15939">https://arxiv.org/abs/2402.15939</a><br>
 
           </p>
           <br>
@@ -277,7 +278,8 @@
           <img src="images/2023-05-091.42.57.png" style="width:800px;height:auto;margin:auto;display:block;">
           <br>
           <p class="u-align-left u-text u-text-2" style="color:indianred">
-            Note: Participants are not required to upload the complete training code. But teams willing to upload the original training code will be automatically entered into the code-sharing pool.
+            Note: Participants are not required to upload the complete training code. But teams willing to upload the
+            original training code will be automatically entered into the code-sharing pool.
           </p><br>
           <h2 class="u-align-left u-text u-text-default u-text-1"> Awards</h2>
           <p class="u-align-left u-text u-text-2">
@@ -498,8 +500,8 @@
               tasks to each team.</span><br>
             Prize-winning methods will be announced publicly as part of a scientific session at the MICCAI annual
             meeting.
-            </p>
-            <br>
+          </p>
+          <br>
         </div>
       </div>
     </div>
@@ -509,105 +511,98 @@
 
   <footer class="u-clearfix u-custom-color-2 u-footer" id="sec-0201">
     <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
-            <div class="u-gutter-0 u-layout">
-                <div class="u-layout-row">
-                    <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-17 u-layout-cell-1">
-                        <div class="u-container-layout u-container-layout-1">
-                            <p class="u-large-text u-text u-text-variant u-text-1"> Contact us:<br>
-                            </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-1"><img
-                                    src="images/2669570-68c79634.png" alt=""></span>
-                            <p class="u-text u-text-2">
-                                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"
-                                    data-href="mailto:CMRxRecon@outlook.com">CMRxRecon@outlook.com<br>
-                                </a>
-                            </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-2"><img
-                                    src="images/733635-bd022505.png" alt=""></span>
-                            <p class="u-text u-text-3">
-                                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-2"
-                                    href="https://twitter.com/CMRxRecon"
-                                    target="_blank">CMRxRecon<br>
-                                </a>
-                            </p>
-                            <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-3"
-                                href="https://www.synapse.org/#!Synapse:syn54951257/wiki/"
-                                target="_blank">Synapse Link</a><span
-                                class="u-file-icon u-icon u-text-custom-color-3 u-icon-3"><img
-                                    src="images/10276957-f66d7f95.png" alt=""></span>
-                            <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-4"
-                                href="https://github.com/CmrxRecon/"
-                                target="_blank">CMRxRecon </a><span
-                                class="u-file-icon u-icon u-text-custom-color-3 u-icon-4"><img
-                                    src="images/25231-9e47ce63.png" alt=""></span>
-                        </div>
-                    </div>
-                    <div class="u-container-style u-layout-cell u-size-26 u-layout-cell-2">
-                        <div class="u-container-layout u-container-layout-2">
-                            <img style="position:absolute;margin:92px auto 0 50px;width: 65px;height: auto;"
-                                src="images/fudan-logo.png">
-                            <img style="position:absolute;margin:95px auto 0 130px;width: 55px;height: auto;"
-                                src="images/R-C.png">
-                            <img style="position:absolute;margin:95px auto 0 200px;width: 55px;height: auto;"
-                                src="images/Shield_of_Imperial_College_London.svg.png">
-                            <img style="position:absolute;margin:94px auto 0 270px;width: 60px;height: auto;"
-                                src="images/hong-kong-polytechnic-university-logo-00FF467BCA-seeklogo.com.png">
-                            <img style="position:absolute;margin:94px auto 0 345px;width: 60px;height: auto;"
-                                src="images/1200px-Xiamen_University_logo.svg.png">
-
-                            <img style="position:absolute;margin:180px auto 0 -10px;width: 60px;height: auto;"
-                                src="images/Ruijin_Hospital_Shanghai_Jiaotong_University_School_Of_Medicine_logo.png">
-                            <img style="position:absolute;margin:183px auto 0 65px;width: 60px;height: auto;"
-                                src="images/Renji_hospital_logo.png">
-                            <img style="position:absolute;margin:190px auto 0 140px;width: 80px;height: auto;"
-                                src="images/philips-healthcare.png">
-                            <img style="position:absolute;margin:198px auto 0 240px;width: 100px;height: auto;"
-                                src="images/Siemens_Healthineers_logo.svg.png">
-                            <img style="position:absolute;margin:180px auto 0 350px;width: 56px;height: auto;"
-                                src="images/nice-logo.png">
-                            <img style="position:absolute;margin:180px auto 0 407px;width: 56px;height: auto;"
-                                src="images/jitri_logo.png">
-                            <br><br><br><br><br><br><br>
-
-                        </div>
-                    </div>
-                    <div
-                        class="u-align-left u-container-style u-layout-cell u-right-cell u-size-17 u-layout-cell-3">
-                        <div class="u-container-layout u-container-layout-3">
-                            <p class="u-large-text u-text u-text-variant u-text-5">CMRxRecon2023<br>
-                            </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
-                                    src="images/10276957-f66d7f95.png" alt=""></span>
-                            <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
-                                href="https://cmrxrecon.github.io" target="_blank">CMRxRecon2023 website</a>
-                            <span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
-                                    src="images/10276957-f66d7f95.png" alt=""></span>
-                            <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
-                                data-href="mailto:CMRxRecon@outlook.com"
-                                href="https://www.synapse.org/#!Synapse:syn51471091/wiki/622170"
-                                target="_blank">Synapse Link</a>
-                            <p class="u-large-text u-text u-text-variant u-text-5">CMRxMotion<br>
-                            </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
-                                    src="images/10276957-f66d7f95.png" alt=""></span>
-                            <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
-                                data-href="mailto:CMRxRecon@outlook.com" href="http://cmr.miccai.cloud/">CMRxMotion
-                                website<br>
-                            </a><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
-                                    src="images/10276957-f66d7f95.png" alt=""></span>
-                            <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
-                                data-href="mailto:CMRxRecon@outlook.com"
-                                href="https://www.synapse.org/#!Synapse:syn28503327/wiki/617822"
-                                target="_blank">Synapse Link</a>
-
-
-                        </div>
-                    </div>
-                </div>
+      <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+        <div class="u-gutter-0 u-layout">
+          <div class="u-layout-row">
+            <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-17 u-layout-cell-1">
+              <div class="u-container-layout u-container-layout-1">
+                <p class="u-large-text u-text u-text-variant u-text-1"> Contact us:<br>
+                </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-1"><img
+                    src="images/2669570-68c79634.png" alt=""></span>
+                <p class="u-text u-text-2">
+                  <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"
+                    data-href="mailto:CMRxRecon@outlook.com">CMRxRecon@outlook.com<br>
+                  </a>
+                </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-2"><img
+                    src="images/733635-bd022505.png" alt=""></span>
+                <p class="u-text u-text-3">
+                  <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-2"
+                    href="https://twitter.com/CMRxRecon" target="_blank">CMRxRecon<br>
+                  </a>
+                </p>
+                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-3"
+                  href="https://www.synapse.org/#!Synapse:syn54951257/wiki/" target="_blank">Synapse Link</a><span
+                  class="u-file-icon u-icon u-text-custom-color-3 u-icon-3"><img src="images/10276957-f66d7f95.png"
+                    alt=""></span>
+                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-4"
+                  href="https://github.com/CmrxRecon/" target="_blank">CMRxRecon </a><span
+                  class="u-file-icon u-icon u-text-custom-color-3 u-icon-4"><img src="images/25231-9e47ce63.png"
+                    alt=""></span>
+              </div>
             </div>
+            <div class="u-container-style u-layout-cell u-size-26 u-layout-cell-2">
+              <div class="u-container-layout u-container-layout-2">
+                <img style="position:absolute;margin:92px auto 0 50px;width: 65px;height: auto;"
+                  src="images/fudan-logo.png">
+                <img style="position:absolute;margin:95px auto 0 130px;width: 55px;height: auto;" src="images/R-C.png">
+                <img style="position:absolute;margin:95px auto 0 200px;width: 55px;height: auto;"
+                  src="images/Shield_of_Imperial_College_London.svg.png">
+                <img style="position:absolute;margin:94px auto 0 270px;width: 60px;height: auto;"
+                  src="images/hong-kong-polytechnic-university-logo-00FF467BCA-seeklogo.com.png">
+                <img style="position:absolute;margin:94px auto 0 345px;width: 60px;height: auto;"
+                  src="images/1200px-Xiamen_University_logo.svg.png">
+
+                <img style="position:absolute;margin:180px auto 0 -10px;width: 60px;height: auto;"
+                  src="images/Ruijin_Hospital_Shanghai_Jiaotong_University_School_Of_Medicine_logo.png">
+                <img style="position:absolute;margin:183px auto 0 65px;width: 60px;height: auto;"
+                  src="images/Renji_hospital_logo.png">
+                <img style="position:absolute;margin:190px auto 0 140px;width: 80px;height: auto;"
+                  src="images/philips-healthcare.png">
+                <img style="position:absolute;margin:198px auto 0 240px;width: 100px;height: auto;"
+                  src="images/Siemens_Healthineers_logo.svg.png">
+                <img style="position:absolute;margin:180px auto 0 350px;width: 56px;height: auto;"
+                  src="images/nice-logo.png">
+                <img style="position:absolute;margin:180px auto 0 407px;width: 56px;height: auto;"
+                  src="images/jitri_logo.png">
+                <br><br><br><br><br><br><br>
+
+              </div>
+            </div>
+            <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-17 u-layout-cell-3">
+              <div class="u-container-layout u-container-layout-3">
+                <p class="u-large-text u-text u-text-variant u-text-5">CMRxRecon2023<br>
+                </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
+                    src="images/10276957-f66d7f95.png" alt=""></span>
+                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
+                  href="https://cmrxrecon.github.io" target="_blank">CMRxRecon2023 website</a>
+                <span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img src="images/10276957-f66d7f95.png"
+                    alt=""></span>
+                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
+                  data-href="mailto:CMRxRecon@outlook.com"
+                  href="https://www.synapse.org/#!Synapse:syn51471091/wiki/622170" target="_blank">Synapse Link</a>
+                <p class="u-large-text u-text u-text-variant u-text-5">CMRxMotion<br>
+                </p><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
+                    src="images/10276957-f66d7f95.png" alt=""></span>
+                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
+                  data-href="mailto:CMRxRecon@outlook.com" href="http://cmr.miccai.cloud/">CMRxMotion
+                  website<br>
+                </a><span class="u-file-icon u-icon u-text-custom-color-3 u-icon-7"><img
+                    src="images/10276957-f66d7f95.png" alt=""></span>
+                <a class="u-active-none u-border-hover-grey-75 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-8"
+                  data-href="mailto:CMRxRecon@outlook.com"
+                  href="https://www.synapse.org/#!Synapse:syn28503327/wiki/617822" target="_blank">Synapse Link</a>
+
+
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="u-border-2 u-border-custom-color-3 u-line u-line-horizontal u-line-1"></div>
-        <p class="u-text u-text-custom-color-3 u-text-7"> © Copyright 2024 CMRxRecon Working Group<br>
-        </p>
+      </div>
+      <div class="u-border-2 u-border-custom-color-3 u-line u-line-horizontal u-line-1"></div>
+      <p class="u-text u-text-custom-color-3 u-text-7"> © Copyright 2024 CMRxRecon Working Group<br>
+      </p>
     </div>
-</footer>
+  </footer>
   <section class="u-backlink u-clearfix u-grey-80">
     <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
       <span>Website Templates</span>
