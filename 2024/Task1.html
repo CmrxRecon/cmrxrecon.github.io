@@ -205,10 +205,18 @@
         views, and scanning protocols using a single universal model. The proposed method is supposed to offer a unified
         framework that can handle various imaging contrasts, allowing for faster and more robust reconstructions across
         different CMR protocols.
-        <br><br><span style="font-weight:bold;color: indianred;">Note:</span> In TASK 1, participants are allowed to
-        train <span style="font-weight:bold;color: #2d7553;">three individual contrast-universal
-          models</span> to respectively reconstruct multi-contrast data at the aforementioned three acceleration
-        factors.
+        <br><br><span style="font-weight:bold;color: indianred;">Note:</span> In TASK 1, participants are allowed
+        to train <span style="font-weight: 700;color: indianred;">three individual contrast-universal models</span> to
+        respectively reconstruct multi-contrast data at the
+        aforementioned three acceleration factors; <span style="font-weight: 700;color: indianred;">TrainingSet
+        includes Cine, Aorta, Mapping, and Tagging;
+        ValidationSet and TestSet include Cine, Aorta, Mapping,
+        Tagging, and other two unseen contrasts (Flow2d and
+        BlackBlood)</span>; the data size of Cine, Aorta, Mapping, Tagging, and Flow2d is 5D (nx,ny,nc,nz,nt); the
+        data
+        size of BlackBlood is 4D (nx,ny,nc,nz); <span style="font-weight: 700;color: indianred;">the size of all
+          undersampling masks is 2D (nx,ny)</span>, the central 16
+        lines (ny) are always fully sampled to be used as autocalibration signals (ACS).
           <br><br>
       </p>
     </div>
@@ -242,9 +250,15 @@
         scanner will be processed and transformed to '.mat' format using the script provided by our vendor. A readme
         file will be provided to describe the content and usage of the data.
         <br>
-      </p>
-      <br>
-      <p class="u-align-left u-text u-text-2">
+        <p style="font-weight: 700;color:#2d7553;text-align: center;">Details of data types in Task1</p>
+        <img src="images/task1-data-detail.png" style="width:800px;height:auto;margin:auto;display:block;">
+        <br>
+        <span style="font-weight:bold;color: indianred;">Note: Undersampled and the fully sampled data share the same dimension. nx: matrix size in x-axis (k-space); ny: matrix size in y-axis (k-space); nc: coil array number (compressed to 10); nz: slice number (for SAX) or slice group (for LAX, i.e., 3CH, 2CH, and 4CH views); nt: temporal/parametric frame.</span>
+        <p style="font-weight: 700;color:#2d7553;text-align: center;">Details of mask types in Task1</p>
+        <img src="images/task1-mask-detail.png" style="width:800px;height:auto;margin:auto;display:block;">
+        <br>
+        <span style="font-weight:bold;color: indianred;">Note: nx: matrix size in x-axis (k-space); ny: matrix size in y-axis (k-space); nt: temporal/parametric frame.</span>
+<br><br>
         <span style="font-weight: 700;color:#2d7553;font-size: larger;">Taking multi-coil long-axis (LAX) cine as an
           example, the format of
           data is as follows:</span>
