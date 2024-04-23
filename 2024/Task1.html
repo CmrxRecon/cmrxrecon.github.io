@@ -15,7 +15,8 @@
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.5, maximum-scale=2.0, user-scalable=yes" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.5, maximum-scale=2.0, user-scalable=yes" />
 
 
 
@@ -209,15 +210,15 @@
         to train <span style="font-weight: 700;color: indianred;">three individual contrast-universal models</span> to
         respectively reconstruct multi-contrast data at the
         aforementioned three acceleration factors; <span style="font-weight: 700;color: indianred;">TrainingSet
-        includes Cine, Aorta, Mapping, and Tagging;
-        ValidationSet and TestSet include Cine, Aorta, Mapping,
-        Tagging, and other two unseen contrasts (Flow2d and
-        BlackBlood)</span>; the data size of Cine, Aorta, Mapping, Tagging, and Flow2d is 5D (nx,ny,nc,nz,nt); the
+          includes Cine, Aorta, Mapping, and Tagging;
+          ValidationSet and TestSet include Cine, Aorta, Mapping,
+          Tagging, and other two unseen contrasts (Flow2d and
+          BlackBlood)</span>; the data size of Cine, Aorta, Mapping, Tagging, and Flow2d is 5D (nx,ny,nc,nz,nt); the
         data
         size of BlackBlood is 4D (nx,ny,nc,nz); <span style="font-weight: 700;color: indianred;">the size of all
           undersampling masks is 2D (nx,ny)</span>, the central 16
         lines (ny) are always fully sampled to be used as autocalibration signals (ACS).
-          <br><br>
+        <br><br>
       </p>
     </div>
     <div class="u-clearfix u-sheet u-sheet-1">
@@ -250,54 +251,58 @@
         scanner will be processed and transformed to '.mat' format using the script provided by our vendor. A readme
         file will be provided to describe the content and usage of the data.
         <br>
-        <p style="font-weight: 700;color:#2d7553;text-align: center;">Details of data types in Task1</p>
-        <img src="images/task1-data-detail.png" style="width:800px;height:auto;margin:auto;display:block;">
-        <br>
-        <span style="font-weight:bold;color: indianred;">Note: Undersampled and the fully sampled data share the same dimension. nx: matrix size in x-axis (k-space); ny: matrix size in y-axis (k-space); nc: coil array number (compressed to 10); nz: slice number (for SAX) or slice group (for LAX, i.e., 3CH, 2CH, and 4CH views); nt: temporal/parametric frame.</span>
-        <p style="font-weight: 700;color:#2d7553;text-align: center;">Details of mask types in Task1</p>
-        <img src="images/task1-mask-detail.png" style="width:800px;height:auto;margin:auto;display:block;">
-        <br>
-        <span style="font-weight:bold;color: indianred;">Note: nx: matrix size in x-axis (k-space); ny: matrix size in y-axis (k-space); nt: temporal/parametric frame.</span>
-<br><br>
-        <span style="font-weight: 700;color:#2d7553;font-size: larger;">Taking multi-coil long-axis (LAX) cine as an
-          example, the format of
-          data is as follows:</span>
-        <br><br><span style="font-weight: 700;color:#2d7553">1) Data in folder 'FullSample': cine_lax.mat</span>
-        <br># cine with long-axis view (including 3CH, 2CH, and 4CH views within the nz dimension).
-        <br># variable name:
-        <br># 'kspace_full' for fully sampled kspace
-        <br># data type: complex kspace data with the dimensions (nx,ny,nc,nz,nt)
-        <br>-nx: matrix size in x-axis (kspace)
-        <br>-ny: matrix size in y-axis (kspace)
-        <br>-nc: coil array number (compressed to 10)
-        <br>-nz: slice number (for SAX) or slice group (for LAX, i.e., 3CH, 2CH, and 4CH views)
-        <br>-nt: temporal/parametric frame
-        <br><br><span style="font-weight: 700;color:#2d7553">2) Data in folder 'UnderSample_Task1':
-          cine_lax_kus_xxx.mat</span>
-        <br># cine with long-axis view (including 3CH, 2CH, and 4CH views within the nz dimension).
-        <br># 'xxx' is the corresponding undersampling scenarios. For example, 'Uniform4' means uniform undersampling at
-        acceleration factor 4x (ACS not included for calculations)
-        <br># variable name:
-        <br># 'kus' for undersampled kspace
-        <br># data type: complex kspace data with the dimensions (nx,ny,nc,nz,nt), the central 16 lines (ny) are always
-        <br>fully sampled to be used as autocalibration signals (ACS)
-        <br>-nx: matrix size in x-axis (kspace)
-        <br>-ny: matrix size in y-axis (kspace)
-        <br>-nc: coil array number (compressed to 10)
-        <br>-nz: slice number (for SAX) or slice group (for LAX, i.e., 3CH, 2CH, and 4CH views)
-        <br>-nt: temporal/parametric frame
-        <br><br><span style="font-weight: 700;color:#2d7553">3) Data in folder 'Mask_Task1':
-          cine_lax_mask_xxx.mat</span>
-        <br># undersampling mask with long-axis view, the mask is fixed among different nc, nz and nt.
-        <br># 'xxx' is the corresponding undersampling scenarios. For example, 'Uniform4' means uniform undersampling at
-        acceleration factor 4x (ACS not included for calculations)
-        <br># variable name:
-        <br># "mask" for undersampling mask
-        <br># data type: 2D binary data with the dimensions (nx,ny), the central 16 lines (ny) are always fully sampled
-        to be used as autocalibration signals (ACS)
-        <br>-nx: matrix size in x-axis (kspace)
-        <br>-ny: matrix size in y-axis (kspace)
-          <br><br>
+      <p style="font-weight: 700;color:#2d7553;text-align: center;">Details of data types in Task1</p>
+      <img src="images/task1-data-detail.png" style="width:800px;height:auto;margin:auto;display:block;">
+      <br>
+      <span style="font-weight:bold;color: indianred;">Note: Undersampled and the fully sampled data share the same
+        dimension. nx: matrix size in x-axis (k-space); ny: matrix size in y-axis (k-space); nc: coil array number
+        (compressed to 10); nz: slice number (for SAX) or slice group (for LAX, i.e., 3CH, 2CH, and 4CH views); nt:
+        temporal/parametric frame.</span>
+      <p style="font-weight: 700;color:#2d7553;text-align: center;">Details of mask types in Task1</p>
+      <img src="images/task1-mask-detail.png" style="width:800px;height:auto;margin:auto;display:block;">
+      <br>
+      <span style="font-weight:bold;color: indianred;">Note: nx: matrix size in x-axis (k-space); ny: matrix size in
+        y-axis (k-space); nt: temporal/parametric frame.</span>
+      <br><br>
+      <span style="font-weight: 700;color:#2d7553;font-size: larger;">Taking multi-coil long-axis (LAX) cine as an
+        example, the format of
+        data is as follows:</span>
+      <br><br><span style="font-weight: 700;color:#2d7553">1) Data in folder 'FullSample': cine_lax.mat</span>
+      <br># cine with long-axis view (including 3CH, 2CH, and 4CH views within the nz dimension).
+      <br># variable name:
+      <br># 'kspace_full' for fully sampled kspace
+      <br># data type: complex kspace data with the dimensions (nx,ny,nc,nz,nt)
+      <br>-nx: matrix size in x-axis (kspace)
+      <br>-ny: matrix size in y-axis (kspace)
+      <br>-nc: coil array number (compressed to 10)
+      <br>-nz: slice number (for SAX) or slice group (for LAX, i.e., 3CH, 2CH, and 4CH views)
+      <br>-nt: temporal/parametric frame
+      <br><br><span style="font-weight: 700;color:#2d7553">2) Data in folder 'UnderSample_Task1':
+        cine_lax_kus_xxx.mat</span>
+      <br># cine with long-axis view (including 3CH, 2CH, and 4CH views within the nz dimension).
+      <br># 'xxx' is the corresponding undersampling scenarios. For example, 'Uniform4' means uniform undersampling at
+      acceleration factor 4x (ACS not included for calculations)
+      <br># variable name:
+      <br># 'kus' for undersampled kspace
+      <br># data type: complex kspace data with the dimensions (nx,ny,nc,nz,nt), the central 16 lines (ny) are always
+      <br>fully sampled to be used as autocalibration signals (ACS)
+      <br>-nx: matrix size in x-axis (kspace)
+      <br>-ny: matrix size in y-axis (kspace)
+      <br>-nc: coil array number (compressed to 10)
+      <br>-nz: slice number (for SAX) or slice group (for LAX, i.e., 3CH, 2CH, and 4CH views)
+      <br>-nt: temporal/parametric frame
+      <br><br><span style="font-weight: 700;color:#2d7553">3) Data in folder 'Mask_Task1':
+        cine_lax_mask_xxx.mat</span>
+      <br># undersampling mask with long-axis view, the mask is fixed among different nc, nz and nt.
+      <br># 'xxx' is the corresponding undersampling scenarios. For example, 'Uniform4' means uniform undersampling at
+      acceleration factor 4x (ACS not included for calculations)
+      <br># variable name:
+      <br># "mask" for undersampling mask
+      <br># data type: 2D binary data with the dimensions (nx,ny), the central 16 lines (ny) are always fully sampled
+      to be used as autocalibration signals (ACS)
+      <br>-nx: matrix size in x-axis (kspace)
+      <br>-ny: matrix size in y-axis (kspace)
+      <br><br>
       </p>
 
     </div>
@@ -327,7 +332,7 @@
         <br><br>2) In TASK 1, participants are allowed to train <span style="font-weight: 700;color: #2d7553;">three
           individual contrast-universal models</span> to respectively reconstruct multi-contrast data at three
         acceleration factors.
-<br>
+        <br>
         <br>
       </p>
     </div>
@@ -376,25 +381,27 @@
             </div>
             <div class="u-container-style u-layout-cell u-size-26 u-layout-cell-2">
               <div class="u-container-layout u-container-layout-2">
-                <img style="position:absolute;margin:92px auto 0 50px;width: 65px;height: auto;"
+                <img style="position:absolute;margin:92px auto 0 39px;width: 65px;height: auto;"
                   src="images/fudan-logo.png">
-                <img style="position:absolute;margin:95px auto 0 130px;width: 55px;height: auto;" src="images/R-C.png">
-                <img style="position:absolute;margin:95px auto 0 200px;width: 55px;height: auto;"
+                <img style="position:absolute;margin:95px auto 0 112px;width: 55px;height: auto;" src="images/R-C.png">
+                <img style="position:absolute;margin:95px auto 0 178px;width: 55px;height: auto;"
                   src="images/Shield_of_Imperial_College_London.svg.png">
-                <img style="position:absolute;margin:94px auto 0 270px;width: 60px;height: auto;"
+                <img style="position:absolute;margin:92px auto 0 240px;width: 60px;height: auto;"
+                  src="images/1636px-Oxford-University-Circlet.svg.png">
+                <img style="position:absolute;margin:94px auto 0 310px;width: 60px;height: auto;"
                   src="images/hong-kong-polytechnic-university-logo-00FF467BCA-seeklogo.com.png">
-                <img style="position:absolute;margin:94px auto 0 345px;width: 60px;height: auto;"
+                <img style="position:absolute;margin:94px auto 0 380px;width: 60px;height: auto;"
                   src="images/1200px-Xiamen_University_logo.svg.png">
 
-                <img style="position:absolute;margin:177px auto 0 40px;width: 60px;height: auto;"
+                <img style="position:absolute;margin:177px auto 0 50px;width: 60px;height: auto;"
                   src="images/Ruijin_Hospital_Shanghai_Jiaotong_University_School_Of_Medicine_logo.png">
-                <img style="position:absolute;margin:180px auto 0 112px;width: 60px;height: auto;"
+                <img style="position:absolute;margin:180px auto 0 120px;width: 60px;height: auto;"
                   src="images/Renji_hospital_logo.png">
-                <img style="position:absolute;margin:198px auto 0 185px;width: 100px;height: auto;"
+                <img style="position:absolute;margin:198px auto 0 190px;width: 115px;height: auto;"
                   src="images/640px-Philips_logo.svg.png">
-                <img style="position:absolute;margin:180px auto 0 295px;width: 56px;height: auto;"
+                <img style="position:absolute;margin:180px auto 0 315px;width: 60px;height: auto;"
                   src="images/nice-logo.png">
-                <img style="position:absolute;margin:180px auto 0 355px;width: 56px;height: auto;"
+                <img style="position:absolute;margin:180px auto 0 370px;width: 60px;height: auto;"
                   src="images/jitri_logo.png">
                 <br><br><br><br><br><br><br>
 
