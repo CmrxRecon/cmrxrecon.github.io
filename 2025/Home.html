@@ -43,11 +43,12 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z5F3NX9T5K"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-Z5F3NX9T5K');
 </script>
+
 <body data-path-to-root="/" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
   <header class="u-clearfix u-header u-sticky u-sticky-7dd4 u-white u-header" id="sec-7922">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
@@ -226,11 +227,11 @@
         <div class="u-container-layout u-container-layout-1">
           <h2 class="u-align-left u-text u-text-default u-text-1">About Us</h2>
           <p class="u-align-left u-text u-text-custom-color-3 u-text-2"> Welcome to the Cardiac MRI Reconstruction
-            Challenge 2024 (CMRxRecon2024)!&nbsp;&nbsp;</p>
-          <p class="u-align-left u-text u-text-3">The CMRxRecon2024 (also known as CMRxUniversalRecon) Challenge is a
-            part of the 27th International Conference on Medical Image Computing and Computer Assisted Intervention,
-            MICCAI 2024, which will be held from October 6th to 10th 2024 in Marrakesh, Morocco.</p>
-          <a href="https://conferences.miccai.org/2024/en/challenges.asp"
+            Challenge 2025 (CMRxRecon2025)!&nbsp;&nbsp;</p>
+          <p class="u-align-left u-text u-text-3">The CMRxRecon2025 (also known as CMRxUniversalRecon) Challenge is a
+            part of the 28th International Conference on Medical Image Computing and Computer Assisted Intervention,
+            MICCAI 2025, which will be held from September 23rd to 27th 2025 in Daejeon, Republic of Korea.</p>
+          <a href="https://conferences.miccai.org/2025/en/default.asp"
             class="u-active-none u-align-left u-border-2 u-border-active-custom-color-3 u-border-custom-color-2 u-border-hover-custom-color-3 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-hover-none u-none u-text-active-custom-color-3 u-text-custom-color-2 u-text-hover-custom-color-3 u-btn-1"
             target="_blank">Learn more</a>
           <br>
@@ -254,43 +255,37 @@
       <div class="u-container-align-left u-container-style u-expanded-width u-group u-group-1">
         <div class="u-container-layout u-container-layout-1">
           <h2 class="u-align-left u-text u-text-default u-text-1">Background</h2>
-          <p class="u-align-left u-text u-text-3">Cardiac magnetic resonance imaging (CMR) has emerged as a
-            crucial imaging technique for diagnosing cardiac diseases, thanks to its
-            excellent soft tissue contrast and non-invasive nature. <span
-              style="font-weight: 700;color: #2d7553;">However, a notable
-              limitation of MRI is its slow imaging speed, which causes patient discomfort
-              and introduces motion artifacts into the images.&nbsp;</span>
+          <p class="u-align-left u-text u-text-3">
+            Cardiac MRI (CMR) has become an essential tool for diagnosing and evaluating cardiovascular diseases,
+            offering multi-parametric, high-resolution anatomical and functional data. CMR reconstruction from highly
+            under-sampled k-space data has gained significant attention in recent research. Numerous AI-based image
+            reconstruction algorithms have shown potential in improving imaging performance and patient experience in
+            recovering high-quality images from aggressively undersampled k-space measurements. However, the complexity
+            and diversity of CMR scans in real-world applications, involving various image contrasts, sampling
+            trajectories, equipment vendors, anatomical structures, and disease types, present a great challenge for
+            existing AI-based reconstruction methods, which are usually developed for only one or a few specific
+            scanning settings. In practice, there are often inevitable distribution mismatches between the training data
+            and target data, due to the diversities listed above. Therefore, building and validating universal and
+            robust reconstruction models for handling these diversities remain to be critical technical challenges for
+            multi-parametric CMR imaging.
             <br>
-            <br>To accelerate image acquisition, CMR image reconstruction
-            (recovering high-quality clinical interpretable images from highly
-            under-sampled k-space data) has gained significant attention in recent years. Particularly,
-            AI-based image reconstruction algorithms have shown great potential in
-            improving imaging performance by utilizing highly under-sampled data. Currently, the field of CMR
-            reconstruction lacks publicly available, standardized, and high-quality datasets for the development and
-            assessment for AI-based CMR reconstruction. In the first run of the 'CMRxRecon' challenge (MICCAI 2023), we
-            have provided cine and mapping data from a total of 300 subjects and the technical infrastructure as well as
-            a baseline model for CMR reconstructions. The results of 'CMRxRecon' 2023 demonstrated that deep learning
-            methods demonstrated significantly superior performance compared to traditional methods such as SENSE and
-            GRAPPA in a single task scenario.
-            </span>
             <br>
-            <br>As we all know, CMR imaging has the nature of multi-contrast, e.g., cardiac cine, mapping, tagging,
-            phase-contrast, and dark-blood imaging. It also includes imaging of different anatomical views such as
-            long-axis (2-chamber, 3-chamber, and 4-chamber), short-axis, outflow tract, and aortic (cross-sectional and
-            sagittal views). Additionally, accelerated imaging trajectories, including uniformly undersampling and
-            variable-density sampling, are employed. <span style="font-weight: 700;color: #2d7553;">Unfortunately,
-              conventional CNN-based reconstruction models often require training and deployment for each specific
-              imaging scenario (imaging sequence, view, and device vendor), limiting their clinical application in the
-              real world.</span>
+            In our past MICCAI "CMRxRecon" challenge series (CMRxRecon2023 and
+            CMRxRecon2024), we have released fully sampled k-space data for multi-parametric cardiac imaging from a
+            total of 600 individuals in a single medical center, and provided relevant technical infrastructure as well
+            as a baseline model for CMR reconstruction. However, the previous dataset did not cover multi-center,
+            multi-vendor, and multiple diseases, which are the most valued targets in real-world clinical applications.
+            Therefore, in this proposed challenge, we aim to make an important leap towards real-world clinical
+            scenarios by extending the challenge scope in two directions:
             <br>
-            <br>Thus, in this second run of the CMR reconstruction challenge we aim to make an important step towards
-            clinical implementation by extending the challenge scope in two directions:<br><br>
-            <span style="font-weight: 700;color: #2d7553;">1)Trustworthy reconstruction on multi-contrast CMR imaging
-              (two will be unseen in the training dataset) using a universal pre-trained reconstruction
-              model;</span><br><br>
-            <span style="font-weight: 700;color: #2d7553;">2)Robust reconstruction with diverse k-space trajectory and
-              various acceleration factors using a universal model.</span><br>
-
+            <br>
+            1) To evaluate the robustness and generalization performance of reconstruction foundation models in more
+            than 5 centers and 10 scanners, all those data are unseen during training stage.
+            <br>
+            <br>
+            2) To evaluate the clinical performance of reconstruction foundation models under no less than 5
+            cardiovascular diseases (e.g., hypertrophic cardiomyopathy, dilated cardiomyopathy, myocardial infarction,
+            coronary artery disease, arrhythmias), all those data are unseen during training stage.
           </p>
           <br>
         </div>
@@ -300,38 +295,24 @@
       <div class="u-container-style u-expanded-width u-group u-group-1">
         <div class="u-container-layout u-container-layout-1">
           <h2 class="u-align-left u-text u-text-1"> Challenge tasks</h2>
-          <p class="u-align-left u-text u-text-3"><b>The CMRxRecon2024 challenge includes two independent tasks. Each
+          <p class="u-align-left u-text u-text-3"><b>The CMRxRecon2025 challenge includes two independent tasks. Each
               team
               can choose to participate one of them or both:&nbsp;</b>
           </p>
           <br>
           <p class="u-align-left u-text u-text-custom-color-3 u-text-3"><a href="Task1.html"
-              style="font-size: larger;color: #2d7553;font-weight: bold;">TASK 1: Multi-contrast
-              CMR reconstruction</a>
+              style="font-size: larger;color: #2d7553;font-weight: bold;">TASK 1: CMR reconstruction foundation model
+              for multi-center evaluation</a>
           </p>
           <br>
           <img src="images/Task1.png" style="width:800px;height:auto;margin:auto;display:block;">
           <br>
-          <p class="u-align-left u-text u-text-4"><span style="font-weight: 700;color: #2d7553;">1) Goal:</span> To
-            develop a contrast-universal model that can <span style="font-weight:bold;color:#2d7553">1)</span> provide
-            high-quality image reconstruction for highly-accelerated uniform undersampling (acceleration factors are 4x,
-            8x and 10x, ACS not included for calculations); <span style="font-weight:bold;color:#2d7553">2)</span> being
-            able to process multiple contrast reconstructions with different sequences, views, and scanning protocols
-            using a single universal model. The proposed method is supposed to offer a unified framework that can handle
-            various imaging contrasts, allowing for faster and more robust reconstructions across different CMR
-            protocols.
-            <br><br><span style="font-weight: 700;color: #2d7553;">2) Note:</span> In TASK 1, participants are allowed
-            to train <span style="font-weight: 700;color: #2d7553;">three individual contrast-universal models</span> to
-            respectively reconstruct multi-contrast data at the
-            aforementioned three acceleration factors; <span style="font-weight: 700;color: #2d7553;">TrainingSet
-              includes Cine, Aorta, Mapping, and Tagging;
-              ValidationSet and TestSet include Cine, Aorta, Mapping,
-              Tagging, and other two unseen contrasts (Flow2d and
-              BlackBlood)</span>; the data size of Cine, Aorta, Mapping, Tagging, and Flow2d is 5D (nx,ny,nc,nz,nt); the
-            data
-            size of BlackBlood is 4D (nx,ny,nc,nz); <span style="font-weight: 700;color: #2d7553;">the size of all
-              undersampling masks is 2D (nx,ny)</span>, the central 16
-            lines (ny) are always fully sampled to be used as autocalibration signals (ACS).
+          <p class="u-align-left u-text u-text-4"><span style="font-weight: 700;color: #2d7553;">1) Goal:</span> The
+            objective of this challenge is to develop a foundation model that 1) provide high-quality image
+            reconstruction for highly-accelerated (undersampled) MRI acquisitions; 2) being able to process multiple
+            parametric measurements, views, and scanning protocols across multiple centers using a single foundation
+            model.
+            <br><br><span style="font-weight: 700;color: #2d7553;">2) Note:</span>
             <br><br>
           </p>
 
@@ -341,27 +322,13 @@
           <br>
           <img src="images/Task2.png" style="width:700px;height:auto;margin:auto;display:block;">
           <br>
-          <p class="u-align-left u-text u-text-6"><span style="font-weight: 700;color: #2d7553;">1) Goal:</span> To
-            develop a sampling-universal model that can robustly reconstruct CMR images <span
-              style="font-weight: 700;color: #2d7553;">1)</span> from different k-space
-            trajectories (uniform, Guassian, and pseudo radial undersampling with temporal/parametric interleaving);
-            <span style="font-weight: 700;color: #2d7553;">2)</span>
-            at different acceleration factors (acceleration factors from 4x to 24x, ACS not included for calculations).
-            The proposed method is supposed to leverage deep learning algorithms to exploit the potential of random
-            sampling, enabling faster acquisition times while maintaining high-quality image reconstructions.
-            <br><br><span style="font-weight: 700;color: #2d7553;">2) Note:</span> In TASK 2, participants are allowed
-            to train <span style="font-weight: 700;color: #2d7553;">only one universal model</span> to reconstruct
-            various data at the different undersampling scenarios (including different k-space trajectories: uniform,
-            Guassian, and pseudo radial undersampling with temporal/parametric interleaving; and different acceleration
-            factors: 4x, 8x, 12x, 16x, 20x, 24x, ACS not included for calculations); <span
-              style="font-weight: 700;color: #2d7553;">TrainingSet includes Cine, Aorta,
-              Mapping, and Tagging; ValidationSet and TestSet also include Cine, Aorta, Mapping, and Tagging</span>; the
-            data
-            size of Cine, Aorta, Mapping, and Tagging is 5D (nx,ny,nc,nz,nt); <span
-              style="font-weight: 700;color: #2d7553;">the size of all undersampling masks is 3D
-              (nx,ny,nt)</span>, the central 16 lines (ny, in ktUniform and ktGaussian) or central 16x16 regions (nx*ny,
-            in
-            ktRadial) are always fully sampled to be used as autocalibration signals (ACS).
+          <p class="u-align-left u-text u-text-6"><span style="font-weight: 700;color: #2d7553;">1) Goal:</span> The
+            goal of this research is to develop a robust foundation model capable of reliably reconstructing CMR images
+            and evaluate the performance on different diseases, employing both uniform and variable-density sampling at
+            acceleration factors ranging from 3x to 20x. The model is designed to generalize across multiple diseases
+            (e.g., hypertrophic cardiomyopathy, dilated cardiomyopathy, myocardial infarction, coronary artery disease,
+            arrhythmias), making it a versatile tool in cardiovascular diagnostics.
+            <br><br><span style="font-weight: 700;color: #2d7553;">2) Note:</span>
           </p>
           <br>
         </div>
@@ -372,8 +339,9 @@
         <div class="u-container-layout u-container-layout-1">
           <h2 class="u-align-left u-text u-text-default u-text-1"> Awards</h2>
           <p class="u-align-left u-text u-text-3">
-            We will provide monetary awards for the <span style="font-weight: bold;color:#2d7553">top 5 winners of each
-              task</span>. The prize pool is exclusively sponsored by Philips. <br><br>
+            We will provide monetary awards for the <span style="font-weight: bold;color:#2d7553">The top 5 winners
+              receive monetary awards. We are in active negotiation with the sponsor about the value (approximately
+              $2000 in total). <br><br>
           </p>
           <p class="u-align-left u-text u-text-3" style="font-weight: bold;color: #2d7553;">
             Task 1: Multi-contrast CMR reconstruction<br><br>
@@ -598,28 +566,37 @@
       <div class="u-container-align-left u-container-style u-expanded-width u-group u-group-1">
         <div class="u-container-layout u-container-layout-1">
           <h2 class="u-align-left u-text u-text-default u-text-1"> Study Cohort</h2>
-          <p class="u-align-left u-text u-text-3"> A total of 330 healthy volunteers are recruited for multi-contrast
-            CMR imaging in our imaging center. <span style="font-weight:bold;color:#2d7553">The dataset include
-              multi-contrast k-space data, consist of cardiac cine, T1/T2mapping, tagging, phase-contrast (i.e.,
-              flow2d), and dark-blood imaging. It also includes imaging of different anatomical views like long-axis
-              (2-chamber, 3-chamber, and 4-chamber), short-axis (SAX), left ventricul outflow tract (LVOT), and aorta
-              (transversal and sagittal views).
-            </span>
-
-            <br><span style="font-weight:bold;color:#2d7553">The released dataset includes 200 training data, 60
-              validation data and 70 test data.</span>
+          <p class="u-align-left u-text u-text-3"> The proposed challenge will release multi-channel k-space data from
+            at least 5 medical centers, more than 10 scanners, including mainstream device vendors (GE, Philips,
+            Siemens, and United imaging), 1.5T, 3.0T and 5.0T field strengths, more than 5 types of sequences (e.g.,
+            dark blood, tagging, phase-contrast), including anatomical views including long-axis, short-axis, outflow
+            tract, and aortic (cross-sectional and sagittal views), and at least 5 diseases such as hypertrophic
+            cardiomyopathy, dilated cardiomyopathy, myocardial infarction, coronary artery disease, and arrhythmias. A
+            total of 600 volunteers with multi-parametric CMR imaging (200 cases for training, 100 validation cases and
+            300 test cases) will be included, with no less than 100 cases per center. The dataset will include
+            multi-parametric k-space data, consist of cardiac cine, mapping, tagging, phase-contrast, and dark-blood
+            imaging. The dataset also includes imaging of different anatomical views like long-axis (2-chamber,
+            3-chamber, and 4-chamber), short-axis, outflow tract, and aortic (cross-sectional and sagittal views).
+            During the training phase, we will release data from two centers as the training set. We will retain data
+            from three undisclosed centers as the validation set and test set, to better evaluate the model's
+            generalization performance across different centers. Additionally, we have preliminarily set up the Synapse
+            platform for CMRxRecon2025 and uploaded 1% of the data for review
+            (https://www.synapse.org/#!Synapse:syn59814210/wiki/628454).<br>
             <br>
-            <br>Training cases including fully sampled k-space data will be provided in '.mat' format.
             <br>
-            <br>Validation cases include under-sampled k-space data, sampling trajectories, and autocalibration signals
-            (ACS, 16 lines or 16x16 regions) with various acceleration factors in '.mat' format.
-
+          <p class="u-align-left u-text u-text-6">
             <br>
-            <br>Test cases include fully sampled k-space data, undersampled k-space data, sampling trajectories, and
-            autocalibration signals (ACS, 16 lines or 16x16 regions). Test cases will not be released before the
-            challenge ends.<br>
+            Training cases include fully sampled k-space data and auto-calibration lines (ACS, 24 lines) will be
+            provided in '.mat' format.
             <br>
-            <img src="images/dataset-illustration.png" style="width:900px;height:auto;margin:auto;display:block;">
+            Validation cases include under-sampled k-space data, sampling trajectories, and auto-calibration lines (ACS,
+            24 lines) with various acceleration factors in ‘.mat’ format.
+            <br>
+            Test cases include fully sampled k-space data, under-sampled k-space data, sampling trajectories and
+            auto-calibration lines (ACS, 24 lines). Test cases will not be released before the challenge ends.
+            <br>
+          </p>
+          <img src="images/dataset-illustration.png" style="width:900px;height:auto;margin:auto;display:block;">
           </p>
           <br>
         </div>
@@ -631,26 +608,35 @@
           <h2 class="u-align-left u-text u-text-default u-text-1"> CMR&nbsp;acquisition design</h2>
           <p class="u-align-left u-text u-text-3">
             <span style="font-weight: 700;color:#2d7553"> 1) Scanner: </span>&nbsp;
-            Siemens 3T MRI scanner (MAGNETOM Vida)
+            The challenge will release multi-channel k-space data from more than 10 scanners, including
+            mainstream device vendors (GE, Philips, Siemens, and United imaging), 1.5T, 3.0T and 5.0T field strengths.
             <br>
             <br><span style="font-weight: 700;color:#2d7553">2) Image acquisition: </span>We follow the recommendations
             of CMR exams reported in the previous publication (doi: 10.1007/s43657-02100018x,
             10.1007/s43657-021-00018-x).
             <br>
             <br>
-            <span style="font-weight: 700;color:#2d7553">3) Dataset overview: </span>The dataset will include
-            multi-contrast k-space data, consisting of cardiac cine, T1/T2 mapping, tagging, phase-contrast (i.e.,
-            flow2d), and dark-blood imaging. It also includes imaging of different anatomical views like long-axis (LAX,
-            including 2-chamber, 3-chamber, and 4-chamber), short-axis (SAX), left ventricul aroutflow tract (LVOT), and
-            aortic (transversal and sagittal views).
+            <span style="font-weight: 700;color:#2d7553">3) Dataset overview: </span>The challenge will release
+            multi-channel k-space data from at least 5 medical centers, more than 10 scanners, including mainstream
+            device vendors (GE, Philips, Siemens, and United imaging), 1.5T, 3.0T and 5.0T field strengths, more than 5
+            types of sequences (e.g., dark blood, tagging, phase-contrast), including anatomical views including
+            long-axis, short-axis, outflow tract, and aortic (cross-sectional and sagittal views), and at least 5
+            diseases such as hypertrophic cardiomyopathy, dilated cardiomyopathy, myocardial infarction, coronary artery
+            disease, and arrhythmias. A total of 600 volunteers with multi-parametric CMR imaging (200 cases for
+            training, 100 validation cases and 300 test cases) will be included, with no less than 100 cases per center.
+            The dataset will include multi-parametric k-space data, consist of cardiac cine, mapping, tagging,
+            phase-contrast, and dark-blood imaging. The dataset also includes imaging of different anatomical views like
+            long-axis (2-chamber, 3-chamber, and 4-chamber), short-axis, outflow tract, and aortic (cross-sectional and
+            sagittal views).
             <br>
             <br>
-            <span style="font-weight: 700;color:#2d7553">4) Scan protocol: </span>We use 'TrueFISP' sequence for cine,
-            phase-constrast (i.e., flow2d), and tagging, and 'FLASH' sequence for T1/T2 mapping and dark-blood imaging.
-            For T1/T2 mapping, signals are collected at the end of the diastole with ECG triggering. Typically, 5~15
-            slices are acquired for each contrast. The cardiac cycle is segmented into 12~25 phases with a temporal
-            resolution of around 50 ms. Typical geometrical parameters include: spatial resolution 1.5×1.5 mm2, slice
-            thickness 8.0 mm, and slice gap 4.0 mm.
+            <span style="font-weight: 700;color:#2d7553">4) Scan protocol: </span>We use ‘TrueFISP’ for cine, PC and
+            tagging, and ‘FLASH’ for mapping and dark-blood imaging. The collected imaging planes include long-axis
+            (2-chamber, 3-chamber, and 4-chamber), short-axis, outflow tract, and aortic (cross-sectional and sagittal
+            views). Typically 5~15 slices are acquired. For mapping, signal data were collected at the end of the
+            diastole with ECG triggering. The cardiac cycle is segmented into 15–25 phases with a temporal resolution of
+            around 50 ms. Typical geometrical parameters include: spatial resolution 2.0×2.0 mm2, slice thickness 8.0
+            mm, and slice gap 4.0 mm.
             <br>
             <br>
             <span style="font-weight: 700;color:#2d7553">5) Pre-processing:</span>The raw k-space data exported from the
@@ -686,45 +672,29 @@
               </colgroup>
               <tbody class="u-table-body">
                 <tr style="height: 39px;">
-                  <td class="u-custom-color-2 u-table-cell u-table-cell-1">20 - Apr</td>
-                  <td class="u-custom-color-2 u-table-cell u-table-cell-2">Website opens for registration</td>
+                  <td class="u-custom-color-2 u-table-cell u-table-cell-1">Apr 1, 2025</td>
+                  <td class="u-custom-color-2 u-table-cell u-table-cell-2">website opens for registration, release training and validation images</td>
                 </tr>
                 <tr style="height: 39px;">
-                  <td style="background-color:#f5f9f7e5" class="u-table-cell">26 - Apr</td>
-                  <td style="background-color:#f5f9f7e5" class="u-table-cell">Release training and validation data
+                  <td style="background-color:#f5f9f7e5" class="u-table-cell">Apr 10, 2025</td>
+                  <td style="background-color:#f5f9f7e5" class="u-table-cell">submission system opens for validation
                   </td>
                 </tr>
                 <tr style="height: 39px;">
-                  <td class="u-custom-color-2 u-table-cell u-table-cell-5">10 - May</td>
-                  <td class="u-custom-color-2 u-table-cell u-table-cell-6">Submission system opens for validation</td>
+                  <td class="u-custom-color-2 u-table-cell u-table-cell-5">Aug 1, 2025</td>
+                  <td class="u-custom-color-2 u-table-cell u-table-cell-6">submission system opens for testing</td>
                 </tr>
                 <tr style="height: 39px;">
-                  <td style="background-color:#f5f9f7e5" class="u-table-cell">24 - Jun</td>
-                  <td style="background-color:#f5f9f7e5" class="u-table-cell">Deadline
-                    for conference paper
-                    placeholder submission</td>
+                  <td style="background-color:#f5f9f7e5" class="u-table-cell">Sept 1, 2025</td>
+                  <td style="background-color:#f5f9f7e5" class="u-table-cell">registration and docker submission deadline</td>
                 </tr>
                 <tr style="height: 39px;">
-                  <td class="u-custom-color-2 u-table-cell u-table-cell-9">01 - Aug</td>
-                  <td class="u-custom-color-2 u-table-cell u-table-cell-10">Submission system opens for testing
+                  <td class="u-custom-color-2 u-table-cell u-table-cell-9">Oct 8, 2025</td>
+                  <td class="u-custom-color-2 u-table-cell u-table-cell-10">release final results during the MICCAI annual meeting
                 </tr>
                 <tr style="height: 39px;">
-                  <td style="background-color:#f5f9f7e5" class="u-table-cell">15 - Aug</td>
-                  <td style="background-color:#f5f9f7e5" class="u-table-cell">Deadline for conference paper submission
-                  </td>
-                </tr>
-                <tr style="height: 39px;">
-                  <td class="u-custom-color-2 u-table-cell u-table-cell-9">10 - Sept</td>
-                  <td class="u-custom-color-2 u-table-cell u-table-cell-10">Docker submission (test phase) deadline
-                </tr>
-                <tr style="height: 39px;">
-                  <td style="background-color:#f5f9f7e5" class="u-table-cell">10 - Oct</td>
-                  <td style="background-color:#f5f9f7e5" class="u-table-cell">Release
-                    final results</td>
-                </tr>
-                <tr style="height: 39px;">
-                  <td class="u-custom-color-2 u-table-cell u-table-cell-9">10 - Nov</td>
-                  <td class="u-custom-color-2 u-table-cell u-table-cell-10">Proceeding ready paper release
+                  <td style="background-color:#f5f9f7e5" class="u-table-cell">Jan 31, 2026</td>
+                  <td style="background-color:#f5f9f7e5" class="u-table-cell">challenge summary and invited talk from the winners during the SCMR annual meeting
                   </td>
                 </tr>
               </tbody>
