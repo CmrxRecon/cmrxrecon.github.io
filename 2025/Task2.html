@@ -178,8 +178,8 @@
   </header>
   <section class="u-align-center u-clearfix u-container-align-center u-section-1" id="sec-e8f8">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <h2 class="u-align-center u-text u-text-default u-text-1"> TASK 2: Random
-        sampling CMR reconstruction</h2>
+      <h2 class="u-align-center u-text u-text-default u-text-1"> TASK 2: CMR reconstruction foundation model for
+        multiple diseases evaluation</h2>
       <img src="images/Task2.png" style="width:700px;height:auto;margin:auto;display:block;">
       <br>
     </div>
@@ -187,43 +187,21 @@
   <section class="u-align-left u-clearfix u-section-2" id="sec-939f">
     <div class="u-clearfix u-sheet u-sheet-1">
       <h2 class="u-text u-text-1">Background </h2>
-      <p class="u-text u-text-2"> CMR imaging is time-consuming due to the acquisition of a
-        large amount of raw data in the k-space (raw signal measurement). To address
-        this limitation, accelerated imaging techniques have been developed, which rely
-        on sub-Nyquist undersampling the k-space data. Random (incoherent) undersampling
-        of the k-space trajectory is one such approach that offers acceleration and
-        potential for improved image quality. The need for a universal model therefore arises
-        from the diverse sampling schemes of cardiac image acquisition: Different CMR
-        protocols often require distinct k-space sampling trajectories and acceleration
-        factors. <span style="font-weight: 700;color:#2d7553;">Traditional reconstruction methods struggle to adapt to
-          these
-          variations, as they typically rely on sampling-specific algorithms.</span> A universal
-        model offers a unified framework that can handle different sampling
-        trajectories and acceleration factors, providing flexibility and efficiency in
-        the reconstruction process. This approach is necessary to achieve consistent
-        and reliable reconstructions across diverse CMR imaging scenarios.&nbsp;<br>
-        <br><span style="font-weight: 700;color:#2d7553;">The goal of this challenge</span> is to develop a
-        sampling-universal model that can robustly reconstruct CMR images <span
-          style="font-weight: 700;color:#2d7553;">1)</span> from different k-space trajectories
-        (uniform, Guassian, and pseudo radial undersampling with temporal/parametric interleaving); <span
-          style="font-weight: 700;color:#2d7553;">2)</span> at different
-        acceleration factors (acceleration factors from 4x to 24x, ACS not included for calculations). The proposed
-        method is supposed to leverage deep learning algorithms to exploit the potential of random sampling, enabling
-        faster acquisition times while maintaining high-quality image reconstructions. <br><br><span
-          style="font-weight:bold;color: indianred;">Note:</span> In TASK 2, participants are allowed
-        to train <span style="font-weight: 700;color: indianred;">only one universal model</span> to reconstruct
-        various data at the different undersampling scenarios (including different k-space trajectories: uniform,
-        Guassian, and pseudo radial undersampling with temporal/parametric interleaving; and different acceleration
-        factors: 4x, 8x, 12x, 16x, 20x, 24x, ACS not included for calculations); <span
-          style="font-weight: 700;color: indianred;">TrainingSet includes Cine, Aorta,
-          Mapping, and Tagging; ValidationSet and TestSet also include Cine, Aorta, Mapping, and Tagging</span>; the
-        data
-        size of Cine, Aorta, Mapping, and Tagging is 5D (nx,ny,nc,nz,nt); <span
-          style="font-weight: 700;color: indianred;">the size of all undersampling masks is 3D
-          (nx,ny,nt)</span>, the central 16 lines (ny, in ktUniform and ktGaussian) or central 16x16 regions (nx*ny,
-        in
-        ktRadial) are always fully sampled to be used as autocalibration signals (ACS).
-
+      <p class="u-text u-text-2">
+        CMR is a critical tool for diagnosing a variety of cardiovascular diseases, including coronary artery disease,
+        cardiomyopathy, congenital heart defects, and heart valve disorders. However, the complexity and variability of
+        these diseases present significant challenges for accurate and efficient image reconstruction, especially for
+        ‘small’ models whose training data does sufficiently cover the wide range of cardiac conditions. The primary
+        difficulty arises from the substantial anatomical and physiological variations among patients, which can lead to
+        domain shifts that complicate the reconstruction process. Conventional AI-based reconstruction methods, which
+        rely on domain-specific algorithms, struggle to adapt to these variations.
+        <br>
+        The goal of this research is to develop a robust foundation model capable of reliably reconstructing CMR images
+        and evaluate the performance on different diseases, employing both uniform and variable-density sampling at
+        acceleration factors ranging from 3x to 20x. The model is designed to generalize across multiple diseases (e.g.,
+        hypertrophic cardiomyopathy, dilated cardiomyopathy, myocardial infarction, coronary artery disease,
+        arrhythmias), making it a versatile tool in cardiovascular diagnostics.
+        <br><span style="font-weight:bold;color: indianred;">Note:</span>
       </p>
       <br>
     </div>
@@ -232,32 +210,36 @@
       <p class="u-align-left u-text u-text-2">
 
         <span style="font-weight: 700;color:#2d7553"> 1) Scanner: </span>&nbsp;
-        Siemens 3T MRI scanner (MAGNETOM Vida)
+        more than 10 scanners, including mainstream device vendors (GE, Philips, Siemens, and United imaging), 1.5T,
+        3.0T and 5.0T field strengths.
         <br>
         <br><span style="font-weight: 700;color:#2d7553">2) Image acquisition: </span>We follow the recommendations of
         CMR exams reported in the previous publication (doi: 10.1007/s43657-02100018x, 10.1007/s43657-021-00018-x).
         <br>
         <br>
-        <span style="font-weight: 700;color:#2d7553">3) Dataset overview: </span>The dataset will include multi-contrast
-        k-space data, consisting of cardiac cine, T1/T2 mapping, tagging, phase-contrast (i.e., flow2d), and dark-blood
-        imaging. It also includes imaging of different anatomical views like long-axis (LAX, including 2-chamber,
-        3-chamber, and 4-chamber), short-axis (SAX), left ventricul aroutflow tract (LVOT), and aortic (transversal and
-        sagittal views).
+        <span style="font-weight: 700;color:#2d7553">3) Dataset overview: </span>The challenge will release
+        multi-channel k-space data from at least 5 medical centers, more than 10 scanners, including mainstream device
+        vendors (GE, Philips, Siemens, and United imaging), 1.5T, 3.0T and 5.0T field strengths, more than 5 types of
+        sequences (e.g., dark blood, tagging, phase-contrast), including anatomical views including long-axis,
+        short-axis, outflow tract, and aortic (cross-sectional and sagittal views), and at least 5 diseases such as
+        hypertrophic cardiomyopathy, dilated cardiomyopathy, myocardial infarction, coronary artery disease, and
+        arrhythmias. A total of 600 volunteers with multi-parametric CMR imaging (200 cases for training, 100 validation
+        cases and 300 test cases) will be included, with no less than 100 cases per center. The dataset will include
+        multi-parametric k-space data, consist of cardiac cine, mapping, tagging, phase-contrast, and dark-blood
+        imaging. The dataset also includes imaging of different anatomical views like long-axis (2-chamber, 3-chamber,
+        and 4-chamber), short-axis, outflow tract, and aortic (cross-sectional and sagittal views).
         <br>
-        <img src="images/task2-data.png" style="width:800px;height:auto;margin:auto;display:block;">
-        <br>
-        <img src="images/task2-mask.png" style="width:800px;height:auto;margin:auto;display:block;">
-        <br>
-        <span style="font-weight: 700;color:#2d7553">4) Scan protocol: </span>We use 'TrueFISP' sequence for cine,
-        phase-constrast (i.e., flow2d), and tagging, and 'FLASH' sequence for T1/T2 mapping and dark-blood imaging. For
-        T1/T2 mapping, signals are collected at the end of the diastole with ECG triggering. Typically, 5~15 slices are
-        acquired for each contrast. The cardiac cycle is segmented into 12~25 phases with a temporal resolution of
-        around 50 ms. Typical geometrical parameters include: spatial resolution 1.5×1.5 mm2, slice thickness 8.0 mm,
-        and slice gap 4.0 mm.
+        <span style="font-weight: 700;color:#2d7553">4) Scan protocol: </span>We use ‘TrueFISP’ for cine, PC and
+        tagging, and ‘FLASH’ for mapping and dark-blood imaging. The collected imaging planes include long-axis
+        (2-chamber, 3-chamber, and 4-chamber), short-axis, outflow tract, and aortic (cross-sectional and sagittal
+        views). Typically 5~15 slices are acquired. For mapping, signal data were collected at the end of the diastole
+        with ECG triggering. The cardiac cycle is segmented into 15–25 phases with a temporal resolution of around 50
+        ms. Typical geometrical parameters include: spatial resolution 2.0×2.0 mm2, slice thickness 8.0 mm, and slice
+        gap 4.0 mm.
         <br>
         <br>
         <span style="font-weight: 700;color:#2d7553">5) Pre-processing:</span>The raw k-space data exported from the
-        scanner will be processed and transformed to '.mat' format using the script provided by our vendor. A readme
+        scanner will be processed and transformed to ‘.mat’ format using the script provided by our vendor. A readme
         file will be provided to describe the content and usage of the data.
         <br>
       <p style="font-weight: 700;color:#2d7553;text-align: center;">Details of data types in Task2</p>
@@ -328,30 +310,32 @@
       <h2 class="u-text u-text-1"> Metrics &amp; Ranking</h2>
       <p class="u-text u-text-2">
         <span style="font-weight: 700;"> Metrics:</span>
-        <br>PSNR,
-        SSIM and NMSE
-        between reconstructed images and ground truth images (fully sampled data).<br>
+        <br>For cardiac cine, PSNR, SSIM and NMSE between reconstructed images and ground truth images (fully sampled
+        data) will be used for performance evaluation.For cardiac mapping, Root Mean Squared Error (RMSE) of T1 and T2
+        measurements in the LV myocardium region between reconstructed images and ground truth images (fully sampled
+        data) will be used for performance evaluation.<br>
         <br>
         <span style="font-weight: 700;">Ranking methods:</span>
-        <br>During the testing
-        and ranking phase, we will invite three radiologists to independently score the
-        top five teams ranked by SSIM. <span style="font-weight: 700;color:#2d7553">The scoring will cover three
-          aspects: image
-          quality, image artifacts, and clinical utility. </span>We will consider both the
-        radiologists' scores and the SSIM results to generate a comprehensive ranking.
-        We
-        will calculate PSNR, SSIM and NMSE for quantitative evaluations, while we only use
-        SSIM as our final ranking score.<br>
-        <span style="font-weight: 700;color:#2d7553">Participating
-          teams are required to submit docker containers and process all the cases in the
-          test set on our server. </span>For the cases without valid output, we will assign it
-        to the lowest value of metric.<br>
+        <br>1.When evaluating SSIM, we will narrow down the assessment field-of-view to the region where the heart is
+        located, to avoid interference from the background area.
+        <br>
+        2.During the testing and ranking phase, we will invite three radiologists to independently score the top five
+        teams ranked by SSIM. The radiologists will assess several image characteristics using a five-point Likert
+        scale, which includes signal loss, sharpness of heart contour, image artifacts (indicating the extent to which
+        artifacts affect image quality), and clinical utility (ranging from 1 (non-diagnostic) to 5 (excellent)). Each
+        radiologist's score for signal loss, sharpness of heart contour, image artifacts, and clinical utility carries a
+        weight of 25%. The final score will be the weighted sum of these four ratings. We will average the scores from
+        the three radiologists to determine the teams' final scores, which will then be ranked from highest to
+        lowest.<br>
+        Participating teams are required to submit docker containers and process all the cases in the test set on our
+        server. For the cases without valid output, we will assign it to the lowest value of metric.<br>
       </p>
       <br>
       <h2 class="u-text u-text-1"> Rules</h2>
       <p class="u-text u-text-2">
-        1) To ensure the fairness of this challenge, you are only allowed to use the datasets provided by fastMRI,
-        CMRxRecon2023, and CMRxRecon2024. Data augmentation based on the training dataset is allowed.
+        1) It should be restricted to the data provided by the previous CMRxRecon challenge as well as data from the
+        ‘fastMRI’ challenge (the most related public dataset), following the terms and conditions associated with the
+        data usage.
         <br><br>2) In TASK 2, participants are allowed to train <span style="font-weight: 700;color:#2d7553">only one
           universal model</span> to reconstruct various data at the aforementioned different undersampling scenarios.
         <br>
@@ -363,7 +347,7 @@
       <h2 class="u-text u-text-1">Submission</h2>
       <p class="u-text u-text-2">
         <span style="font-weight: 700;"></span>The submission instructions will be released on the&nbsp;<a
-          href="https://www.synapse.org/#!Synapse:syn54951257/wiki/"
+          href="https://www.synapse.org/#!Synapse:syn59814210/wiki/628454"
           style="font-weight: bold;">Synapse</a>&nbsp;platform.<br>
       </p>
       <br><br>

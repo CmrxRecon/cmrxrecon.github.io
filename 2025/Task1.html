@@ -178,8 +178,8 @@
   </header>
   <section class="u-align-center u-clearfix u-container-align-center u-section-1" id="sec-2d78">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <h2 class="u-align-center u-text u-text-default u-text-1"> TASK 1: Multi-contrast
-        CMR reconstruction</h2>
+      <h2 class="u-align-center u-text u-text-default u-text-1"> TASK 1: CMR reconstruction foundation model for
+        multi-center evaluation</h2>
       <img src="images/Task1.png" style="width:800px;height:auto;margin:auto;display:block;">
       <br>
     </div>
@@ -187,38 +187,19 @@
   <section class="u-align-left u-clearfix u-section-2" id="sec-99dd">
     <div class="u-clearfix u-sheet u-sheet-1">
       <h2 class="u-text u-text-1">Background </h2>
-      <p class="u-text u-text-2"> Multi-contrast CMR imaging, which involves acquiring
-        multiple imaging sequences with different contrast weightings, provides
-        valuable information for comprehensive cardiac structural and functional assessment.
-        However, the acquisition of multiple contrast-weighted images significantly
-        increases the scan time, leading to longer patient discomfort and greater
-        susceptibility to motion artifacts. <span style="font-weight: 700;color: #2d7553;">Therefore, to reduce image
-          acquisition
-          time, there is a growing need for data-efficient and reliable reconstruction methods
-          to enable accelerated and high-quality multi-contrast CMR imaging.&nbsp;</span>
+      <p class="u-text u-text-2"> CMR has emerged as a critical tool in the diagnosis and assessment of cardiovascular
+        diseases, providing high-resolution anatomical and functional information. However, the process of
+        reconstructing CMR data is complex and computationally intensive, especially in multi-center clinical settings.
+        Differences in scanner configurations, imaging protocols, sampling trajectories, and patient populations across
+        centers contribute to data heterogeneity, posing significant challenges for achieving consistent and reliable
+        evaluations. Addressing these challenges necessitates the development of a foundation model for CMR
+        reconstruction that can accommodate the variability inherent in multi-center data.
         <br>
-        <br><span style="font-weight:bold;color: #2d7553;">The goal of this challenge</span> is to develop a
-        contrast-universal model that can <span style="font-weight:bold;color: #2d7553;">1)</span> provide high-quality
-        image
-        reconstruction for highly-accelerated uniform undersampling (acceleration factors are 4x, 8x and 10x, ACS not
-        included for calculations); <span style="font-weight:bold;color: #2d7553;">2)</span> being able to process
-        multiple contrast reconstructions with different sequences,
-        views, and scanning protocols using a single universal model. The proposed method is supposed to offer a unified
-        framework that can handle various imaging contrasts, allowing for faster and more robust reconstructions across
-        different CMR protocols.
-        <br><br><span style="font-weight:bold;color: indianred;">Note:</span> In TASK 1, participants are allowed
-        to train <span style="font-weight: 700;color: indianred;">three individual contrast-universal models</span> to
-        respectively reconstruct multi-contrast data at the
-        aforementioned three acceleration factors; <span style="font-weight: 700;color: indianred;">TrainingSet
-          includes Cine, Aorta, Mapping, and Tagging;
-          ValidationSet and TestSet include Cine, Aorta, Mapping,
-          Tagging, and other two unseen contrasts (Flow2d and
-          BlackBlood)</span>; the data size of Cine, Aorta, Mapping, Tagging, and Flow2d is 5D (nx,ny,nc,nz,nt); the
-        data
-        size of BlackBlood is 4D (nx,ny,nc,nz); <span style="font-weight: 700;color: indianred;">the size of all
-          undersampling masks is 2D (nx,ny)</span>, the central 16
-        lines (ny) are always fully sampled to be used as autocalibration signals (ACS).
-        <br><br>
+        <br><span style="font-weight:bold;color: #2d7553;">The objective of this challenge is to develop a foundation
+          model that 1) provide high-quality image reconstruction for highly-accelerated (undersampled) MRI
+          acquisitions; 2) being able to process multiple parametric measurements, views, and scanning protocols across
+          multiple centers using a single foundation model.
+          <br><br><span style="font-weight:bold;color: indianred;">Note:</span>
       </p>
     </div>
     <div class="u-clearfix u-sheet u-sheet-1">
@@ -226,32 +207,36 @@
       <p class="u-align-left u-text u-text-2">
 
         <span style="font-weight: 700;color:#2d7553"> 1) Scanner: </span>&nbsp;
-        Siemens 3T MRI scanner (MAGNETOM Vida)
+        more than 10 scanners, including mainstream device vendors (GE, Philips, Siemens, and United imaging), 1.5T,
+        3.0T and 5.0T field strengths.
         <br>
         <br><span style="font-weight: 700;color:#2d7553">2) Image acquisition: </span>We follow the recommendations of
         CMR exams reported in the previous publication (doi: 10.1007/s43657-02100018x, 10.1007/s43657-021-00018-x).
         <br>
         <br>
-        <span style="font-weight: 700;color:#2d7553">3) Dataset overview: </span>The dataset will include multi-contrast
-        k-space data, consisting of cardiac cine, T1/T2 mapping, tagging, phase-contrast (i.e., flow2d), and dark-blood
-        imaging. It also includes imaging of different anatomical views like long-axis (LAX, including 2-chamber,
-        3-chamber, and 4-chamber), short-axis (SAX), left ventricul aroutflow tract (LVOT), and aortic (transversal and
-        sagittal views).
+        <span style="font-weight: 700;color:#2d7553">3) Dataset overview: </span>The challenge will release
+        multi-channel k-space data from at least 5 medical centers, more than 10 scanners, including mainstream device
+        vendors (GE, Philips, Siemens, and United imaging), 1.5T, 3.0T and 5.0T field strengths, more than 5 types of
+        sequences (e.g., dark blood, tagging, phase-contrast), including anatomical views including long-axis,
+        short-axis, outflow tract, and aortic (cross-sectional and sagittal views), and at least 5 diseases such as
+        hypertrophic cardiomyopathy, dilated cardiomyopathy, myocardial infarction, coronary artery disease, and
+        arrhythmias. A total of 600 volunteers with multi-parametric CMR imaging (200 cases for training, 100 validation
+        cases and 300 test cases) will be included, with no less than 100 cases per center. The dataset will include
+        multi-parametric k-space data, consist of cardiac cine, mapping, tagging, phase-contrast, and dark-blood
+        imaging. The dataset also includes imaging of different anatomical views like long-axis (2-chamber, 3-chamber,
+        and 4-chamber), short-axis, outflow tract, and aortic (cross-sectional and sagittal views).
         <br>
-        <img src="images/task1-data.png" style="width:800px;height:auto;margin:auto;display:block;">
-        <br>
-        <img src="images/task1-mask.png" style="width:800px;height:auto;margin:auto;display:block;">
-        <br>
-        <span style="font-weight: 700;color:#2d7553">4) Scan protocol: </span>We use 'TrueFISP' sequence for cine,
-        phase-constrast (i.e., flow2d), and tagging, and 'FLASH' sequence for T1/T2 mapping and dark-blood imaging. For
-        T1/T2 mapping, signals are collected at the end of the diastole with ECG triggering. Typically, 5~15 slices are
-        acquired for each contrast. The cardiac cycle is segmented into 12~25 phases with a temporal resolution of
-        around 50 ms. Typical geometrical parameters include: spatial resolution 1.5×1.5 mm2, slice thickness 8.0 mm,
-        and slice gap 4.0 mm.
+        <span style="font-weight: 700;color:#2d7553">4) Scan protocol: </span>We use ‘TrueFISP’ for cine, PC and
+        tagging, and ‘FLASH’ for mapping and dark-blood imaging. The collected imaging planes include long-axis
+        (2-chamber, 3-chamber, and 4-chamber), short-axis, outflow tract, and aortic (cross-sectional and sagittal
+        views). Typically 5~15 slices are acquired. For mapping, signal data were collected at the end of the diastole
+        with ECG triggering. The cardiac cycle is segmented into 15–25 phases with a temporal resolution of around 50
+        ms. Typical geometrical parameters include: spatial resolution 2.0×2.0 mm2, slice thickness 8.0 mm, and slice
+        gap 4.0 mm.
         <br>
         <br>
         <span style="font-weight: 700;color:#2d7553">5) Pre-processing:</span>The raw k-space data exported from the
-        scanner will be processed and transformed to '.mat' format using the script provided by our vendor. A readme
+        scanner will be processed and transformed to ‘.mat’ format using the script provided by our vendor. A readme
         file will be provided to describe the content and usage of the data.
         <br>
       <p style="font-weight: 700;color:#2d7553;text-align: center;">Details of data types in Task1</p>
@@ -311,27 +296,32 @@
     </div>
     <div class="u-clearfix u-sheet u-sheet-1">
       <h2 class="u-text u-text-1"> Metrics &amp; Ranking</h2>
-      <p class="u-text u-text-2"><b>Metrics:&nbsp;</b>&nbsp;<br>PSNR,
-        SSIM and NMSE
-        between reconstructed images and ground truth images (fully sampled data).<br>
+      <p class="u-text u-text-2"><b>Metrics:&nbsp;</b>&nbsp;<br>For cardiac cine, PSNR, SSIM and NMSE between
+        reconstructed images and ground truth images (fully sampled data) will be used for performance evaluation.<br>
+        <br>
+        For cardiac mapping, Root Mean Squared Error (RMSE) of T1 and T2 measurements in the LV myocardium region
+        between reconstructed images and ground truth images (fully sampled data) will be used for performance
+        evaluation.
         <br>
         <span style="font-weight: 700;">Ranking methods:&nbsp;&nbsp;</span>
-        <br>During the testing
-        and ranking phase, we will invite three radiologists to independently score the
-        top five teams ranked by SSIM. <span style="font-weight: 700;color: #2d7553;">The scoring will cover three
-          aspects: image
-          quality, image artifacts, and clinical utility.</span> We will consider both the
-        radiologists' scores and the SSIM results to generate a comprehensive ranking.<br>
-        <span style="font-weight: 700;color: #2d7553;">Participating
-          teams are required to submit docker containers and process all the cases in the
-          test set on our server.</span> For the cases without valid output, we will assign it
-        to the lowest value of metric.<br>
+        <br>
+        1.When evaluating SSIM, we will narrow down the assessment field-of-view to the region where the heart is
+        located, to avoid interference from the background area.
+        <br>
+        2.During the testing and ranking phase, we will invite three radiologists to independently score the top five
+        teams ranked by SSIM. The scoring will cover three aspects: image quality, image artifacts, and clinical
+        utility. We will consider both the radiologists' scores and the SSIM results to generate a comprehensive
+        ranking.
+        <br>
+        Participating teams are required to submit docker containers and process all the cases in the test set on
+        our server. For the cases without valid output, we will assign it to the lowest value of metric.<br>
         <br>
       </p>
       <h2 class="u-text u-text-1"> Rules</h2>
       <p class="u-text u-text-2">
-        1) To ensure the fairness of this challenge, you are only allowed to use the datasets provided by fastMRI,
-        CMRxRecon2023, and CMRxRecon2024. Data augmentation based on the training dataset is allowed.
+        1) It should be restricted to the data provided by the previous CMRxRecon challenge as well as data from the
+        ‘fastMRI’ challenge (the most related public dataset), under the terms and conditions associated with the data
+        usage.
         <br><br>2) In TASK 1, participants are allowed to train <span style="font-weight: 700;color: #2d7553;">three
           individual contrast-universal models</span> to respectively reconstruct multi-contrast data at three
         acceleration factors.
@@ -342,7 +332,7 @@
     <div class="u-clearfix u-sheet u-sheet-1">
       <h2 class="u-text u-text-1">Submission</h2>
       <p class="u-text u-text-2"><b></b>The submission instructions will be released on the<a
-          href="https://www.synapse.org/#!Synapse:syn54951257/wiki/627148"
+          href="https://www.synapse.org/#!Synapse:syn59814210/wiki/628454"
           style="font-weight: bold;">&nbsp;Synapse</a>&nbsp;platform.<br><br>
       </p>
       <br>
