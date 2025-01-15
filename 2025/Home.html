@@ -242,7 +242,8 @@
       <div class="u-container-align-left u-container-style u-expanded-width u-group u-group-1">
         <div class="u-container-layout u-container-layout-1">
           <h2 class="u-align-left u-text u-text-1">Motivation</h2>
-          <p class="u-align-left u-text u-text-3">The objective of establishing the CMRxUniversalRecon challenge (Toward
+          <p class="u-align-left u-text u-text-3">The objective of establishing the CMRxUniversal Recon challenge
+            (Toward
             Universal Reconstruction) is to provide a benchmark that enables the broader research community to
             contribute to the important work of accelerated CMR imaging with universal approaches that allow more
             diverse applications and better performance in real-world deployment in various environments.
@@ -566,34 +567,21 @@
       <div class="u-container-align-left u-container-style u-expanded-width u-group u-group-1">
         <div class="u-container-layout u-container-layout-1">
           <h2 class="u-align-left u-text u-text-default u-text-1"> Study Cohort</h2>
-          <p class="u-align-left u-text u-text-3"> The proposed challenge will release multi-channel k-space data from
-            at least 5 medical centers, more than 10 scanners, including mainstream device vendors (GE, Philips,
-            Siemens, and United imaging), 1.5T, 3.0T and 5.0T field strengths, more than 5 types of sequences (e.g.,
-            dark blood, tagging, phase-contrast), including anatomical views including long-axis, short-axis, outflow
-            tract, and aortic (cross-sectional and sagittal views), and at least 5 diseases such as hypertrophic
-            cardiomyopathy, dilated cardiomyopathy, myocardial infarction, coronary artery disease, and arrhythmias. A
-            total of 600 volunteers with multi-parametric CMR imaging (200 cases for training, 100 validation cases and
-            300 test cases) will be included, with no less than 100 cases per center. The dataset will include
-            multi-parametric k-space data, consist of cardiac cine, mapping, tagging, phase-contrast, and dark-blood
-            imaging. The dataset also includes imaging of different anatomical views like long-axis (2-chamber,
-            3-chamber, and 4-chamber), short-axis, outflow tract, and aortic (cross-sectional and sagittal views).
-            During the training phase, we will release data from two centers as the training set. We will retain data
-            from three undisclosed centers as the validation set and test set, to better evaluate the model's
-            generalization performance across different centers. Additionally, we have preliminarily set up the Synapse
-            platform for CMRxRecon2025 and uploaded 1% of the data for review
-            (https://www.synapse.org/#!Synapse:syn59814210/wiki/628454).<br>
-            <br>
-            <br>
-            Training cases include fully sampled k-space data and auto-calibration lines (ACS, 24 lines) will be
-            provided in '.mat' format.
-            <br>
-            Validation cases include under-sampled k-space data, sampling trajectories, and auto-calibration lines (ACS,
-            24 lines) with various acceleration factors in ‘.mat’ format.
-            <br>
-            Test cases include fully sampled k-space data, under-sampled k-space data, sampling trajectories and
-            auto-calibration lines (ACS, 24 lines). Test cases will not be released before the challenge ends.
-            <br>
-            <img src="images/dataset-illustration.png" style="width:900px;height:auto;margin:auto;display:block;">
+          <p class="u-align-left u-text u-text-3">
+            Challenge Platform:
+          <ul style="margin-left: 50px;">
+            <li>Hosted on Synapse platform.&nbsp;</li>
+            <li>Initial dataset preview: 1% of data uploaded for review.&nbsp;</li>
+            <a href="https://www.synapse.org/#!Synapse:syn59814210/wiki/628454" style="font-weight: bold;">&nbsp;Visit
+              the Synapse Project Page</a>
+          </ul>
+          Objective:
+          <ul style="margin-left: 50px;">
+            <li>Evaluate the model's generalization performance across diverse centers, scanners, and sequences.&nbsp;
+            </li>
+          </ul>
+          <br>
+          <img src="images/dataset-illustration.png" style="width:900px;height:auto;margin:auto;display:block;">
           </p>
           <br>
         </div>
@@ -605,41 +593,79 @@
           <h2 class="u-align-left u-text u-text-default u-text-1"> CMR&nbsp;acquisition design</h2>
           <p class="u-align-left u-text u-text-3">
             <span style="font-weight: 700;color:#2d7553"> 1) Scanner: </span>&nbsp;
-            The challenge will release multi-channel k-space data from more than 10 scanners, including
-            mainstream device vendors (GE, Philips, Siemens, and United imaging), 1.5T, 3.0T and 5.0T field strengths.
-            <br>
-            <br><span style="font-weight: 700;color:#2d7553">2) Image acquisition: </span>We follow the recommendations
-            of CMR exams reported in the previous publication (doi: 10.1007/s43657-02100018x,
-            10.1007/s43657-021-00018-x).
-            <br>
-            <br>
-            <span style="font-weight: 700;color:#2d7553">3) Dataset overview: </span>The challenge will release
-            multi-channel k-space data from at least 5 medical centers, more than 10 scanners, including mainstream
-            device vendors (GE, Philips, Siemens, and United imaging), 1.5T, 3.0T and 5.0T field strengths, more than 5
-            types of sequences (e.g., dark blood, tagging, phase-contrast), including anatomical views including
-            long-axis, short-axis, outflow tract, and aortic (cross-sectional and sagittal views), and at least 5
-            diseases such as hypertrophic cardiomyopathy, dilated cardiomyopathy, myocardial infarction, coronary artery
-            disease, and arrhythmias. A total of 600 volunteers with multi-parametric CMR imaging (200 cases for
-            training, 100 validation cases and 300 test cases) will be included, with no less than 100 cases per center.
-            The dataset will include multi-parametric k-space data, consist of cardiac cine, mapping, tagging,
-            phase-contrast, and dark-blood imaging. The dataset also includes imaging of different anatomical views like
-            long-axis (2-chamber, 3-chamber, and 4-chamber), short-axis, outflow tract, and aortic (cross-sectional and
-            sagittal views).
-            <br>
-            <br>
-            <span style="font-weight: 700;color:#2d7553">4) Scan protocol: </span>We use ‘TrueFISP’ for cine, PC and
-            tagging, and ‘FLASH’ for mapping and dark-blood imaging. The collected imaging planes include long-axis
-            (2-chamber, 3-chamber, and 4-chamber), short-axis, outflow tract, and aortic (cross-sectional and sagittal
-            views). Typically 5~15 slices are acquired. For mapping, signal data were collected at the end of the
-            diastole with ECG triggering. The cardiac cycle is segmented into 15–25 phases with a temporal resolution of
-            around 50 ms. Typical geometrical parameters include: spatial resolution 2.0×2.0 mm2, slice thickness 8.0
-            mm, and slice gap 4.0 mm.
-            <br>
-            <br>
-            <span style="font-weight: 700;color:#2d7553">5) Pre-processing:</span>The raw k-space data exported from the
-            scanner will be processed and transformed to '.mat' format using the script provided by our vendor. A readme
-            file will be provided to describe the content and usage of the data.
-            <br>
+          <ul style="margin-left: 50px;">
+            <li>Multi-channel k-space data from 5+ medical centers.&nbsp;</li>
+            <li>10+ MRI scanners from leading vendors (GE, Philips, Siemens, United Imaging).&nbsp;</li>
+            <li>Field strengths: 1.5T, 3.0T, and 5.0T.&nbsp;</li>
+          </ul>
+          <br>
+          <br><span style="font-weight: 700;color:#2d7553">2) Image acquisition: </span>
+          <br>
+          <ul style="margin-left: 50px;">
+            <li>Modalities and Sequences:&nbsp;</li>
+            <ul>
+              <li>TrueFISP: Used for cine, phase-contrast (PC), and tagging.&nbsp;</li>
+              <li>FLASH: Used for mapping and dark-blood imaging.</li>
+              <li>...</li>
+            </ul>
+            <li>Anatomical views:&nbsp;</li>
+            <ul>
+              <li>Long-axis (2-chamber, 3-chamber, 4-chamber).</li>
+              <li>Short-axis.</li>
+              <li>Outflow tract.</li>
+              <li>Aortic views (cross-sectional and sagittal).</li>
+            </ul>
+            <li>Diseases:&nbsp;</li>
+            <ul>
+              <li>Hypertrophic cardiomyopathy.</li>
+              <li>Dilated cardiomyopathy.</li>
+              <li>Myocardial infarction.</li>
+              <li>Coronary artery disease.</li>
+              <li>Arrhythmias.</li>
+              <li>...</li>
+            </ul>
+          </ul>
+          Slice Acquisition and Geometrical Parameters:
+          <ul style="margin-left: 50px;">
+            <li>5–15 slices per imaging plane.&nbsp;</li>
+            <li>Collected at the end of diastole with ECG triggering.&nbsp;</li>
+            <li>15–25 phases per cycle.&nbsp;</li>
+            <li>Temporal resolution: ~50 ms.&nbsp;</li>
+            <li>Spatial resolution: 2.0 × 2.0 mm².&nbsp;</li>
+            <li>Slice thickness: 8.0 mm.&nbsp;</li>
+            <li>Slice gap: 4.0 mm.&nbsp;</li>
+          </ul>
+          We follow the recommendations
+          of CMR exams reported in the previous publication (doi: 10.1007/s43657-02100018x,
+          10.1007/s43657-021-00018-x).
+          <br>
+          <br>
+          <span style="font-weight: 700;color:#2d7553">3) Dataset overview: </span>
+          <ul style="margin-left: 50px;">
+            <li>Total of 600 volunteers with multi-parametric CMR imaging with 100+ cases per center.</li>
+            <ul>
+              <li>200 cases for training.</li>
+              <li>100 cases for validation.</li>
+              <li>300 cases for testing.</li>
+            </ul>
+            <li>Training Phase: Data from 2 centers.</li>
+            <ul>
+              <li>Includes fully sampled k-space data and auto-calibration lines (ACS, 24 lines) in .mat format.</li>
+            </ul>
+            <li>Validation Phase: Data from 3 undisclosed centers.</li>
+            <ul>
+              <li>Includes under-sampled k-space data, sampling trajectories, and auto-calibration lines (ACS, 24 lines) with varied acceleration factors in .mat format.</li>
+            </ul>
+            <li>Test Phase:Includes fully sampled k-space data, under-sampled k-space data, sampling trajectories, and auto-calibration lines (ACS, 24 lines).</li>
+            <ul>
+              <li>Test cases will remain confidential until the challenge ends.</li>
+            </ul>
+          </ul>
+          <br>
+          <span style="font-weight: 700;color:#2d7553">4) Pre-processing:</span>The raw k-space data exported from the
+          scanner will be processed and transformed to '.mat' format using the script provided by our vendor. A readme
+          file will be provided to describe the content and usage of the data.
+          <br>
           </p>
           <br>
           <h2 class="u-align-left u-text u-text-default u-text-1">Principal of participation</h2>
