@@ -1,0 +1,1 @@
+import{_ as s,c as t,o as e}from"./chunks/framework.CthHURaL.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"submission-task.md","filePath":"submission-task.md"}'),a={name:"submission-task.md"};function o(n,i,r,c,m,p){return e(),t("div")}const f=s(a,[["render",o]]);export{d as __pageData,f as default};
